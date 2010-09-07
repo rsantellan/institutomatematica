@@ -1,0 +1,543 @@
+Aug 27 01:04:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /calendarioMaterias/ejecutarFiltro with parameters array (  'module' => 'calendarioMaterias',  'action' => 'ejecutarFiltro',)
+Aug 27 01:04:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:04:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:04:11 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeEjecutarFiltro()"
+Aug 27 01:04:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:04:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (2)
+Aug 27 01:04:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.docente_id = ?) - (2)
+Aug 27 01:04:11 symfony [info] {Doctrine_Connection_Mysql} query : SELECT c.id AS c__id, c.day AS c__day, c.hour AS c__hour, c.minutes AS c__minutes, c.preparacion_id AS c__preparacion_id, c.duration AS c__duration, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM calendario_materias c - ()
+Aug 27 01:04:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.id = ?) - (1)
+Aug 27 01:04:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.id = ?) - (9)
+Aug 27 01:04:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d WHERE (d.id = ?) - (1)
+Aug 27 01:04:11 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/calendarioMaterias/templates/_showCalendar.php"
+Aug 27 01:04:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 27 01:04:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 27 01:04:11 symfony [info] {sfWebDebugLogger} Configuration 21.51 ms (8)
+Aug 27 01:04:11 symfony [info] {sfWebDebugLogger} Factories 25.65 ms (1)
+Aug 27 01:04:11 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/ejecutarFiltro" 68.83 ms (1)
+Aug 27 01:04:11 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (7)
+Aug 27 01:04:11 symfony [info] {sfWebDebugLogger} Partial "calendarioMaterias/_showCalendar" 4.56 ms (1)
+Aug 27 01:04:11 symfony [info] {sfWebDebugLogger} View "None" for "calendarioMaterias/ejecutarFiltro" 0.04 ms (1)
+Aug 27 01:04:11 symfony [info] {sfWebResponse} Send content (34079 o)
+Aug 27 01:06:50 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /calendarioMaterias/ejecutarFiltro with parameters array (  'module' => 'calendarioMaterias',  'action' => 'ejecutarFiltro',)
+Aug 27 01:06:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:06:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:06:50 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeEjecutarFiltro()"
+Aug 27 01:06:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:06:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (2)
+Aug 27 01:06:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.docente_id = ?) - (2)
+Aug 27 01:06:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.day AS c__day, c.hour AS c__hour, c.minutes AS c__minutes, c.preparacion_id AS c__preparacion_id, c.duration AS c__duration, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM calendario_materias c WHERE (c.preparacion_id IN (?)) - (0)
+Aug 27 01:06:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 27 01:06:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 27 01:06:50 symfony [info] {sfWebDebugLogger} Configuration 2.56 ms (8)
+Aug 27 01:06:50 symfony [info] {sfWebDebugLogger} Factories 15.13 ms (1)
+Aug 27 01:06:50 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/ejecutarFiltro" 58.13 ms (1)
+Aug 27 01:06:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (4)
+Aug 27 01:06:50 symfony [info] {sfWebDebugLogger} View "None" for "calendarioMaterias/ejecutarFiltro" 0.05 ms (1)
+Aug 27 01:06:50 symfony [info] {sfWebResponse} Send content (47 o)
+Aug 27 01:06:54 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /calendarioMaterias/ejecutarFiltro with parameters array (  'module' => 'calendarioMaterias',  'action' => 'ejecutarFiltro',)
+Aug 27 01:06:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:06:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:06:54 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeEjecutarFiltro()"
+Aug 27 01:06:54 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:06:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (2)
+Aug 27 01:06:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.docente_id = ?) - (2)
+Aug 27 01:06:54 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.day AS c__day, c.hour AS c__hour, c.minutes AS c__minutes, c.preparacion_id AS c__preparacion_id, c.duration AS c__duration, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM calendario_materias c WHERE (c.preparacion_id IN (?)) - (0)
+Aug 27 01:06:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 27 01:06:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 27 01:06:54 symfony [info] {sfWebDebugLogger} Configuration 4.18 ms (8)
+Aug 27 01:06:54 symfony [info] {sfWebDebugLogger} Factories 30.15 ms (1)
+Aug 27 01:06:54 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/ejecutarFiltro" 100.76 ms (1)
+Aug 27 01:06:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.44 ms (4)
+Aug 27 01:06:54 symfony [info] {sfWebDebugLogger} View "None" for "calendarioMaterias/ejecutarFiltro" 0.01 ms (1)
+Aug 27 01:06:54 symfony [info] {sfWebResponse} Send content (47 o)
+Aug 27 01:07:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /calendarioMaterias/ejecutarFiltro with parameters array (  'module' => 'calendarioMaterias',  'action' => 'ejecutarFiltro',)
+Aug 27 01:07:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:07:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:07:02 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeEjecutarFiltro()"
+Aug 27 01:07:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:07:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (1)
+Aug 27 01:07:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.docente_id = ?) - (1)
+Aug 27 01:07:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.day AS c__day, c.hour AS c__hour, c.minutes AS c__minutes, c.preparacion_id AS c__preparacion_id, c.duration AS c__duration, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM calendario_materias c WHERE (c.preparacion_id IN (?, ?)) - (0, 1)
+Aug 27 01:07:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.id = ?) - (1)
+Aug 27 01:07:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.id = ?) - (9)
+Aug 27 01:07:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d WHERE (d.id = ?) - (1)
+Aug 27 01:07:02 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/calendarioMaterias/templates/_showCalendar.php"
+Aug 27 01:07:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 27 01:07:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 27 01:07:02 symfony [info] {sfWebDebugLogger} Configuration 34.69 ms (8)
+Aug 27 01:07:02 symfony [info] {sfWebDebugLogger} Factories 5.91 ms (1)
+Aug 27 01:07:02 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/ejecutarFiltro" 138.21 ms (1)
+Aug 27 01:07:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.16 ms (7)
+Aug 27 01:07:02 symfony [info] {sfWebDebugLogger} Partial "calendarioMaterias/_showCalendar" 0.56 ms (1)
+Aug 27 01:07:02 symfony [info] {sfWebDebugLogger} View "None" for "calendarioMaterias/ejecutarFiltro" 0.02 ms (1)
+Aug 27 01:07:02 symfony [info] {sfWebResponse} Send content (34079 o)
+Aug 27 01:09:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /calendarioMaterias with parameters array (  'module' => 'calendarioMaterias',  'action' => 'index',)
+Aug 27 01:09:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:09:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:09:02 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeIndex()"
+Aug 27 01:09:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:09:03 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Aug 27 01:09:25 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /calendarioMaterias with parameters array (  'module' => 'calendarioMaterias',  'action' => 'index',)
+Aug 27 01:09:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:09:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:09:25 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeIndex()"
+Aug 27 01:09:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:09:25 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Aug 27 01:09:31 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /calendarioMaterias with parameters array (  'module' => 'calendarioMaterias',  'action' => 'index',)
+Aug 27 01:09:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:09:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:09:32 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeIndex()"
+Aug 27 01:09:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:09:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Aug 27 01:09:49 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /calendarioMaterias with parameters array (  'module' => 'calendarioMaterias',  'action' => 'index',)
+Aug 27 01:09:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:09:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:09:49 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeIndex()"
+Aug 27 01:09:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:09:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Aug 27 01:09:49 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/calendarioMaterias/templates/indexSuccess.php"
+Aug 27 01:09:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Aug 27 01:09:49 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 27 01:09:50 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 27 01:09:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 27 01:09:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 27 01:09:50 symfony [info] {sfWebDebugLogger} Configuration 38.76 ms (9)
+Aug 27 01:09:50 symfony [info] {sfWebDebugLogger} Factories 66.37 ms (1)
+Aug 27 01:09:50 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/index" 77.03 ms (1)
+Aug 27 01:09:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (3)
+Aug 27 01:09:50 symfony [info] {sfWebDebugLogger} View "Success" for "calendarioMaterias/index" 101.23 ms (1)
+Aug 27 01:09:50 symfony [info] {sfWebResponse} Send content (87652 o)
+Aug 27 01:09:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /calendarioMaterias/ejecutarFiltro with parameters array (  'module' => 'calendarioMaterias',  'action' => 'ejecutarFiltro',)
+Aug 27 01:09:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:09:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:09:55 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeEjecutarFiltro()"
+Aug 27 01:09:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:09:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (1)
+Aug 27 01:09:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.docente_id = ?) - (1)
+Aug 27 01:09:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.day AS c__day, c.hour AS c__hour, c.minutes AS c__minutes, c.preparacion_id AS c__preparacion_id, c.duration AS c__duration, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM calendario_materias c WHERE (c.preparacion_id IN (?, ?)) - (0, 1)
+Aug 27 01:09:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.id = ?) - (1)
+Aug 27 01:09:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.id = ?) - (9)
+Aug 27 01:09:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d WHERE (d.id = ?) - (1)
+Aug 27 01:09:55 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/calendarioMaterias/templates/_showCalendar.php"
+Aug 27 01:09:55 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 27 01:09:55 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 27 01:09:55 symfony [info] {sfWebDebugLogger} Configuration 2.10 ms (8)
+Aug 27 01:09:55 symfony [info] {sfWebDebugLogger} Factories 7.76 ms (1)
+Aug 27 01:09:55 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/ejecutarFiltro" 63.88 ms (1)
+Aug 27 01:09:55 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (7)
+Aug 27 01:09:55 symfony [info] {sfWebDebugLogger} Partial "calendarioMaterias/_showCalendar" 4.74 ms (1)
+Aug 27 01:09:55 symfony [info] {sfWebDebugLogger} View "None" for "calendarioMaterias/ejecutarFiltro" 0.01 ms (1)
+Aug 27 01:09:55 symfony [info] {sfWebResponse} Send content (34079 o)
+Aug 27 01:10:03 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /calendarioMaterias/ejecutarFiltro with parameters array (  'module' => 'calendarioMaterias',  'action' => 'ejecutarFiltro',)
+Aug 27 01:10:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:10:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:10:03 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeEjecutarFiltro()"
+Aug 27 01:10:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:10:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (4)
+Aug 27 01:10:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.docente_id = ?) - (4)
+Aug 27 01:10:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.day AS c__day, c.hour AS c__hour, c.minutes AS c__minutes, c.preparacion_id AS c__preparacion_id, c.duration AS c__duration, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM calendario_materias c WHERE (c.preparacion_id IN (?)) - (0)
+Aug 27 01:10:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 27 01:10:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 27 01:10:03 symfony [info] {sfWebDebugLogger} Configuration 13.66 ms (8)
+Aug 27 01:10:03 symfony [info] {sfWebDebugLogger} Factories 13.00 ms (1)
+Aug 27 01:10:03 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/ejecutarFiltro" 59.88 ms (1)
+Aug 27 01:10:03 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (4)
+Aug 27 01:10:03 symfony [info] {sfWebDebugLogger} View "None" for "calendarioMaterias/ejecutarFiltro" 0.01 ms (1)
+Aug 27 01:10:03 symfony [info] {sfWebResponse} Send content (47 o)
+Aug 27 01:10:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /calendarioMaterias/ejecutarFiltro with parameters array (  'module' => 'calendarioMaterias',  'action' => 'ejecutarFiltro',)
+Aug 27 01:10:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 27 01:10:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 27 01:10:07 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeEjecutarFiltro()"
+Aug 27 01:10:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 27 01:10:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (1)
+Aug 27 01:10:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.docente_id = ?) - (1)
+Aug 27 01:10:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.day AS c__day, c.hour AS c__hour, c.minutes AS c__minutes, c.preparacion_id AS c__preparacion_id, c.duration AS c__duration, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM calendario_materias c WHERE (c.preparacion_id IN (?, ?)) - (0, 1)
+Aug 27 01:10:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.id = ?) - (1)
+Aug 27 01:10:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.id = ?) - (9)
+Aug 27 01:10:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d WHERE (d.id = ?) - (1)
+Aug 27 01:10:07 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/calendarioMaterias/templates/_showCalendar.php"
+Aug 27 01:10:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 27 01:10:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 27 01:10:07 symfony [info] {sfWebDebugLogger} Configuration 3.64 ms (8)
+Aug 27 01:10:07 symfony [info] {sfWebDebugLogger} Factories 31.71 ms (1)
+Aug 27 01:10:07 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/ejecutarFiltro" 104.19 ms (1)
+Aug 27 01:10:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (7)
+Aug 27 01:10:07 symfony [info] {sfWebDebugLogger} Partial "calendarioMaterias/_showCalendar" 6.61 ms (1)
+Aug 27 01:10:07 symfony [info] {sfWebDebugLogger} View "None" for "calendarioMaterias/ejecutarFiltro" 0.07 ms (1)
+Aug 27 01:10:07 symfony [info] {sfWebResponse} Send content (34079 o)
+Aug 29 12:45:34 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 29 12:45:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:45:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:45:35 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 29 12:45:35 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/default/templates/indexSuccess.php"
+Aug 29 12:45:35 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:45:35 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:45:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:45:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:45:35 symfony [info] {sfWebDebugLogger} Configuration 7.02 ms (9)
+Aug 29 12:45:35 symfony [info] {sfWebDebugLogger} Factories 1012.73 ms (1)
+Aug 29 12:45:35 symfony [info] {sfWebDebugLogger} Action "default/index" 1.34 ms (1)
+Aug 29 12:45:35 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 271.06 ms (1)
+Aug 29 12:45:36 symfony [info] {sfWebResponse} Send content (44266 o)
+Aug 29 12:45:48 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /alumno with parameters array (  'module' => 'alumno',  'action' => 'index',)
+Aug 29 12:45:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:45:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:45:48 symfony [info] {alumnoActions} Call "alumnoActions->executeIndex()"
+Aug 29 12:45:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:45:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a - ()
+Aug 29 12:45:49 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/alumno/templates/indexSuccess.php"
+Aug 29 12:45:49 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:45:49 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:45:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:45:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:45:49 symfony [info] {sfWebDebugLogger} Configuration 186.31 ms (10)
+Aug 29 12:45:49 symfony [info] {sfWebDebugLogger} Factories 96.15 ms (1)
+Aug 29 12:45:49 symfony [info] {sfWebDebugLogger} Action "alumno/index" 988.63 ms (1)
+Aug 29 12:45:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.10 ms (2)
+Aug 29 12:45:49 symfony [info] {sfWebDebugLogger} View "Success" for "alumno/index" 92.12 ms (1)
+Aug 29 12:45:49 symfony [info] {sfWebResponse} Send content (65646 o)
+Aug 29 12:45:55 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /alumno/new with parameters array (  'module' => 'alumno',  'action' => 'new',)
+Aug 29 12:45:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:45:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:45:55 symfony [info] {alumnoActions} Call "alumnoActions->executeNew()"
+Aug 29 12:45:56 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/alumno/templates/newSuccess.php"
+Aug 29 12:45:56 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/alumno/templates/_form.php"
+Aug 29 12:45:56 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:45:56 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:45:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:45:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:45:56 symfony [info] {sfWebDebugLogger} Configuration 14.33 ms (9)
+Aug 29 12:45:56 symfony [info] {sfWebDebugLogger} Factories 121.50 ms (1)
+Aug 29 12:45:56 symfony [info] {sfWebDebugLogger} Action "alumno/new" 464.04 ms (1)
+Aug 29 12:45:56 symfony [info] {sfWebDebugLogger} View "Success" for "alumno/new" 124.05 ms (1)
+Aug 29 12:45:56 symfony [info] {sfWebDebugLogger} Partial "alumno/_form" 54.77 ms (1)
+Aug 29 12:45:56 symfony [info] {sfWebResponse} Send content (55131 o)
+Aug 29 12:46:21 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /alumno/create with parameters array (  'module' => 'alumno',  'action' => 'create',)
+Aug 29 12:46:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:46:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:46:22 symfony [info] {alumnoActions} Call "alumnoActions->executeCreate()"
+Aug 29 12:46:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:46:22 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO alumno (nombre, apellido, telefono, celular, direccion, email, sexo, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) - (Rodrigo, Santellan, 613 41 35, 099 69 48 06, 18 de diciembre 1627, rsantellan@gmail.com, M, 2010-08-29 12:46:22, 2010-08-29 12:46:22)
+Aug 29 12:46:22 symfony [info] {sfFrontWebController} Redirect to "http://local.instituto.com/frontend_dev.php/alumno/edit/id/1"
+Aug 29 12:46:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Aug 29 12:46:22 symfony [info] {sfWebResponse} Send header "Location: http://local.instituto.com/frontend_dev.php/alumno/edit/id/1"
+Aug 29 12:46:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:46:22 symfony [info] {sfWebDebugLogger} Configuration 13.27 ms (8)
+Aug 29 12:46:22 symfony [info] {sfWebDebugLogger} Factories 155.26 ms (1)
+Aug 29 12:46:22 symfony [info] {sfWebDebugLogger} Action "alumno/create" 650.98 ms (1)
+Aug 29 12:46:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (2)
+Aug 29 12:46:22 symfony [info] {sfWebResponse} Send content (131 o)
+Aug 29 12:46:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /alumno/edit/id/1 with parameters array (  'module' => 'alumno',  'action' => 'edit',  'id' => '1',)
+Aug 29 12:46:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:46:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:46:22 symfony [info] {alumnoActions} Call "alumnoActions->executeEdit()"
+Aug 29 12:46:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:46:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a WHERE (a.id = ?) LIMIT 1 - (1)
+Aug 29 12:46:23 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/alumno/templates/editSuccess.php"
+Aug 29 12:46:23 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/alumno/templates/_form.php"
+Aug 29 12:46:23 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:46:23 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:46:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:46:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:46:23 symfony [info] {sfWebDebugLogger} Configuration 4.70 ms (9)
+Aug 29 12:46:23 symfony [info] {sfWebDebugLogger} Factories 17.31 ms (1)
+Aug 29 12:46:23 symfony [info] {sfWebDebugLogger} Action "alumno/edit" 253.49 ms (1)
+Aug 29 12:46:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.05 ms (2)
+Aug 29 12:46:23 symfony [info] {sfWebDebugLogger} View "Success" for "alumno/edit" 105.78 ms (1)
+Aug 29 12:46:23 symfony [info] {sfWebDebugLogger} Partial "alumno/_form" 36.74 ms (1)
+Aug 29 12:46:23 symfony [info] {sfWebResponse} Send content (79145 o)
+Aug 29 12:46:27 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /alumno with parameters array (  'module' => 'alumno',  'action' => 'index',)
+Aug 29 12:46:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:46:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:46:27 symfony [info] {alumnoActions} Call "alumnoActions->executeIndex()"
+Aug 29 12:46:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:46:27 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a - ()
+Aug 29 12:46:27 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/alumno/templates/indexSuccess.php"
+Aug 29 12:46:27 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:46:27 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:46:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:46:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:46:27 symfony [info] {sfWebDebugLogger} Configuration 18.77 ms (9)
+Aug 29 12:46:27 symfony [info] {sfWebDebugLogger} Factories 104.25 ms (1)
+Aug 29 12:46:27 symfony [info] {sfWebDebugLogger} Action "alumno/index" 373.08 ms (1)
+Aug 29 12:46:27 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.11 ms (2)
+Aug 29 12:46:27 symfony [info] {sfWebDebugLogger} View "Success" for "alumno/index" 123.38 ms (1)
+Aug 29 12:46:27 symfony [info] {sfWebResponse} Send content (65942 o)
+Aug 29 12:46:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /preparacion with parameters array (  'module' => 'preparacion',  'action' => 'index',)
+Aug 29 12:46:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:46:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:46:32 symfony [info] {preparacionActions} Call "preparacionActions->executeIndex()"
+Aug 29 12:46:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:46:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p - ()
+Aug 29 12:46:32 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/preparacion/templates/indexSuccess.php"
+Aug 29 12:46:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.id = ?) - (9)
+Aug 29 12:46:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d WHERE (d.id = ?) - (1)
+Aug 29 12:46:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e WHERE (e.id = ?) - (1)
+Aug 29 12:46:32 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:46:32 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:46:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:46:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:46:32 symfony [info] {sfWebDebugLogger} Configuration 20.89 ms (9)
+Aug 29 12:46:32 symfony [info] {sfWebDebugLogger} Factories 55.81 ms (1)
+Aug 29 12:46:32 symfony [info] {sfWebDebugLogger} Action "preparacion/index" 165.58 ms (1)
+Aug 29 12:46:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.12 ms (5)
+Aug 29 12:46:32 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/index" 303.64 ms (1)
+Aug 29 12:46:33 symfony [info] {sfWebResponse} Send content (106097 o)
+Aug 29 12:46:39 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/show/id/1 with parameters array (  'module' => 'preparacion',  'action' => 'show',  'id' => '1',)
+Aug 29 12:46:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:46:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:46:39 symfony [info] {preparacionActions} Call "preparacionActions->executeShow()"
+Aug 29 12:46:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:46:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.id = ?) LIMIT 1 - (1)
+Aug 29 12:46:40 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/preparacion/templates/showSuccess.php"
+Aug 29 12:46:40 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/alumno/templates/_listForm.php"
+Aug 29 12:46:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.id = ?) - (9)
+Aug 29 12:46:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d WHERE (d.id = ?) - (1)
+Aug 29 12:46:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e WHERE (e.id = ?) - (1)
+Aug 29 12:46:40 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.alumno_id AS a__alumno_id, a.preparacion_id AS a__preparacion_id, a.forma_contacto_id AS a__forma_contacto_id, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno_preparacion a WHERE (a.preparacion_id IN (?)) - (1)
+Aug 29 12:46:40 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:46:40 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:46:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:46:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:46:40 symfony [info] {sfWebDebugLogger} Configuration 5.43 ms (9)
+Aug 29 12:46:40 symfony [info] {sfWebDebugLogger} Factories 43.99 ms (1)
+Aug 29 12:46:40 symfony [info] {sfWebDebugLogger} Action "preparacion/show" 453.88 ms (1)
+Aug 29 12:46:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.32 ms (6)
+Aug 29 12:46:40 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/show" 284.55 ms (1)
+Aug 29 12:46:40 symfony [info] {sfWebDebugLogger} Partial "alumno/_listForm" 80.14 ms (1)
+Aug 29 12:46:40 symfony [info] {sfWebResponse} Send content (134131 o)
+Aug 29 12:46:45 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /alumno/traerAlumnos with parameters array (  'module' => 'alumno',  'action' => 'traerAlumnos',)
+Aug 29 12:46:45 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:46:45 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:46:45 symfony [info] {alumnoActions} Call "alumnoActions->executeTraerAlumnos()"
+Aug 29 12:46:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:46:46 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a WHERE (a.apellido LIKE ? AND a.nombre LIKE ? AND a.id NOT IN (SELECT a2.alumno_id AS a2__alumno_id FROM alumno_preparacion a2 WHERE (a2.preparacion_id = ?))) - (%%, %%, 1)
+Aug 29 12:46:46 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/preparacion/templates/_alumnoLista.php"
+Aug 29 12:46:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:46:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:46:46 symfony [info] {sfWebDebugLogger} Configuration 5.56 ms (8)
+Aug 29 12:46:46 symfony [info] {sfWebDebugLogger} Factories 19.99 ms (1)
+Aug 29 12:46:46 symfony [info] {sfWebDebugLogger} Action "alumno/traerAlumnos" 150.46 ms (1)
+Aug 29 12:46:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (2)
+Aug 29 12:46:46 symfony [info] {sfWebDebugLogger} Partial "preparacion/_alumnoLista" 10.86 ms (1)
+Aug 29 12:46:46 symfony [info] {sfWebDebugLogger} View "None" for "alumno/traerAlumnos" 0.04 ms (1)
+Aug 29 12:46:46 symfony [info] {sfWebResponse} Send content (476 o)
+Aug 29 12:46:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/getAlumnoPreparacionForm with parameters array (  'module' => 'preparacion',  'action' => 'getAlumnoPreparacionForm',)
+Aug 29 12:46:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:46:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:46:48 symfony [info] {preparacionActions} Call "preparacionActions->executeGetAlumnoPreparacionForm()"
+Aug 29 12:46:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:46:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.id = ?) LIMIT 1 - (1)
+Aug 29 12:46:48 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a WHERE (a.id = ?) LIMIT 1 - (1)
+Aug 29 12:46:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM forma_contacto f - ()
+Aug 29 12:46:48 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/preparacion/templates/_alumnoPreparacionForm.php"
+Aug 29 12:46:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:46:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:46:48 symfony [info] {sfWebDebugLogger} Configuration 23.29 ms (8)
+Aug 29 12:46:48 symfony [info] {sfWebDebugLogger} Factories 23.00 ms (1)
+Aug 29 12:46:48 symfony [info] {sfWebDebugLogger} Action "preparacion/getAlumnoPreparacionForm" 144.93 ms (1)
+Aug 29 12:46:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (4)
+Aug 29 12:46:48 symfony [info] {sfWebDebugLogger} Partial "preparacion/_alumnoPreparacionForm" 16.96 ms (1)
+Aug 29 12:46:48 symfony [info] {sfWebDebugLogger} View "None" for "preparacion/getAlumnoPreparacionForm" 0.03 ms (1)
+Aug 29 12:46:48 symfony [info] {sfWebResponse} Send content (945 o)
+Aug 29 12:46:51 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/saveAlumnoEnPreparacion with parameters array (  'module' => 'preparacion',  'action' => 'saveAlumnoEnPreparacion',)
+Aug 29 12:46:51 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:46:51 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:46:51 symfony [info] {preparacionActions} Call "preparacionActions->executeSaveAlumnoEnPreparacion()"
+Aug 29 12:46:52 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:46:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.id = ?) LIMIT 1 - (1)
+Aug 29 12:46:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a WHERE (a.id = ?) LIMIT 1 - (1)
+Aug 29 12:46:52 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM forma_contacto f WHERE (f.id = ?) LIMIT 1 - (1)
+Aug 29 12:46:52 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO alumno_preparacion (alumno_id, preparacion_id, forma_contacto_id, created_at, updated_at) VALUES (?, ?, ?, ?, ?) - (1, 1, 1, 2010-08-29 12:46:52, 2010-08-29 12:46:52)
+Aug 29 12:46:52 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/preparacion/templates/_tableRowAlumnoPreparacion.php"
+Aug 29 12:46:52 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:46:52 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:46:52 symfony [info] {sfWebDebugLogger} Configuration 19.50 ms (8)
+Aug 29 12:46:52 symfony [info] {sfWebDebugLogger} Factories 99.72 ms (1)
+Aug 29 12:46:52 symfony [info] {sfWebDebugLogger} Action "preparacion/saveAlumnoEnPreparacion" 465.89 ms (1)
+Aug 29 12:46:52 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.17 ms (5)
+Aug 29 12:46:52 symfony [info] {sfWebDebugLogger} Partial "preparacion/_tableRowAlumnoPreparacion" 46.83 ms (1)
+Aug 29 12:46:52 symfony [info] {sfWebDebugLogger} View "None" for "preparacion/saveAlumnoEnPreparacion" 0.03 ms (1)
+Aug 29 12:46:52 symfony [info] {sfWebResponse} Send content (444 o)
+Aug 29 12:47:05 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /calendarioMaterias with parameters array (  'module' => 'calendarioMaterias',  'action' => 'index',)
+Aug 29 12:47:05 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:47:05 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:47:05 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeIndex()"
+Aug 29 12:47:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:47:05 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Aug 29 12:47:06 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/calendarioMaterias/templates/indexSuccess.php"
+Aug 29 12:47:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Aug 29 12:47:06 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:47:06 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:47:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:47:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:47:06 symfony [info] {sfWebDebugLogger} Configuration 8.57 ms (9)
+Aug 29 12:47:06 symfony [info] {sfWebDebugLogger} Factories 208.64 ms (1)
+Aug 29 12:47:06 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/index" 601.69 ms (1)
+Aug 29 12:47:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.06 ms (3)
+Aug 29 12:47:06 symfony [info] {sfWebDebugLogger} View "Success" for "calendarioMaterias/index" 188.55 ms (1)
+Aug 29 12:47:06 symfony [info] {sfWebResponse} Send content (87646 o)
+Aug 29 12:47:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /calendarioMaterias/ejecutarFiltro with parameters array (  'module' => 'calendarioMaterias',  'action' => 'ejecutarFiltro',)
+Aug 29 12:47:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:47:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:47:12 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeEjecutarFiltro()"
+Aug 29 12:47:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:47:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (1)
+Aug 29 12:47:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.docente_id = ?) - (1)
+Aug 29 12:47:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.day AS c__day, c.hour AS c__hour, c.minutes AS c__minutes, c.preparacion_id AS c__preparacion_id, c.duration AS c__duration, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM calendario_materias c WHERE (c.preparacion_id IN (?, ?)) - (0, 1)
+Aug 29 12:47:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.id = ?) - (1)
+Aug 29 12:47:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.id = ?) - (9)
+Aug 29 12:47:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d WHERE (d.id = ?) - (1)
+Aug 29 12:47:12 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/calendarioMaterias/templates/_showCalendar.php"
+Aug 29 12:47:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:47:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:47:12 symfony [info] {sfWebDebugLogger} Configuration 25.80 ms (8)
+Aug 29 12:47:12 symfony [info] {sfWebDebugLogger} Factories 92.66 ms (1)
+Aug 29 12:47:12 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/ejecutarFiltro" 804.66 ms (1)
+Aug 29 12:47:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.15 ms (7)
+Aug 29 12:47:12 symfony [info] {sfWebDebugLogger} Partial "calendarioMaterias/_showCalendar" 71.22 ms (1)
+Aug 29 12:47:12 symfony [info] {sfWebDebugLogger} View "None" for "calendarioMaterias/ejecutarFiltro" 0.03 ms (1)
+Aug 29 12:47:12 symfony [info] {sfWebResponse} Send content (34079 o)
+Aug 29 12:49:57 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /calendarioMaterias with parameters array (  'module' => 'calendarioMaterias',  'action' => 'index',)
+Aug 29 12:49:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:49:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:49:57 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeIndex()"
+Aug 29 12:49:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:49:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Aug 29 12:49:57 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/modules/calendarioMaterias/templates/indexSuccess.php"
+Aug 29 12:49:58 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Aug 29 12:49:58 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:49:58 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/instituto/apps/frontend/templates/layout.php"
+Aug 29 12:49:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:49:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:49:58 symfony [info] {sfWebDebugLogger} Configuration 546.58 ms (10)
+Aug 29 12:49:58 symfony [info] {sfWebDebugLogger} Factories 139.41 ms (1)
+Aug 29 12:49:58 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/index" 369.07 ms (1)
+Aug 29 12:49:58 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.15 ms (3)
+Aug 29 12:49:58 symfony [info] {sfWebDebugLogger} View "Success" for "calendarioMaterias/index" 120.81 ms (1)
+Aug 29 12:49:58 symfony [info] {sfWebResponse} Send content (87571 o)
+Aug 29 12:50:06 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /calendarioMaterias/ejecutarFiltro with parameters array (  'module' => 'calendarioMaterias',  'action' => 'ejecutarFiltro',)
+Aug 29 12:50:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 29 12:50:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 29 12:50:06 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeEjecutarFiltro()"
+Aug 29 12:50:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 29 12:50:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (1)
+Aug 29 12:50:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p WHERE (p.docente_id = ?) - (1)
+Aug 29 12:50:06 symfony [info] {Doctrine_Connection_Statement} execute : SELECT c.id AS c__id, c.day AS c__day, c.hour AS c__hour, c.minutes AS c__minutes, c.preparacion_id AS c__preparacion_id, c.duration AS c__duration, c.created_at AS c__created_at, c.updated_at AS c__updated_at FROM calendario_materias c WHERE (c.preparacion_id IN (?)) - (0)
+Aug 29 12:50:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 29 12:50:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 29 12:50:06 symfony [info] {sfWebDebugLogger} Configuration 4.18 ms (8)
+Aug 29 12:50:06 symfony [info] {sfWebDebugLogger} Factories 17.99 ms (1)
+Aug 29 12:50:06 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/ejecutarFiltro" 125.18 ms (1)
+Aug 29 12:50:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.12 ms (4)
+Aug 29 12:50:06 symfony [info] {sfWebDebugLogger} View "None" for "calendarioMaterias/ejecutarFiltro" 0.06 ms (1)
+Aug 29 12:50:06 symfony [info] {sfWebResponse} Send content (47 o)
+Aug 30 03:39:08 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 30 03:39:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 84 (Wrong parameter count for session_set_cookie_params())
+Aug 30 03:39:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:39:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:39:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 30 03:39:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 30 03:39:08 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 30 03:39:08 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\modules/default/templates/indexSuccess.php"
+Aug 30 03:39:08 symfony [info] {sfPHPView} Decorate content with "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:39:08 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:39:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:39:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 30 03:39:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:39:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 30 03:39:08 symfony [info] {sfWebDebugLogger} Configuration 1330.88 ms (9)
+Aug 30 03:39:08 symfony [info] {sfWebDebugLogger} Factories 1043.68 ms (1)
+Aug 30 03:39:08 symfony [info] {sfWebDebugLogger} Action "default/index" 0.48 ms (1)
+Aug 30 03:39:08 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 199.90 ms (1)
+Aug 30 03:41:16 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 30 03:41:16 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 84 (Wrong parameter count for session_set_cookie_params())
+Aug 30 03:41:16 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:41:16 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:41:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 30 03:41:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 30 03:41:17 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 30 03:41:17 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\modules/default/templates/indexSuccess.php"
+Aug 30 03:41:17 symfony [info] {sfPHPView} Decorate content with "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:41:17 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:41:17 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:41:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 30 03:41:17 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:41:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 30 03:41:17 symfony [info] {sfWebDebugLogger} Configuration 37.66 ms (9)
+Aug 30 03:41:17 symfony [info] {sfWebDebugLogger} Factories 173.48 ms (1)
+Aug 30 03:41:17 symfony [info] {sfWebDebugLogger} Action "default/index" 0.46 ms (1)
+Aug 30 03:41:17 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 151.05 ms (1)
+Aug 30 03:41:29 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 30 03:41:29 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 84 (Wrong parameter count for session_set_cookie_params())
+Aug 30 03:41:29 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:41:29 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:41:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 30 03:41:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 30 03:41:29 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 30 03:41:29 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\modules/default/templates/indexSuccess.php"
+Aug 30 03:41:29 symfony [info] {sfPHPView} Decorate content with "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:41:29 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:41:29 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:41:29 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 30 03:41:29 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:41:29 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 30 03:41:29 symfony [info] {sfWebDebugLogger} Configuration 62.03 ms (9)
+Aug 30 03:41:29 symfony [info] {sfWebDebugLogger} Factories 247.06 ms (1)
+Aug 30 03:41:29 symfony [info] {sfWebDebugLogger} Action "default/index" 0.73 ms (1)
+Aug 30 03:41:29 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 149.90 ms (1)
+Aug 30 03:42:08 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 30 03:42:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 84 (Wrong parameter count for session_set_cookie_params())
+Aug 30 03:42:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:42:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:42:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 30 03:42:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 30 03:42:08 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 30 03:42:08 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\modules/default/templates/indexSuccess.php"
+Aug 30 03:42:08 symfony [info] {sfPHPView} Decorate content with "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:42:08 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:42:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:42:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 30 03:42:08 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:84))
+Aug 30 03:42:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 30 03:42:08 symfony [info] {sfWebDebugLogger} Configuration 821.64 ms (9)
+Aug 30 03:42:08 symfony [info] {sfWebDebugLogger} Factories 239.64 ms (1)
+Aug 30 03:42:08 symfony [info] {sfWebDebugLogger} Action "default/index" 0.68 ms (1)
+Aug 30 03:42:08 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 150.68 ms (1)
+Aug 30 03:44:25 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Aug 30 03:44:25 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 84 (Wrong parameter count for session_set_cookie_params())
+Aug 30 03:44:25 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:78))
+Aug 30 03:44:25 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php on line 93 (session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:78))
+Aug 30 03:44:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 30 03:44:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 30 03:44:25 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Aug 30 03:44:25 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\modules/default/templates/indexSuccess.php"
+Aug 30 03:44:25 symfony [info] {sfPHPView} Decorate content with "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:44:25 symfony [info] {sfPHPView} Render "C:\instituto\apps\frontend\templates/layout.php"
+Aug 30 03:44:25 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 336 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:78))
+Aug 30 03:44:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 30 03:44:25 symfony [warning] {sfWebDebugLogger}  Warning at C:\instituto\lib\vendor\symfony\lib\response\sfWebResponse.class.php on line 357 (Cannot modify header information - headers already sent by (output started at C:\instituto\lib\vendor\symfony\lib\storage\sfSessionStorage.class.php:78))
+Aug 30 03:44:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 30 03:44:25 symfony [info] {sfWebDebugLogger} Configuration 15.95 ms (9)
+Aug 30 03:44:25 symfony [info] {sfWebDebugLogger} Factories 173.29 ms (1)
+Aug 30 03:44:25 symfony [info] {sfWebDebugLogger} Action "default/index" 0.50 ms (1)
+Aug 30 03:44:25 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 57.93 ms (1)
+Aug 30 04:05:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /alumno/checkAlumno with parameters array (  'module' => 'alumno',  'action' => 'checkAlumno',)
+Aug 30 04:05:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Aug 30 04:05:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Aug 30 04:05:56 symfony [info] {alumnoActions} Call "alumnoActions->executeCheckAlumno()"
+Aug 30 04:05:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Aug 30 04:05:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a WHERE (a.telefono = ?) - (12931)
+Aug 30 04:05:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a WHERE (a.celular = ?) - (31291)
+Aug 30 04:05:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a WHERE (a.direccion = ?) - (23kads 0912)
+Aug 30 04:05:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a WHERE (a.email = ?) - (re@as.com)
+Aug 30 04:05:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a WHERE (a.apellido LIKE ? AND a.nombre LIKE ?) - (%Perez%, %Juan%)
+Aug 30 04:05:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Aug 30 04:05:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Aug 30 04:05:56 symfony [info] {sfWebDebugLogger} Configuration 465.61 ms (8)
+Aug 30 04:05:56 symfony [info] {sfWebDebugLogger} Factories 219.70 ms (1)
+Aug 30 04:05:56 symfony [info] {sfWebDebugLogger} Action "alumno/checkAlumno" 191.24 ms (1)
+Aug 30 04:05:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.41 ms (6)
+Aug 30 04:05:56 symfony [info] {sfWebDebugLogger} View "None" for "alumno/checkAlumno" 0.01 ms (1)
+Aug 30 04:05:56 symfony [info] {sfWebResponse} Send content (24 o)
