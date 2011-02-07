@@ -1,0 +1,49 @@
+<?php
+
+/**
+ * mdAttributeObject form base class.
+ *
+ * @method mdAttributeObject getObject() Returns the current form's model object
+ *
+ * @package    instituto
+ * @subpackage form
+ * @author     Your name here
+ * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ */
+abstract class BasemdAttributeObjectForm extends BaseFormDoctrine
+{
+  public function setup()
+  {
+    $this->setWidgets(array(
+      'id'                    => new sfWidgetFormInputHidden(),
+      'object_id'             => new sfWidgetFormInputText(),
+      'object_class_name'     => new sfWidgetFormInputText(),
+      'md_attribute_id'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('mdAttribute'), 'add_empty' => false)),
+      'md_attribute_value_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('mdAttributeValue'), 'add_empty' => true)),
+      'md_profile_id'         => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('mdProfile'), 'add_empty' => false)),
+    ));
+
+    $this->setValidators(array(
+      'id'                    => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
+      'object_id'             => new sfValidatorInteger(),
+      'object_class_name'     => new sfValidatorString(array('max_length' => 128)),
+      'md_attribute_id'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('mdAttribute'))),
+      'md_attribute_value_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('mdAttributeValue'), 'required' => false)),
+      'md_profile_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('mdProfile'))),
+    ));
+
+    $this->widgetSchema->setNameFormat('md_attribute_object[%s]');
+
+    $this->errorSchema = new sfValidatorErrorSchema($this->validatorSchema);
+
+    $this->setupInheritance();
+
+    parent::setup();
+  }
+
+  public function getModelName()
+  {
+    return 'mdAttributeObject';
+  }
+
+}

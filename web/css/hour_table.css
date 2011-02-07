@@ -1,0 +1,39 @@
+.hour_table{
+	width: 100%;
+	text-align:center;
+}
+	.hour_table .data .hour_detail{
+		color:blue;
+		font-size:17px;
+		font-style:italic;
+	}
+	
+	.hour_table .data{
+		height: 20px;
+	}
+	
+		.hour_table .data td{
+			width: 100px;
+		}
+
+		.hour_table .data .red_color{
+			background-color: red !important;
+		}
+		.hour_table .data .blue_color{
+			background-color: blue !important;
+		}
+		.hour_table .data .yellow_color{
+			background-color: yellow !important;
+		}
+		.hour_table .data .purple_color{
+			background-color: black !important;
+			color: white !important;
+		}
+		.hour_table .data .cyan_color{
+			background-color: black !important;
+			color: white !important;
+		}
+		.hour_table .data .pink_color{
+			background-color: black !important;
+			color: white !important;
+		}

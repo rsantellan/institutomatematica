@@ -1,0 +1,14 @@
+formaContacto:
+  fc3:
+    nombre: Ya habia concurrido a otra materia
+  fc1:
+    nombre: Recomendacion de un amigo
+    tiene_nota: 1
+  fc2:
+    nombre: Aviso del Catalogo de Estudiantes
+  fc4:
+    nombre: Cartelera de Facultad
+  fc5:
+    nombre: Volantes
+  fc6:
+    nombre: pagina web tuprofe.com

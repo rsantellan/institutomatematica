@@ -1,0 +1,64 @@
+materia:
+  m1:
+    nombre: Matemática I
+    facultad: f1
+  m2:
+    nombre: Matemática II
+    facultad: f1
+  m3:
+    nombre: Estadística I
+    facultad: f1
+  m4:
+    nombre: Estadística II
+    facultad: f1
+  m5:
+    nombre: Introducción a la Contabilidad
+    facultad: f1
+  m6:
+    nombre: Contabilidad Básica
+    facultad: f1
+  m7:
+    nombre: Contabilidad I
+    facultad: f2
+  m8:
+    nombre: Contabilidad II
+    facultad: f2
+  m9:
+    nombre: Contabilidad de Costos y Presupuestal
+    facultad: f2
+  m10:
+    nombre: Métodos I
+    facultad: f2
+  m11:
+    nombre: Métodos II
+    facultad: f2
+  m12:
+    nombre: Introducción a la Probabilidad y Estadistica
+    facultad: f2
+  m13:
+    nombre: Cálculo I
+    facultad: f3
+  m14:
+    nombre: Cálculo II
+    facultad: f3
+  m15:
+    nombre: Cálculo III
+    facultad: f3
+  m16:
+    nombre: Algebra I
+    facultad: f3
+  m17:
+    nombre: Algebra II
+    facultad: f3
+  m18:
+    nombre: Física I
+    facultad: f3
+  m19:
+    nombre: Termo
+    facultad: f3
+  m20:
+    nombre: Mecánica Newtoniana
+    facultad: f3
+  m21:
+    nombre: Matemática 01
+    facultad: f4
