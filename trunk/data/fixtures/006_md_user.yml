@@ -1,0 +1,69 @@
+mdUser:
+  mdUser_base:
+    email: admin@admin.com
+    super_admin: 1
+  mdUser_nati:
+    email: nati@nati.com
+    super_admin: 0
+  mdUser_juan:
+    email: juan@juan.com
+    super_admin: 0
+  mdUser_alejandro:
+    email: alejandro@alejandro.com
+    super_admin: 0
+  mdUser_eduardo:
+    email: eduardo@eduardo.com
+    super_admin: 0
+
+mdPassport:
+  mdPassport_base:
+    username: admin
+    password: 123
+    mdUser: mdUser_base
+    account_active: 1
+  mdPassport_nati:
+    username: nati
+    password: 123
+    mdUser: mdUser_nati
+    account_active: 1
+  mdPassport_juan:
+    mdUser: mdUser_juan
+    username: juan
+    password: 123
+    account_active: 1
+  mdPassport_alejandro:
+    mdUser: mdUser_alejandro
+    username: alejandro
+    password: 123
+    account_active: 1
+  mdPassport_eduardo:
+    mdUser: mdUser_eduardo
+    username: eduardo
+    password: 123
+    account_active: 1
+
+mdUserProfile:
+  mdUserProfile_0:
+    mdUserIdTmp: 1
+    name: Admin
+    last_name: Admin
+  mdUserProfile_1:
+    mdUserIdTmp: 2
+    name: Natalia
+    last_name: Castro
+    city: montevideo
+  mdUserProfile_2:
+    mdUserIdTmp: 3
+    name: Juan
+    last_name: Kalemkerian
+    city: montevideo
+  mdUserProfile_3:
+    mdUserIdTmp: 4
+    name: Alejandro
+    last_name: Sapello
+    city: montevideo
+  mdUserProfile_4:
+    mdUserIdTmp: 5
+    name: Eduardo
+    last_name: Godin
+    city: montevideo

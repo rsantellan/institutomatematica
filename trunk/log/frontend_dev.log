@@ -1,0 +1,1388 @@
+Feb 07 12:13:59 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Feb 07 12:13:59 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:13:59 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:13:59 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Feb 07 12:13:59 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/default/templates/indexSuccess.php"
+Feb 07 12:13:59 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:13:59 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:13:59 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:13:59 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:13:59 symfony [info] {sfWebDebugLogger} Configuration 272.00 ms (9)
+Feb 07 12:13:59 symfony [info] {sfWebDebugLogger} Factories 120.35 ms (1)
+Feb 07 12:13:59 symfony [info] {sfWebDebugLogger} Action "default/index" 0.23 ms (1)
+Feb 07 12:13:59 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 19.03 ms (1)
+Feb 07 12:13:59 symfony [info] {sfWebResponse} Send content (46226 o)
+Feb 07 12:14:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /alumno with parameters array (  'module' => 'alumno',  'action' => 'index',)
+Feb 07 12:14:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:02 symfony [info] {alumnoActions} Call "alumnoActions->executeIndex()"
+Feb 07 12:14:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a - ()
+Feb 07 12:14:02 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/alumno/templates/indexSuccess.php"
+Feb 07 12:14:02 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:02 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:02 symfony [info] {sfWebDebugLogger} Configuration 18.07 ms (10)
+Feb 07 12:14:02 symfony [info] {sfWebDebugLogger} Factories 12.11 ms (1)
+Feb 07 12:14:02 symfony [info] {sfWebDebugLogger} Action "alumno/index" 61.11 ms (1)
+Feb 07 12:14:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:02 symfony [info] {sfWebDebugLogger} View "Success" for "alumno/index" 16.50 ms (1)
+Feb 07 12:14:02 symfony [info] {sfWebResponse} Send content (67603 o)
+Feb 07 12:14:03 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /preparacion with parameters array (  'module' => 'preparacion',  'action' => 'index',)
+Feb 07 12:14:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:03 symfony [info] {preparacionActions} Call "preparacionActions->executeIndex()"
+Feb 07 12:14:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:03 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p - ()
+Feb 07 12:14:03 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/indexSuccess.php"
+Feb 07 12:14:03 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:03 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:03 symfony [info] {sfWebDebugLogger} Configuration 12.03 ms (10)
+Feb 07 12:14:03 symfony [info] {sfWebDebugLogger} Factories 7.92 ms (1)
+Feb 07 12:14:03 symfony [info] {sfWebDebugLogger} Action "preparacion/index" 11.19 ms (1)
+Feb 07 12:14:03 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:03 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/index" 10.15 ms (1)
+Feb 07 12:14:03 symfony [info] {sfWebResponse} Send content (67373 o)
+Feb 07 12:14:04 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /facultad with parameters array (  'module' => 'facultad',  'action' => 'index',)
+Feb 07 12:14:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:04 symfony [info] {facultadActions} Call "facultadActions->executeIndex()"
+Feb 07 12:14:04 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:04 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:14:04 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/facultad/templates/indexSuccess.php"
+Feb 07 12:14:04 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:04 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:04 symfony [info] {sfWebDebugLogger} Configuration 13.22 ms (10)
+Feb 07 12:14:04 symfony [info] {sfWebDebugLogger} Factories 9.98 ms (1)
+Feb 07 12:14:04 symfony [info] {sfWebDebugLogger} Action "facultad/index" 12.51 ms (1)
+Feb 07 12:14:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:04 symfony [info] {sfWebDebugLogger} View "Success" for "facultad/index" 21.36 ms (1)
+Feb 07 12:14:04 symfony [info] {sfWebResponse} Send content (67720 o)
+Feb 07 12:14:06 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /evaluacion with parameters array (  'module' => 'evaluacion',  'action' => 'index',)
+Feb 07 12:14:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:06 symfony [info] {evaluacionActions} Call "evaluacionActions->executeIndex()"
+Feb 07 12:14:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 12:14:06 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/evaluacion/templates/indexSuccess.php"
+Feb 07 12:14:06 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:06 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:06 symfony [info] {sfWebDebugLogger} Configuration 11.92 ms (10)
+Feb 07 12:14:06 symfony [info] {sfWebDebugLogger} Factories 8.07 ms (1)
+Feb 07 12:14:06 symfony [info] {sfWebDebugLogger} Action "evaluacion/index" 9.58 ms (1)
+Feb 07 12:14:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:06 symfony [info] {sfWebDebugLogger} View "Success" for "evaluacion/index" 21.51 ms (1)
+Feb 07 12:14:06 symfony [info] {sfWebResponse} Send content (67790 o)
+Feb 07 12:14:07 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /materia with parameters array (  'module' => 'materia',  'action' => 'index',)
+Feb 07 12:14:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:07 symfony [info] {materiaActions} Call "materiaActions->executeIndex()"
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 12:14:07 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/materia/templates/indexSuccess.php"
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:14:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (4)
+Feb 07 12:14:07 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:07 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:07 symfony [info] {sfWebDebugLogger} Configuration 12.34 ms (10)
+Feb 07 12:14:07 symfony [info] {sfWebDebugLogger} Factories 9.24 ms (1)
+Feb 07 12:14:07 symfony [info] {sfWebDebugLogger} Action "materia/index" 15.05 ms (1)
+Feb 07 12:14:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (23)
+Feb 07 12:14:07 symfony [info] {sfWebDebugLogger} View "Success" for "materia/index" 137.80 ms (1)
+Feb 07 12:14:07 symfony [info] {sfWebResponse} Send content (351463 o)
+Feb 07 12:14:08 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /formaContacto with parameters array (  'module' => 'formaContacto',  'action' => 'index',)
+Feb 07 12:14:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:08 symfony [info] {formaContactoActions} Call "formaContactoActions->executeIndex()"
+Feb 07 12:14:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM forma_contacto f - ()
+Feb 07 12:14:08 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/formaContacto/templates/indexSuccess.php"
+Feb 07 12:14:08 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:08 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:08 symfony [info] {sfWebDebugLogger} Configuration 11.68 ms (10)
+Feb 07 12:14:08 symfony [info] {sfWebDebugLogger} Factories 8.83 ms (1)
+Feb 07 12:14:08 symfony [info] {sfWebDebugLogger} Action "formaContacto/index" 12.83 ms (1)
+Feb 07 12:14:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:08 symfony [info] {sfWebDebugLogger} View "Success" for "formaContacto/index" 20.00 ms (1)
+Feb 07 12:14:08 symfony [info] {sfWebResponse} Send content (68241 o)
+Feb 07 12:14:10 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /calendarioMaterias with parameters array (  'module' => 'calendarioMaterias',  'action' => 'index',)
+Feb 07 12:14:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:10 symfony [info] {calendarioMateriasActions} Call "calendarioMateriasActions->executeIndex()"
+Feb 07 12:14:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Feb 07 12:14:10 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/calendarioMaterias/templates/indexSuccess.php"
+Feb 07 12:14:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Feb 07 12:14:10 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:10 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:10 symfony [info] {sfWebDebugLogger} Configuration 11.58 ms (10)
+Feb 07 12:14:10 symfony [info] {sfWebDebugLogger} Factories 7.32 ms (1)
+Feb 07 12:14:10 symfony [info] {sfWebDebugLogger} Action "calendarioMaterias/index" 27.00 ms (1)
+Feb 07 12:14:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Feb 07 12:14:10 symfony [info] {sfWebDebugLogger} View "Success" for "calendarioMaterias/index" 28.19 ms (1)
+Feb 07 12:14:10 symfony [info] {sfWebResponse} Send content (86270 o)
+Feb 07 12:14:12 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /facultad with parameters array (  'module' => 'facultad',  'action' => 'index',)
+Feb 07 12:14:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:12 symfony [info] {facultadActions} Call "facultadActions->executeIndex()"
+Feb 07 12:14:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:12 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:14:12 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/facultad/templates/indexSuccess.php"
+Feb 07 12:14:12 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:12 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:12 symfony [info] {sfWebDebugLogger} Configuration 3.21 ms (9)
+Feb 07 12:14:12 symfony [info] {sfWebDebugLogger} Factories 7.45 ms (1)
+Feb 07 12:14:12 symfony [info] {sfWebDebugLogger} Action "facultad/index" 13.18 ms (1)
+Feb 07 12:14:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:12 symfony [info] {sfWebDebugLogger} View "Success" for "facultad/index" 18.97 ms (1)
+Feb 07 12:14:12 symfony [info] {sfWebResponse} Send content (67723 o)
+Feb 07 12:14:13 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /preparacion with parameters array (  'module' => 'preparacion',  'action' => 'index',)
+Feb 07 12:14:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:13 symfony [info] {preparacionActions} Call "preparacionActions->executeIndex()"
+Feb 07 12:14:13 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p - ()
+Feb 07 12:14:13 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/indexSuccess.php"
+Feb 07 12:14:13 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:13 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:13 symfony [info] {sfWebDebugLogger} Configuration 3.41 ms (9)
+Feb 07 12:14:13 symfony [info] {sfWebDebugLogger} Factories 9.14 ms (1)
+Feb 07 12:14:13 symfony [info] {sfWebDebugLogger} Action "preparacion/index" 6.78 ms (1)
+Feb 07 12:14:13 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:13 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/index" 7.92 ms (1)
+Feb 07 12:14:13 symfony [info] {sfWebResponse} Send content (67370 o)
+Feb 07 12:14:14 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /alumno with parameters array (  'module' => 'alumno',  'action' => 'index',)
+Feb 07 12:14:14 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:14 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:14 symfony [info] {alumnoActions} Call "alumnoActions->executeIndex()"
+Feb 07 12:14:14 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:14 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a - ()
+Feb 07 12:14:14 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/alumno/templates/indexSuccess.php"
+Feb 07 12:14:14 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:14 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:14 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:14 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:14 symfony [info] {sfWebDebugLogger} Configuration 3.41 ms (9)
+Feb 07 12:14:14 symfony [info] {sfWebDebugLogger} Factories 7.29 ms (1)
+Feb 07 12:14:14 symfony [info] {sfWebDebugLogger} Action "alumno/index" 7.73 ms (1)
+Feb 07 12:14:14 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:14 symfony [info] {sfWebDebugLogger} View "Success" for "alumno/index" 7.48 ms (1)
+Feb 07 12:14:14 symfony [info] {sfWebResponse} Send content (67609 o)
+Feb 07 12:14:15 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Feb 07 12:14:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:15 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Feb 07 12:14:15 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/default/templates/indexSuccess.php"
+Feb 07 12:14:15 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:15 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:15 symfony [info] {sfWebDebugLogger} Configuration 2.79 ms (9)
+Feb 07 12:14:15 symfony [info] {sfWebDebugLogger} Factories 6.61 ms (1)
+Feb 07 12:14:15 symfony [info] {sfWebDebugLogger} Action "default/index" 0.21 ms (1)
+Feb 07 12:14:15 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 7.99 ms (1)
+Feb 07 12:14:15 symfony [info] {sfWebResponse} Send content (46657 o)
+Feb 07 12:14:15 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /preparacion with parameters array (  'module' => 'preparacion',  'action' => 'index',)
+Feb 07 12:14:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:15 symfony [info] {preparacionActions} Call "preparacionActions->executeIndex()"
+Feb 07 12:14:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p - ()
+Feb 07 12:14:15 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/indexSuccess.php"
+Feb 07 12:14:15 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:15 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:15 symfony [info] {sfWebDebugLogger} Configuration 2.80 ms (9)
+Feb 07 12:14:15 symfony [info] {sfWebDebugLogger} Factories 6.67 ms (1)
+Feb 07 12:14:15 symfony [info] {sfWebDebugLogger} Action "preparacion/index" 7.98 ms (1)
+Feb 07 12:14:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:15 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/index" 9.17 ms (1)
+Feb 07 12:14:15 symfony [info] {sfWebResponse} Send content (67362 o)
+Feb 07 12:14:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 12:14:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:56 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 12:14:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:14:56 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 12:14:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 12:14:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Feb 07 12:14:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 12:14:56 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:56 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:14:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:56 symfony [info] {sfWebDebugLogger} Configuration 2.81 ms (9)
+Feb 07 12:14:56 symfony [info] {sfWebDebugLogger} Factories 7.14 ms (1)
+Feb 07 12:14:56 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 19.71 ms (1)
+Feb 07 12:14:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (5)
+Feb 07 12:14:56 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 82.23 ms (1)
+Feb 07 12:14:56 symfony [info] {sfWebResponse} Send content (112110 o)
+Feb 07 12:14:58 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/traerMaterias with parameters array (  'module' => 'preparacion',  'action' => 'traerMaterias',)
+Feb 07 12:14:58 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:14:58 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:14:58 symfony [info] {preparacionActions} Call "preparacionActions->executeTraerMaterias()"
+Feb 07 12:14:58 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:14:58 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.facultad_id = ?) - (1)
+Feb 07 12:14:58 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:14:58 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:14:58 symfony [info] {sfWebDebugLogger} Configuration 2.93 ms (8)
+Feb 07 12:14:58 symfony [info] {sfWebDebugLogger} Factories 8.92 ms (1)
+Feb 07 12:14:58 symfony [info] {sfWebDebugLogger} Action "preparacion/traerMaterias" 11.99 ms (1)
+Feb 07 12:14:58 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:14:58 symfony [info] {sfWebDebugLogger} View "None" for "preparacion/traerMaterias" 0.01 ms (1)
+Feb 07 12:14:58 symfony [info] {sfWebResponse} Send content (278 o)
+Feb 07 12:15:07 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/saveAjax with parameters array (  'module' => 'preparacion',  'action' => 'saveAjax',)
+Feb 07 12:15:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:15:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:15:07 symfony [info] {preparacionActions} Call "preparacionActions->executeSaveAjax()"
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM materia m WHERE m.id = ? - (1)
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (2)
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM evaluacion e WHERE e.id = ? - (1)
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM materia m WHERE m.id = ? - (1)
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (2)
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM evaluacion e WHERE e.id = ? - (1)
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM materia m WHERE m.id = ? - (1)
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM docente d WHERE d.id = ? - (2)
+Feb 07 12:15:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM evaluacion e WHERE e.id = ? - (1)
+Feb 07 12:15:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:15:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:15:07 symfony [info] {sfWebDebugLogger} Configuration 2.85 ms (8)
+Feb 07 12:15:07 symfony [info] {sfWebDebugLogger} Factories 9.78 ms (1)
+Feb 07 12:15:07 symfony [info] {sfWebDebugLogger} Action "preparacion/saveAjax" 58.30 ms (1)
+Feb 07 12:15:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (10)
+Feb 07 12:15:07 symfony [info] {sfWebDebugLogger} View "None" for "preparacion/saveAjax" 0.01 ms (1)
+Feb 07 12:15:07 symfony [info] {sfWebResponse} Send content (199 o)
+Feb 07 12:15:09 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /preparacion with parameters array (  'module' => 'preparacion',  'action' => 'index',)
+Feb 07 12:15:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:15:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:15:09 symfony [info] {preparacionActions} Call "preparacionActions->executeIndex()"
+Feb 07 12:15:09 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:15:09 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.docente_id AS p__docente_id, p.evaluacion_id AS p__evaluacion_id, p.periodo AS p__periodo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p - ()
+Feb 07 12:15:09 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/indexSuccess.php"
+Feb 07 12:15:10 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:15:10 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:15:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:15:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:15:10 symfony [info] {sfWebDebugLogger} Configuration 3.48 ms (9)
+Feb 07 12:15:10 symfony [info] {sfWebDebugLogger} Factories 8.17 ms (1)
+Feb 07 12:15:10 symfony [info] {sfWebDebugLogger} Action "preparacion/index" 8.28 ms (1)
+Feb 07 12:15:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:15:10 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/index" 11.41 ms (1)
+Feb 07 12:15:10 symfony [info] {sfWebResponse} Send content (67378 o)
+Feb 07 12:47:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /preparacion with parameters array (  'module' => 'preparacion',  'action' => 'index',)
+Feb 07 12:47:22 symfony [info] {myUser} Automatic user logout due to timeout
+Feb 07 12:47:22 symfony [info] {myUser} User is not authenticated
+Feb 07 12:47:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:22 symfony [info] {preparacionActions} Call "preparacionActions->executeIndex()"
+Feb 07 12:47:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.md_user_id AS p__md_user_id, p.evaluacion_id AS p__evaluacion_id, p.periodo_id AS p__periodo_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p - ()
+Feb 07 12:47:22 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/indexSuccess.php"
+Feb 07 12:47:22 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:22 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:22 symfony [info] {sfWebDebugLogger} Configuration 258.10 ms (9)
+Feb 07 12:47:22 symfony [info] {sfWebDebugLogger} Factories 112.15 ms (1)
+Feb 07 12:47:22 symfony [info] {sfWebDebugLogger} Action "preparacion/index" 66.81 ms (1)
+Feb 07 12:47:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:47:22 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/index" 25.75 ms (1)
+Feb 07 12:47:22 symfony [info] {sfWebResponse} Send content (71003 o)
+Feb 07 12:47:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /alumno with parameters array (  'module' => 'alumno',  'action' => 'index',)
+Feb 07 12:47:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:23 symfony [info] {alumnoActions} Call "alumnoActions->executeIndex()"
+Feb 07 12:47:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:23 symfony [info] {Doctrine_Connection_Mysql} query : SELECT a.id AS a__id, a.nombre AS a__nombre, a.apellido AS a__apellido, a.telefono AS a__telefono, a.celular AS a__celular, a.direccion AS a__direccion, a.email AS a__email, a.sexo AS a__sexo, a.created_at AS a__created_at, a.updated_at AS a__updated_at FROM alumno a - ()
+Feb 07 12:47:23 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/alumno/templates/indexSuccess.php"
+Feb 07 12:47:23 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:23 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:23 symfony [info] {sfWebDebugLogger} Configuration 16.95 ms (10)
+Feb 07 12:47:23 symfony [info] {sfWebDebugLogger} Factories 11.07 ms (1)
+Feb 07 12:47:23 symfony [info] {sfWebDebugLogger} Action "alumno/index" 10.52 ms (1)
+Feb 07 12:47:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:47:23 symfony [info] {sfWebDebugLogger} View "Success" for "alumno/index" 13.79 ms (1)
+Feb 07 12:47:23 symfony [info] {sfWebResponse} Send content (67615 o)
+Feb 07 12:47:25 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /preparacion with parameters array (  'module' => 'preparacion',  'action' => 'index',)
+Feb 07 12:47:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:25 symfony [info] {preparacionActions} Call "preparacionActions->executeIndex()"
+Feb 07 12:47:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:25 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.md_user_id AS p__md_user_id, p.evaluacion_id AS p__evaluacion_id, p.periodo_id AS p__periodo_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p - ()
+Feb 07 12:47:25 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/indexSuccess.php"
+Feb 07 12:47:25 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:25 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:25 symfony [info] {sfWebDebugLogger} Configuration 3.27 ms (9)
+Feb 07 12:47:25 symfony [info] {sfWebDebugLogger} Factories 10.81 ms (1)
+Feb 07 12:47:25 symfony [info] {sfWebDebugLogger} Action "preparacion/index" 6.47 ms (1)
+Feb 07 12:47:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Feb 07 12:47:25 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/index" 9.90 ms (1)
+Feb 07 12:47:25 symfony [info] {sfWebResponse} Send content (67381 o)
+Feb 07 12:47:26 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /facultad with parameters array (  'module' => 'facultad',  'action' => 'index',)
+Feb 07 12:47:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:26 symfony [info] {facultadActions} Call "facultadActions->executeIndex()"
+Feb 07 12:47:26 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:26 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:47:26 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/facultad/templates/indexSuccess.php"
+Feb 07 12:47:26 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:26 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:26 symfony [info] {sfWebDebugLogger} Configuration 27.83 ms (10)
+Feb 07 12:47:26 symfony [info] {sfWebDebugLogger} Factories 17.91 ms (1)
+Feb 07 12:47:26 symfony [info] {sfWebDebugLogger} Action "facultad/index" 20.56 ms (1)
+Feb 07 12:47:26 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:47:26 symfony [info] {sfWebDebugLogger} View "Success" for "facultad/index" 43.24 ms (1)
+Feb 07 12:47:26 symfony [info] {sfWebResponse} Send content (67722 o)
+Feb 07 12:47:28 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /evaluacion with parameters array (  'module' => 'evaluacion',  'action' => 'index',)
+Feb 07 12:47:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:28 symfony [info] {evaluacionActions} Call "evaluacionActions->executeIndex()"
+Feb 07 12:47:28 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:28 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 12:47:28 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/evaluacion/templates/indexSuccess.php"
+Feb 07 12:47:28 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:28 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:28 symfony [info] {sfWebDebugLogger} Configuration 23.48 ms (10)
+Feb 07 12:47:28 symfony [info] {sfWebDebugLogger} Factories 10.18 ms (1)
+Feb 07 12:47:28 symfony [info] {sfWebDebugLogger} Action "evaluacion/index" 9.82 ms (1)
+Feb 07 12:47:28 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:47:28 symfony [info] {sfWebDebugLogger} View "Success" for "evaluacion/index" 25.80 ms (1)
+Feb 07 12:47:28 symfony [info] {sfWebResponse} Send content (67791 o)
+Feb 07 12:47:30 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /docente with parameters array (  'module' => 'docente',  'action' => 'index',)
+Feb 07 12:47:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:30 symfony [info] {docenteActions} Call "docenteActions->executeIndex()"
+Feb 07 12:47:30 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:30 symfony [info] {Doctrine_Connection_Mysql} query : SELECT d.id AS d__id, d.nombre AS d__nombre, d.created_at AS d__created_at, d.updated_at AS d__updated_at FROM docente d - ()
+Feb 07 12:47:30 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/docente/templates/indexSuccess.php"
+Feb 07 12:47:30 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:30 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:30 symfony [info] {sfWebDebugLogger} Configuration 13.32 ms (10)
+Feb 07 12:47:30 symfony [info] {sfWebDebugLogger} Factories 11.14 ms (1)
+Feb 07 12:47:30 symfony [info] {sfWebDebugLogger} Action "docente/index" 10.04 ms (1)
+Feb 07 12:47:30 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:47:30 symfony [info] {sfWebDebugLogger} View "Success" for "docente/index" 18.62 ms (1)
+Feb 07 12:47:30 symfony [info] {sfWebResponse} Send content (67716 o)
+Feb 07 12:47:31 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /materia with parameters array (  'module' => 'materia',  'action' => 'index',)
+Feb 07 12:47:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:31 symfony [info] {materiaActions} Call "materiaActions->executeIndex()"
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 12:47:31 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/materia/templates/indexSuccess.php"
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:31 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (4)
+Feb 07 12:47:31 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:31 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:31 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:31 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:31 symfony [info] {sfWebDebugLogger} Configuration 18.21 ms (10)
+Feb 07 12:47:31 symfony [info] {sfWebDebugLogger} Factories 13.48 ms (1)
+Feb 07 12:47:31 symfony [info] {sfWebDebugLogger} Action "materia/index" 10.41 ms (1)
+Feb 07 12:47:31 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (23)
+Feb 07 12:47:31 symfony [info] {sfWebDebugLogger} View "Success" for "materia/index" 116.36 ms (1)
+Feb 07 12:47:31 symfony [info] {sfWebResponse} Send content (351461 o)
+Feb 07 12:47:32 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /materia with parameters array (  'module' => 'materia',  'action' => 'index',)
+Feb 07 12:47:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:32 symfony [info] {materiaActions} Call "materiaActions->executeIndex()"
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 12:47:32 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/materia/templates/indexSuccess.php"
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (1)
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (2)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (3)
+Feb 07 12:47:33 symfony [info] {Doctrine_Connection_Statement} execute : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f WHERE (f.id = ?) - (4)
+Feb 07 12:47:33 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:33 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:33 symfony [info] {sfWebDebugLogger} Configuration 3.41 ms (9)
+Feb 07 12:47:33 symfony [info] {sfWebDebugLogger} Factories 8.73 ms (1)
+Feb 07 12:47:33 symfony [info] {sfWebDebugLogger} Action "materia/index" 12.21 ms (1)
+Feb 07 12:47:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (23)
+Feb 07 12:47:33 symfony [info] {sfWebDebugLogger} View "Success" for "materia/index" 98.75 ms (1)
+Feb 07 12:47:33 symfony [info] {sfWebResponse} Send content (351457 o)
+Feb 07 12:47:34 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /evaluacion with parameters array (  'module' => 'evaluacion',  'action' => 'index',)
+Feb 07 12:47:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:34 symfony [info] {evaluacionActions} Call "evaluacionActions->executeIndex()"
+Feb 07 12:47:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 12:47:34 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/evaluacion/templates/indexSuccess.php"
+Feb 07 12:47:34 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:34 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:34 symfony [info] {sfWebDebugLogger} Configuration 3.00 ms (9)
+Feb 07 12:47:34 symfony [info] {sfWebDebugLogger} Factories 6.64 ms (1)
+Feb 07 12:47:34 symfony [info] {sfWebDebugLogger} Action "evaluacion/index" 7.55 ms (1)
+Feb 07 12:47:34 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:47:34 symfony [info] {sfWebDebugLogger} View "Success" for "evaluacion/index" 18.28 ms (1)
+Feb 07 12:47:34 symfony [info] {sfWebResponse} Send content (67786 o)
+Feb 07 12:47:35 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /formaContacto with parameters array (  'module' => 'formaContacto',  'action' => 'index',)
+Feb 07 12:47:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:35 symfony [info] {formaContactoActions} Call "formaContactoActions->executeIndex()"
+Feb 07 12:47:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.nota AS f__nota, f.tiene_nota AS f__tiene_nota, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM forma_contacto f - ()
+Feb 07 12:47:35 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/formaContacto/templates/indexSuccess.php"
+Feb 07 12:47:35 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:35 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:35 symfony [info] {sfWebDebugLogger} Configuration 13.05 ms (10)
+Feb 07 12:47:35 symfony [info] {sfWebDebugLogger} Factories 6.68 ms (1)
+Feb 07 12:47:35 symfony [info] {sfWebDebugLogger} Action "formaContacto/index" 10.32 ms (1)
+Feb 07 12:47:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:47:35 symfony [info] {sfWebDebugLogger} View "Success" for "formaContacto/index" 24.04 ms (1)
+Feb 07 12:47:35 symfony [info] {sfWebResponse} Send content (68499 o)
+Feb 07 12:47:39 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /facultad with parameters array (  'module' => 'facultad',  'action' => 'index',)
+Feb 07 12:47:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:39 symfony [info] {facultadActions} Call "facultadActions->executeIndex()"
+Feb 07 12:47:40 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:40 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:47:40 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/facultad/templates/indexSuccess.php"
+Feb 07 12:47:40 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:40 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:40 symfony [info] {sfWebDebugLogger} Configuration 3.36 ms (9)
+Feb 07 12:47:40 symfony [info] {sfWebDebugLogger} Factories 6.96 ms (1)
+Feb 07 12:47:40 symfony [info] {sfWebDebugLogger} Action "facultad/index" 10.87 ms (1)
+Feb 07 12:47:40 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:47:40 symfony [info] {sfWebDebugLogger} View "Success" for "facultad/index" 18.23 ms (1)
+Feb 07 12:47:40 symfony [info] {sfWebResponse} Send content (67718 o)
+Feb 07 12:47:41 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /preparacion with parameters array (  'module' => 'preparacion',  'action' => 'index',)
+Feb 07 12:47:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:41 symfony [info] {preparacionActions} Call "preparacionActions->executeIndex()"
+Feb 07 12:47:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:47:41 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.md_user_id AS p__md_user_id, p.evaluacion_id AS p__evaluacion_id, p.periodo_id AS p__periodo_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p - ()
+Feb 07 12:47:41 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/indexSuccess.php"
+Feb 07 12:47:41 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:41 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:47:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:47:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:47:41 symfony [info] {sfWebDebugLogger} Configuration 3.52 ms (9)
+Feb 07 12:47:41 symfony [info] {sfWebDebugLogger} Factories 9.78 ms (1)
+Feb 07 12:47:41 symfony [info] {sfWebDebugLogger} Action "preparacion/index" 7.12 ms (1)
+Feb 07 12:47:41 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Feb 07 12:47:41 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/index" 7.62 ms (1)
+Feb 07 12:47:41 symfony [info] {sfWebResponse} Send content (67382 o)
+Feb 07 12:47:43 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 12:47:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:47:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:47:43 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 12:48:48 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 12:48:48 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:48:48 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:48:48 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 12:48:48 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:48:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:48:48 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 12:48:48 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 12:48:48 symfony [err] {InvalidArgumentException} Widget "docente_id" does not exist.
+Feb 07 12:48:48 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 07 12:48:48 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:48:48 symfony [info] {sfWebDebugLogger} Configuration 313.99 ms (9)
+Feb 07 12:48:48 symfony [info] {sfWebDebugLogger} Factories 106.62 ms (1)
+Feb 07 12:48:48 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 24.57 ms (1)
+Feb 07 12:48:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Feb 07 12:48:48 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 44.22 ms (1)
+Feb 07 12:48:56 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /facultad with parameters array (  'module' => 'facultad',  'action' => 'index',)
+Feb 07 12:48:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:48:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:48:56 symfony [info] {facultadActions} Call "facultadActions->executeIndex()"
+Feb 07 12:48:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:48:56 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:48:56 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/facultad/templates/indexSuccess.php"
+Feb 07 12:48:56 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:48:56 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:48:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:48:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:48:56 symfony [info] {sfWebDebugLogger} Configuration 12.20 ms (10)
+Feb 07 12:48:56 symfony [info] {sfWebDebugLogger} Factories 9.48 ms (1)
+Feb 07 12:48:56 symfony [info] {sfWebDebugLogger} Action "facultad/index" 6.73 ms (1)
+Feb 07 12:48:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Feb 07 12:48:56 symfony [info] {sfWebDebugLogger} View "Success" for "facultad/index" 20.99 ms (1)
+Feb 07 12:48:56 symfony [info] {sfWebResponse} Send content (67718 o)
+Feb 07 12:51:06 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /facultad with parameters array (  'module' => 'facultad',  'action' => 'index',)
+Feb 07 12:51:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:51:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:51:06 symfony [info] {facultadActions} Call "facultadActions->executeIndex()"
+Feb 07 12:51:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:51:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:51:06 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/facultad/templates/indexSuccess.php"
+Feb 07 12:51:06 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:51:06 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:51:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:51:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:51:06 symfony [info] {sfWebDebugLogger} Configuration 3.62 ms (9)
+Feb 07 12:51:06 symfony [info] {sfWebDebugLogger} Factories 9.21 ms (1)
+Feb 07 12:51:06 symfony [info] {sfWebDebugLogger} Action "facultad/index" 10.10 ms (1)
+Feb 07 12:51:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:51:06 symfony [info] {sfWebDebugLogger} View "Success" for "facultad/index" 21.01 ms (1)
+Feb 07 12:51:06 symfony [info] {sfWebResponse} Send content (67714 o)
+Feb 07 12:52:50 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /facultad with parameters array (  'module' => 'facultad',  'action' => 'index',)
+Feb 07 12:52:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:52:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:52:50 symfony [info] {facultadActions} Call "facultadActions->executeIndex()"
+Feb 07 12:52:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:52:50 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:52:50 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/facultad/templates/indexSuccess.php"
+Feb 07 12:52:50 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 12:52:50 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:52:50 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:52:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:52:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:52:50 symfony [info] {sfWebDebugLogger} Configuration 2.86 ms (9)
+Feb 07 12:52:50 symfony [info] {sfWebDebugLogger} Factories 8.27 ms (1)
+Feb 07 12:52:50 symfony [info] {sfWebDebugLogger} Action "facultad/index" 7.35 ms (1)
+Feb 07 12:52:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:52:50 symfony [info] {sfWebDebugLogger} View "Success" for "facultad/index" 16.48 ms (1)
+Feb 07 12:52:50 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 3.52 ms (1)
+Feb 07 12:52:50 symfony [info] {sfWebResponse} Send content (72031 o)
+Feb 07 12:54:17 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /facultad with parameters array (  'module' => 'facultad',  'action' => 'index',)
+Feb 07 12:54:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:54:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:54:17 symfony [info] {facultadActions} Call "facultadActions->executeIndex()"
+Feb 07 12:54:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:54:17 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 12:54:17 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/facultad/templates/indexSuccess.php"
+Feb 07 12:54:17 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 12:54:17 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:54:17 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:54:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:54:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:54:17 symfony [info] {sfWebDebugLogger} Configuration 3.30 ms (9)
+Feb 07 12:54:17 symfony [info] {sfWebDebugLogger} Factories 8.06 ms (1)
+Feb 07 12:54:17 symfony [info] {sfWebDebugLogger} Action "facultad/index" 6.88 ms (1)
+Feb 07 12:54:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:54:17 symfony [info] {sfWebDebugLogger} View "Success" for "facultad/index" 15.39 ms (1)
+Feb 07 12:54:17 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 3.82 ms (1)
+Feb 07 12:54:17 symfony [info] {sfWebResponse} Send content (72096 o)
+Feb 07 12:54:18 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 12:54:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:54:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:54:18 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 12:54:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:54:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 12:54:19 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 12:54:19 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 12:54:19 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:54:19 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:54:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:54:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:54:19 symfony [info] {sfWebDebugLogger} Configuration 12.02 ms (10)
+Feb 07 12:54:19 symfony [info] {sfWebDebugLogger} Factories 9.02 ms (1)
+Feb 07 12:54:19 symfony [info] {sfWebDebugLogger} Action "periodo/index" 7.10 ms (1)
+Feb 07 12:54:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:54:19 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 14.51 ms (1)
+Feb 07 12:54:19 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 3.86 ms (1)
+Feb 07 12:54:19 symfony [info] {sfWebResponse} Send content (72022 o)
+Feb 07 12:54:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/new with parameters array (  'module' => 'periodo',  'action' => 'new',)
+Feb 07 12:54:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:54:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:54:20 symfony [info] {periodoActions} Call "periodoActions->executeNew()"
+Feb 07 12:54:20 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/newSuccess.php"
+Feb 07 12:54:20 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/_form.php"
+Feb 07 12:54:20 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:54:20 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:54:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:54:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:54:20 symfony [info] {sfWebDebugLogger} Configuration 3.49 ms (9)
+Feb 07 12:54:20 symfony [info] {sfWebDebugLogger} Factories 8.64 ms (1)
+Feb 07 12:54:20 symfony [info] {sfWebDebugLogger} Action "periodo/new" 8.59 ms (1)
+Feb 07 12:54:20 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/new" 46.71 ms (1)
+Feb 07 12:54:20 symfony [info] {sfWebDebugLogger} Partial "periodo/_form" 36.82 ms (1)
+Feb 07 12:54:20 symfony [info] {sfWebResponse} Send content (75724 o)
+Feb 07 12:55:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/new with parameters array (  'module' => 'periodo',  'action' => 'new',)
+Feb 07 12:55:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:55:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:55:09 symfony [info] {periodoActions} Call "periodoActions->executeNew()"
+Feb 07 12:55:09 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/newSuccess.php"
+Feb 07 12:55:09 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/_form.php"
+Feb 07 12:55:09 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:55:09 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:55:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:55:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:55:09 symfony [info] {sfWebDebugLogger} Configuration 3.22 ms (9)
+Feb 07 12:55:09 symfony [info] {sfWebDebugLogger} Factories 7.24 ms (1)
+Feb 07 12:55:09 symfony [info] {sfWebDebugLogger} Action "periodo/new" 10.11 ms (1)
+Feb 07 12:55:09 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/new" 39.88 ms (1)
+Feb 07 12:55:09 symfony [info] {sfWebDebugLogger} Partial "periodo/_form" 30.10 ms (1)
+Feb 07 12:55:09 symfony [info] {sfWebResponse} Send content (69286 o)
+Feb 07 12:55:22 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/new with parameters array (  'module' => 'periodo',  'action' => 'new',)
+Feb 07 12:55:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:55:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:55:22 symfony [info] {periodoActions} Call "periodoActions->executeNew()"
+Feb 07 12:55:22 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/newSuccess.php"
+Feb 07 12:55:22 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/_form.php"
+Feb 07 12:55:22 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:55:22 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:55:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:55:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:55:22 symfony [info] {sfWebDebugLogger} Configuration 2.88 ms (9)
+Feb 07 12:55:22 symfony [info] {sfWebDebugLogger} Factories 10.60 ms (1)
+Feb 07 12:55:22 symfony [info] {sfWebDebugLogger} Action "periodo/new" 8.15 ms (1)
+Feb 07 12:55:22 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/new" 24.44 ms (1)
+Feb 07 12:55:22 symfony [info] {sfWebDebugLogger} Partial "periodo/_form" 16.61 ms (1)
+Feb 07 12:55:22 symfony [info] {sfWebResponse} Send content (63893 o)
+Feb 07 12:55:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/new with parameters array (  'module' => 'periodo',  'action' => 'new',)
+Feb 07 12:55:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:55:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:55:31 symfony [info] {periodoActions} Call "periodoActions->executeNew()"
+Feb 07 12:55:40 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/new with parameters array (  'module' => 'periodo',  'action' => 'new',)
+Feb 07 12:55:40 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:55:40 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:55:40 symfony [info] {periodoActions} Call "periodoActions->executeNew()"
+Feb 07 12:55:40 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/newSuccess.php"
+Feb 07 12:55:40 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/_form.php"
+Feb 07 12:55:40 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:55:40 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:55:40 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:55:40 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:55:40 symfony [info] {sfWebDebugLogger} Configuration 3.05 ms (9)
+Feb 07 12:55:40 symfony [info] {sfWebDebugLogger} Factories 7.09 ms (1)
+Feb 07 12:55:40 symfony [info] {sfWebDebugLogger} Action "periodo/new" 8.65 ms (1)
+Feb 07 12:55:40 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/new" 18.42 ms (1)
+Feb 07 12:55:40 symfony [info] {sfWebDebugLogger} Partial "periodo/_form" 11.09 ms (1)
+Feb 07 12:55:40 symfony [info] {sfWebResponse} Send content (62789 o)
+Feb 07 12:55:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/new with parameters array (  'module' => 'periodo',  'action' => 'new',)
+Feb 07 12:55:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:55:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:55:49 symfony [info] {periodoActions} Call "periodoActions->executeNew()"
+Feb 07 12:55:49 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/newSuccess.php"
+Feb 07 12:55:49 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/_form.php"
+Feb 07 12:55:49 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:55:49 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:55:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:55:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:55:49 symfony [info] {sfWebDebugLogger} Configuration 3.36 ms (9)
+Feb 07 12:55:49 symfony [info] {sfWebDebugLogger} Factories 9.19 ms (1)
+Feb 07 12:55:49 symfony [info] {sfWebDebugLogger} Action "periodo/new" 8.08 ms (1)
+Feb 07 12:55:49 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/new" 22.98 ms (1)
+Feb 07 12:55:49 symfony [info] {sfWebDebugLogger} Partial "periodo/_form" 14.43 ms (1)
+Feb 07 12:55:49 symfony [info] {sfWebResponse} Send content (62789 o)
+Feb 07 12:57:56 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/new with parameters array (  'module' => 'periodo',  'action' => 'new',)
+Feb 07 12:57:56 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:57:56 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:57:56 symfony [info] {periodoActions} Call "periodoActions->executeNew()"
+Feb 07 12:57:56 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/newSuccess.php"
+Feb 07 12:57:56 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/_form.php"
+Feb 07 12:57:56 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:57:56 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:57:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:57:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:57:56 symfony [info] {sfWebDebugLogger} Configuration 162.33 ms (10)
+Feb 07 12:57:56 symfony [info] {sfWebDebugLogger} Factories 7.45 ms (1)
+Feb 07 12:57:56 symfony [info] {sfWebDebugLogger} Action "periodo/new" 11.26 ms (1)
+Feb 07 12:57:56 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/new" 20.96 ms (1)
+Feb 07 12:57:56 symfony [info] {sfWebDebugLogger} Partial "periodo/_form" 12.07 ms (1)
+Feb 07 12:57:56 symfony [info] {sfWebResponse} Send content (62819 o)
+Feb 07 12:58:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/new with parameters array (  'module' => 'periodo',  'action' => 'new',)
+Feb 07 12:58:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:58:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:58:01 symfony [info] {periodoActions} Call "periodoActions->executeNew()"
+Feb 07 12:58:01 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/newSuccess.php"
+Feb 07 12:58:01 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/_form.php"
+Feb 07 12:58:01 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:58:01 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:58:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:58:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:58:01 symfony [info] {sfWebDebugLogger} Configuration 3.00 ms (9)
+Feb 07 12:58:01 symfony [info] {sfWebDebugLogger} Factories 7.96 ms (1)
+Feb 07 12:58:01 symfony [info] {sfWebDebugLogger} Action "periodo/new" 7.88 ms (1)
+Feb 07 12:58:01 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/new" 24.63 ms (1)
+Feb 07 12:58:01 symfony [info] {sfWebDebugLogger} Partial "periodo/_form" 15.44 ms (1)
+Feb 07 12:58:01 symfony [info] {sfWebResponse} Send content (62840 o)
+Feb 07 12:58:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/create with parameters array (  'module' => 'periodo',  'action' => 'create',)
+Feb 07 12:58:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:58:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:58:17 symfony [info] {periodoActions} Call "periodoActions->executeCreate()"
+Feb 07 12:58:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:58:17 symfony [info] {Doctrine_Connection_Statement} execute : INSERT INTO periodo (activo, inicio, fin, nombre, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?) - (0, 2011-02-07 00:00:00, 2011-02-26 00:00:00, Febrero 2011, 2011-02-07 12:58:17, 2011-02-07 12:58:17)
+Feb 07 12:58:17 symfony [info] {sfFrontWebController} Redirect to "http://local.institutomatematica.com/frontend_dev.php/periodo/edit/id/1"
+Feb 07 12:58:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Feb 07 12:58:17 symfony [info] {sfWebResponse} Send header "Location: http://local.institutomatematica.com/frontend_dev.php/periodo/edit/id/1"
+Feb 07 12:58:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} Configuration 2.86 ms (8)
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} Factories 8.13 ms (1)
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} Action "periodo/create" 40.49 ms (1)
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:58:17 symfony [info] {sfWebResponse} Send content (142 o)
+Feb 07 12:58:17 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /periodo/edit/id/1 with parameters array (  'module' => 'periodo',  'action' => 'edit',  'id' => '1',)
+Feb 07 12:58:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:58:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:58:17 symfony [info] {periodoActions} Call "periodoActions->executeEdit()"
+Feb 07 12:58:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:58:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p WHERE (p.id = ?) LIMIT 1 - (1)
+Feb 07 12:58:17 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/editSuccess.php"
+Feb 07 12:58:17 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/_form.php"
+Feb 07 12:58:17 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:58:17 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:58:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:58:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} Configuration 3.17 ms (9)
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} Factories 7.44 ms (1)
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} Action "periodo/edit" 14.98 ms (1)
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/edit" 22.41 ms (1)
+Feb 07 12:58:17 symfony [info] {sfWebDebugLogger} Partial "periodo/_form" 15.21 ms (1)
+Feb 07 12:58:17 symfony [info] {sfWebResponse} Send content (86263 o)
+Feb 07 12:58:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 12:58:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:58:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:58:22 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 12:58:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:58:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 12:58:22 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 12:58:22 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 12:58:22 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:58:22 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:58:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:58:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:58:22 symfony [info] {sfWebDebugLogger} Configuration 2.85 ms (9)
+Feb 07 12:58:22 symfony [info] {sfWebDebugLogger} Factories 8.45 ms (1)
+Feb 07 12:58:22 symfony [info] {sfWebDebugLogger} Action "periodo/index" 6.73 ms (1)
+Feb 07 12:58:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:58:22 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 17.29 ms (1)
+Feb 07 12:58:22 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 5.03 ms (1)
+Feb 07 12:58:22 symfony [info] {sfWebResponse} Send content (72302 o)
+Feb 07 12:59:07 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 12:59:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:59:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:59:07 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 12:59:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:59:07 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 12:59:07 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 12:59:07 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 12:59:07 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:59:07 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:59:07 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:59:07 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:59:07 symfony [info] {sfWebDebugLogger} Configuration 2.98 ms (9)
+Feb 07 12:59:07 symfony [info] {sfWebDebugLogger} Factories 7.68 ms (1)
+Feb 07 12:59:07 symfony [info] {sfWebDebugLogger} Action "periodo/index" 8.53 ms (1)
+Feb 07 12:59:07 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:59:07 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 16.35 ms (1)
+Feb 07 12:59:07 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 4.78 ms (1)
+Feb 07 12:59:07 symfony [info] {sfWebResponse} Send content (72214 o)
+Feb 07 12:59:15 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 12:59:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 12:59:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 12:59:15 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 12:59:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 12:59:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 12:59:15 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 12:59:15 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 12:59:15 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:59:15 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 12:59:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 12:59:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 12:59:15 symfony [info] {sfWebDebugLogger} Configuration 11.01 ms (9)
+Feb 07 12:59:15 symfony [info] {sfWebDebugLogger} Factories 16.09 ms (1)
+Feb 07 12:59:15 symfony [info] {sfWebDebugLogger} Action "periodo/index" 7.47 ms (1)
+Feb 07 12:59:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 12:59:15 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 15.72 ms (1)
+Feb 07 12:59:15 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 3.97 ms (1)
+Feb 07 12:59:16 symfony [info] {sfWebResponse} Send content (72216 o)
+Feb 07 13:00:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 13:00:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:00:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:00:23 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 13:00:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:00:23 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:00:23 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 13:00:23 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 13:00:23 symfony [notice] {sfWebDebugLogger}  Notice at /home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php on line 18 (A non well formed numeric value encountered)
+Feb 07 13:00:23 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:00:23 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:00:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:00:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:00:23 symfony [info] {sfWebDebugLogger} Configuration 144.84 ms (11)
+Feb 07 13:00:23 symfony [info] {sfWebDebugLogger} Factories 8.35 ms (1)
+Feb 07 13:00:23 symfony [info] {sfWebDebugLogger} Action "periodo/index" 7.22 ms (1)
+Feb 07 13:00:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 13:00:23 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 159.77 ms (1)
+Feb 07 13:00:23 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 4.79 ms (1)
+Feb 07 13:00:23 symfony [info] {sfWebResponse} Send content (72399 o)
+Feb 07 13:02:01 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 13:02:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:02:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:02:01 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 13:02:01 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:02:01 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:02:01 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 13:02:01 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 13:02:01 symfony [err] {InvalidArgumentException} Unable to load "dateHelper.php" helper in: SF_ROOT_DIR/apps/frontend/modules/periodo/lib/helper, SF_ROOT_DIR/apps/frontend/lib/helper, SF_ROOT_DIR/lib/helper, SF_ROOT_DIR/plugins/mastodontePlugin/lib/helper, SF_ROOT_DIR/plugins/mdAttributeDoctrinePlugin/lib/helper, SF_ROOT_DIR/plugins/mdMediaDoctrinePlugin/lib/helper, SF_ROOT_DIR/plugins/mdUserDoctrinePlugin/lib/helper, SF_ROOT_DIR/plugins/sfExtraWidgetsPlugin/lib/helper, SF_ROOT_DIR/lib/vendor/symfony/lib/helper.
+Feb 07 13:02:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 07 13:02:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:02:01 symfony [info] {sfWebDebugLogger} Configuration 2.88 ms (9)
+Feb 07 13:02:01 symfony [info] {sfWebDebugLogger} Factories 10.05 ms (1)
+Feb 07 13:02:01 symfony [info] {sfWebDebugLogger} Action "periodo/index" 6.65 ms (1)
+Feb 07 13:02:01 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 13:02:01 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 40.46 ms (1)
+Feb 07 13:02:01 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 4.95 ms (1)
+Feb 07 13:03:47 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 13:03:47 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:03:47 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:03:47 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 13:03:47 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:03:47 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:03:47 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 13:03:47 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 13:03:47 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:03:47 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:03:47 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:03:47 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:03:47 symfony [info] {sfWebDebugLogger} Configuration 2.98 ms (9)
+Feb 07 13:03:47 symfony [info] {sfWebDebugLogger} Factories 7.60 ms (1)
+Feb 07 13:03:47 symfony [info] {sfWebDebugLogger} Action "periodo/index" 6.87 ms (1)
+Feb 07 13:03:47 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 13:03:47 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 27.96 ms (1)
+Feb 07 13:03:47 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 5.19 ms (1)
+Feb 07 13:03:47 symfony [info] {sfWebResponse} Send content (72202 o)
+Feb 07 13:04:06 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 13:04:06 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:04:06 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:04:06 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 13:04:06 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:04:06 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:04:06 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 13:04:06 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 13:04:06 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:04:06 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:04:06 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:04:06 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:04:06 symfony [info] {sfWebDebugLogger} Configuration 2.93 ms (9)
+Feb 07 13:04:06 symfony [info] {sfWebDebugLogger} Factories 8.40 ms (1)
+Feb 07 13:04:06 symfony [info] {sfWebDebugLogger} Action "periodo/index" 6.70 ms (1)
+Feb 07 13:04:06 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Feb 07 13:04:06 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 18.60 ms (1)
+Feb 07 13:04:06 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 3.87 ms (1)
+Feb 07 13:04:06 symfony [info] {sfWebResponse} Send content (72204 o)
+Feb 07 13:04:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 13:04:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:04:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:04:42 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 13:04:42 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:04:42 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:04:42 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 13:04:42 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 13:04:42 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:04:42 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:04:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:04:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:04:42 symfony [info] {sfWebDebugLogger} Configuration 3.02 ms (9)
+Feb 07 13:04:42 symfony [info] {sfWebDebugLogger} Factories 17.04 ms (1)
+Feb 07 13:04:42 symfony [info] {sfWebDebugLogger} Action "periodo/index" 8.56 ms (1)
+Feb 07 13:04:42 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 13:04:42 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 20.71 ms (1)
+Feb 07 13:04:42 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 3.80 ms (1)
+Feb 07 13:04:42 symfony [info] {sfWebResponse} Send content (72208 o)
+Feb 07 13:05:02 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 13:05:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:05:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:05:02 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 13:05:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:05:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:05:02 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 13:05:02 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 13:05:02 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:05:02 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:05:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:05:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:05:02 symfony [info] {sfWebDebugLogger} Configuration 3.44 ms (9)
+Feb 07 13:05:02 symfony [info] {sfWebDebugLogger} Factories 7.43 ms (1)
+Feb 07 13:05:02 symfony [info] {sfWebDebugLogger} Action "periodo/index" 8.30 ms (1)
+Feb 07 13:05:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 13:05:02 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 21.57 ms (1)
+Feb 07 13:05:02 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 4.02 ms (1)
+Feb 07 13:05:02 symfony [info] {sfWebResponse} Send content (72204 o)
+Feb 07 13:05:19 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /periodo with parameters array (  'module' => 'periodo',  'action' => 'index',)
+Feb 07 13:05:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:05:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:05:19 symfony [info] {periodoActions} Call "periodoActions->executeIndex()"
+Feb 07 13:05:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:05:19 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:05:19 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/periodo/templates/indexSuccess.php"
+Feb 07 13:05:19 symfony [info] {sfPartialView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/_miniNav.php"
+Feb 07 13:05:19 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:05:19 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:05:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:05:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:05:19 symfony [info] {sfWebDebugLogger} Configuration 3.09 ms (9)
+Feb 07 13:05:19 symfony [info] {sfWebDebugLogger} Factories 7.18 ms (1)
+Feb 07 13:05:19 symfony [info] {sfWebDebugLogger} Action "periodo/index" 6.98 ms (1)
+Feb 07 13:05:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 13:05:19 symfony [info] {sfWebDebugLogger} View "Success" for "periodo/index" 23.13 ms (1)
+Feb 07 13:05:19 symfony [info] {sfWebDebugLogger} Partial "global/_miniNav" 5.08 ms (1)
+Feb 07 13:05:19 symfony [info] {sfWebResponse} Send content (72199 o)
+Feb 07 13:21:19 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'default',  'action' => 'index',)
+Feb 07 13:21:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:21:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:21:19 symfony [info] {defaultActions} Call "defaultActions->executeIndex()"
+Feb 07 13:21:19 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/default/templates/indexSuccess.php"
+Feb 07 13:21:19 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:21:19 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:21:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:21:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:21:19 symfony [info] {sfWebDebugLogger} Configuration 291.60 ms (9)
+Feb 07 13:21:19 symfony [info] {sfWebDebugLogger} Factories 108.10 ms (1)
+Feb 07 13:21:19 symfony [info] {sfWebDebugLogger} Action "default/index" 0.29 ms (1)
+Feb 07 13:21:19 symfony [info] {sfWebDebugLogger} View "Success" for "default/index" 12.54 ms (1)
+Feb 07 13:21:19 symfony [info] {sfWebResponse} Send content (52411 o)
+Feb 07 13:21:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /preparacion with parameters array (  'module' => 'preparacion',  'action' => 'index',)
+Feb 07 13:21:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:21:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:21:22 symfony [info] {preparacionActions} Call "preparacionActions->executeIndex()"
+Feb 07 13:21:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:21:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.materia_id AS p__materia_id, p.md_user_id AS p__md_user_id, p.evaluacion_id AS p__evaluacion_id, p.periodo_id AS p__periodo_id, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM preparacion p - ()
+Feb 07 13:21:22 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/indexSuccess.php"
+Feb 07 13:21:22 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:21:22 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:21:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:21:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:21:22 symfony [info] {sfWebDebugLogger} Configuration 11.87 ms (10)
+Feb 07 13:21:22 symfony [info] {sfWebDebugLogger} Factories 8.13 ms (1)
+Feb 07 13:21:22 symfony [info] {sfWebDebugLogger} Action "preparacion/index" 7.39 ms (1)
+Feb 07 13:21:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 13:21:22 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/index" 10.07 ms (1)
+Feb 07 13:21:22 symfony [info] {sfWebResponse} Send content (73282 o)
+Feb 07 13:21:24 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:21:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:21:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:21:24 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:21:24 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:21:24 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:21:24 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:21:24 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:21:24 symfony [err] {InvalidArgumentException} Widget "docente_id" does not exist.
+Feb 07 13:21:24 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Feb 07 13:21:24 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:21:24 symfony [info] {sfWebDebugLogger} Configuration 2.77 ms (9)
+Feb 07 13:21:24 symfony [info] {sfWebDebugLogger} Factories 6.89 ms (1)
+Feb 07 13:21:24 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 17.74 ms (1)
+Feb 07 13:21:24 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (3)
+Feb 07 13:21:24 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 41.66 ms (1)
+Feb 07 13:22:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:22:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:22:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:22:13 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:22:13 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:22:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:22:13 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:22:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:22:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:22:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:22:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:22:13 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:22:13 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:22:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:22:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:22:13 symfony [info] {sfWebDebugLogger} Configuration 2.79 ms (9)
+Feb 07 13:22:13 symfony [info] {sfWebDebugLogger} Factories 7.00 ms (1)
+Feb 07 13:22:13 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 16.59 ms (1)
+Feb 07 13:22:13 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (6)
+Feb 07 13:22:13 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 27.15 ms (1)
+Feb 07 13:22:13 symfony [info] {sfWebResponse} Send content (125726 o)
+Feb 07 13:22:19 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/traerMaterias with parameters array (  'module' => 'preparacion',  'action' => 'traerMaterias',)
+Feb 07 13:22:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:22:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:22:19 symfony [info] {preparacionActions} Call "preparacionActions->executeTraerMaterias()"
+Feb 07 13:22:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:22:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.facultad_id = ?) - (3)
+Feb 07 13:22:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:22:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:22:19 symfony [info] {sfWebDebugLogger} Configuration 2.55 ms (8)
+Feb 07 13:22:19 symfony [info] {sfWebDebugLogger} Factories 7.23 ms (1)
+Feb 07 13:22:19 symfony [info] {sfWebDebugLogger} Action "preparacion/traerMaterias" 13.23 ms (1)
+Feb 07 13:22:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.00 ms (2)
+Feb 07 13:22:19 symfony [info] {sfWebDebugLogger} View "None" for "preparacion/traerMaterias" 0.01 ms (1)
+Feb 07 13:22:19 symfony [info] {sfWebResponse} Send content (303 o)
+Feb 07 13:25:10 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:25:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:25:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:25:10 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:25:10 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:25:10 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:25:10 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:25:10 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:25:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:25:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:25:10 symfony [info] {sfWebDebugLogger} Configuration 3.14 ms (9)
+Feb 07 13:25:10 symfony [info] {sfWebDebugLogger} Factories 7.71 ms (1)
+Feb 07 13:25:10 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 21.29 ms (1)
+Feb 07 13:25:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Feb 07 13:25:10 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 44.76 ms (1)
+Feb 07 13:25:10 symfony [info] {sfWebResponse} Send content (179183 o)
+Feb 07 13:45:44 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:45:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:45:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:45:44 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:45:44 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:45:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:45:44 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:45:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:45:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:45:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:45:44 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:45:44 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:45:44 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:45:44 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:45:44 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:45:44 symfony [info] {sfWebDebugLogger} Configuration 136.87 ms (10)
+Feb 07 13:45:44 symfony [info] {sfWebDebugLogger} Factories 6.92 ms (1)
+Feb 07 13:45:44 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 20.23 ms (1)
+Feb 07 13:45:44 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (6)
+Feb 07 13:45:44 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 34.67 ms (1)
+Feb 07 13:45:44 symfony [info] {sfWebResponse} Send content (126723 o)
+Feb 07 13:46:00 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:46:00 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:46:00 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:46:00 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:46:00 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:46:00 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:46:00 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:46:00 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:46:00 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:46:00 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:46:00 symfony [info] {sfWebDebugLogger} Configuration 3.77 ms (9)
+Feb 07 13:46:00 symfony [info] {sfWebDebugLogger} Factories 8.25 ms (1)
+Feb 07 13:46:00 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 28.40 ms (1)
+Feb 07 13:46:00 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Feb 07 13:46:00 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 83.04 ms (1)
+Feb 07 13:46:00 symfony [info] {sfWebResponse} Send content (195933 o)
+Feb 07 13:46:33 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:46:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:46:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:46:33 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:46:33 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:46:33 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:46:33 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:46:33 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:46:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:46:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:46:33 symfony [info] {sfWebDebugLogger} Configuration 2.97 ms (9)
+Feb 07 13:46:33 symfony [info] {sfWebDebugLogger} Factories 19.63 ms (1)
+Feb 07 13:46:33 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 26.13 ms (1)
+Feb 07 13:46:33 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Feb 07 13:46:33 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 84.05 ms (1)
+Feb 07 13:46:33 symfony [info] {sfWebResponse} Send content (193949 o)
+Feb 07 13:47:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:47:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:47:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:47:49 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:47:49 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:47:49 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:47:49 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:47:49 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:47:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:47:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:47:49 symfony [info] {sfWebDebugLogger} Configuration 3.70 ms (9)
+Feb 07 13:47:49 symfony [info] {sfWebDebugLogger} Factories 7.68 ms (1)
+Feb 07 13:47:49 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 21.29 ms (1)
+Feb 07 13:47:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Feb 07 13:47:49 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 62.13 ms (1)
+Feb 07 13:47:49 symfony [info] {sfWebResponse} Send content (194614 o)
+Feb 07 13:49:13 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:49:13 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:49:13 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:49:13 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:49:13 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:49:13 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:49:13 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:49:13 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:49:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:49:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:49:13 symfony [info] {sfWebDebugLogger} Configuration 4.02 ms (9)
+Feb 07 13:49:13 symfony [info] {sfWebDebugLogger} Factories 9.02 ms (1)
+Feb 07 13:49:13 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 21.18 ms (1)
+Feb 07 13:49:13 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.04 ms (10)
+Feb 07 13:49:13 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 78.96 ms (1)
+Feb 07 13:49:13 symfony [info] {sfWebResponse} Send content (196610 o)
+Feb 07 13:50:08 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:50:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:50:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:50:08 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:50:08 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:50:08 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:50:08 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:50:08 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:50:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:50:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:50:08 symfony [info] {sfWebDebugLogger} Configuration 11.27 ms (9)
+Feb 07 13:50:08 symfony [info] {sfWebDebugLogger} Factories 7.37 ms (1)
+Feb 07 13:50:08 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 19.79 ms (1)
+Feb 07 13:50:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Feb 07 13:50:08 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 59.85 ms (1)
+Feb 07 13:50:08 symfony [info] {sfWebResponse} Send content (194521 o)
+Feb 07 13:51:57 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:51:57 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:51:57 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:51:57 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:51:57 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:51:57 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:51:57 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:51:57 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:51:57 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:51:57 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:51:57 symfony [info] {sfWebDebugLogger} Configuration 3.04 ms (9)
+Feb 07 13:51:57 symfony [info] {sfWebDebugLogger} Factories 8.18 ms (1)
+Feb 07 13:51:57 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 20.00 ms (1)
+Feb 07 13:51:57 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Feb 07 13:51:57 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 93.61 ms (1)
+Feb 07 13:51:57 symfony [info] {sfWebResponse} Send content (208116 o)
+Feb 07 13:52:34 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:52:34 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:52:34 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:52:34 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:52:34 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:52:34 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:52:34 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:52:34 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:52:34 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:52:34 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:52:34 symfony [info] {sfWebDebugLogger} Configuration 6.90 ms (9)
+Feb 07 13:52:34 symfony [info] {sfWebDebugLogger} Factories 15.24 ms (1)
+Feb 07 13:52:34 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 30.08 ms (1)
+Feb 07 13:52:34 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.03 ms (10)
+Feb 07 13:52:34 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 88.12 ms (1)
+Feb 07 13:52:34 symfony [info] {sfWebResponse} Send content (208491 o)
+Feb 07 13:55:36 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:55:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:55:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:55:36 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:55:36 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:55:36 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:55:36 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:55:36 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:55:36 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:55:36 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:55:36 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:55:36 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:55:36 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:55:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:55:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:55:36 symfony [info] {sfWebDebugLogger} Configuration 3.08 ms (9)
+Feb 07 13:55:36 symfony [info] {sfWebDebugLogger} Factories 6.90 ms (1)
+Feb 07 13:55:36 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 20.92 ms (1)
+Feb 07 13:55:36 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (6)
+Feb 07 13:55:36 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 43.59 ms (1)
+Feb 07 13:55:36 symfony [info] {sfWebResponse} Send content (140787 o)
+Feb 07 13:56:46 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:56:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:56:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:56:46 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:56:46 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:56:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:56:46 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:56:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:56:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:56:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:56:46 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:56:46 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:56:46 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:56:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:56:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:56:46 symfony [info] {sfWebDebugLogger} Configuration 2.94 ms (9)
+Feb 07 13:56:46 symfony [info] {sfWebDebugLogger} Factories 9.06 ms (1)
+Feb 07 13:56:46 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 23.84 ms (1)
+Feb 07 13:56:46 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (6)
+Feb 07 13:56:46 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 54.16 ms (1)
+Feb 07 13:56:46 symfony [info] {sfWebResponse} Send content (140802 o)
+Feb 07 13:57:02 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/new with parameters array (  'module' => 'preparacion',  'action' => 'new',)
+Feb 07 13:57:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:57:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:57:02 symfony [info] {preparacionActions} Call "preparacionActions->executeNew()"
+Feb 07 13:57:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:57:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT f.id AS f__id, f.nombre AS f__nombre, f.created_at AS f__created_at, f.updated_at AS f__updated_at FROM facultad f - ()
+Feb 07 13:57:02 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/modules/preparacion/templates/newSuccess.php"
+Feb 07 13:57:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m - ()
+Feb 07 13:57:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT m.id AS m__id, m.email AS m__email, m.super_admin AS m__super_admin, m.deleted_at AS m__deleted_at, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM md_user m - ()
+Feb 07 13:57:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT e.id AS e__id, e.nombre AS e__nombre, e.created_at AS e__created_at, e.updated_at AS e__updated_at FROM evaluacion e - ()
+Feb 07 13:57:02 symfony [info] {Doctrine_Connection_Mysql} query : SELECT p.id AS p__id, p.inicio AS p__inicio, p.fin AS p__fin, p.nombre AS p__nombre, p.activo AS p__activo, p.created_at AS p__created_at, p.updated_at AS p__updated_at FROM periodo p - ()
+Feb 07 13:57:02 symfony [info] {sfPHPView} Decorate content with "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:57:02 symfony [info] {sfPHPView} Render "/home/rodrigo/Mastodonte/personales/institutomatematica/trunk/apps/frontend/templates/layout.php"
+Feb 07 13:57:02 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:57:02 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:57:02 symfony [info] {sfWebDebugLogger} Configuration 3.09 ms (9)
+Feb 07 13:57:02 symfony [info] {sfWebDebugLogger} Factories 7.26 ms (1)
+Feb 07 13:57:02 symfony [info] {sfWebDebugLogger} Action "preparacion/new" 18.97 ms (1)
+Feb 07 13:57:02 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (6)
+Feb 07 13:57:02 symfony [info] {sfWebDebugLogger} View "Success" for "preparacion/new" 40.77 ms (1)
+Feb 07 13:57:02 symfony [info] {sfWebResponse} Send content (140817 o)
+Feb 07 13:57:41 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /preparacion/traerMaterias with parameters array (  'module' => 'preparacion',  'action' => 'traerMaterias',)
+Feb 07 13:57:41 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Feb 07 13:57:41 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Feb 07 13:57:41 symfony [info] {preparacionActions} Call "preparacionActions->executeTraerMaterias()"
+Feb 07 13:57:41 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Feb 07 13:57:41 symfony [info] {Doctrine_Connection_Statement} execute : SELECT m.id AS m__id, m.nombre AS m__nombre, m.facultad_id AS m__facultad_id, m.created_at AS m__created_at, m.updated_at AS m__updated_at FROM materia m WHERE (m.facultad_id = ?) - (1)
+Feb 07 13:57:41 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Feb 07 13:57:41 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Feb 07 13:57:41 symfony [info] {sfWebDebugLogger} Configuration 2.68 ms (8)
+Feb 07 13:57:41 symfony [info] {sfWebDebugLogger} Factories 7.75 ms (1)
+Feb 07 13:57:41 symfony [info] {sfWebDebugLogger} Action "preparacion/traerMaterias" 11.99 ms (1)
+Feb 07 13:57:41 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.01 ms (2)
+Feb 07 13:57:41 symfony [info] {sfWebDebugLogger} View "None" for "preparacion/traerMaterias" 0.01 ms (1)
+Feb 07 13:57:41 symfony [info] {sfWebResponse} Send content (278 o)

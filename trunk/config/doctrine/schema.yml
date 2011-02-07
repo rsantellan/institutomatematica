@@ -1,0 +1,255 @@
+alumno:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    nombre:
+      type: string(128)
+      notnull: true
+    apellido:
+      type: string(255)
+      notnull: true
+    telefono:
+      type: string(255)
+    celular:
+      type: string(255)
+    direccion:
+      type: string(255)
+    email:
+      type: string(255)
+    sexo:
+      type: enum
+      length: 2
+      values: ['M','F']
+      notnull: true
+
+facultad:
+  actAs: 
+    Timestampable: ~ 
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    nombre:
+      type: string(128)
+      notnull: true
+
+materia:
+  actAs: 
+    Timestampable: ~ 
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    nombre:
+      type: string(128)
+      notnull: true
+    facultad_id:
+      type: integer(4)
+  relations:
+    facultad: 
+      onDelete: CASCADE 
+      local: facultad_id
+      foreign: id
+
+#docente:
+#  actAs:
+#    Timestampable: ~
+#  columns:
+#    id:
+#      type: integer(4)
+#      primary: true
+#      autoincrement: true
+#    nombre:
+#      type: string(128)
+#      notnull: true
+
+evaluacion:
+  actAs: 
+    Timestampable: ~ 
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    nombre:
+      type: string(128)
+      notnull: true
+
+formaContacto:
+  actAs: 
+    Timestampable: ~ 
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    nombre:
+      type: string(128)
+      notnull: true
+    nota:
+      type: string(128)
+    tiene_nota:
+      type: integer(1)
+      default: '0'
+      notnull: true
+
+periodo:
+  actAs:
+    Timestampable: ~
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    inicio:
+      type: timestamp
+      notnull: true
+    fin:
+      type: timestamp
+      notnull: true
+    nombre:
+      type: string(128)
+    activo:
+      type: boolean
+      default: 0
+      notnull: true
+
+preparacion:
+  actAs: 
+    Timestampable: ~ 
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    materia_id:
+      type: integer(4)
+      notnull: true
+    md_user_id:
+      type: integer(4)
+      notnull: true
+    evaluacion_id:
+      type: integer(4)
+      notnull: true
+    periodo_id:
+      type: integer(4)
+      notnull: true
+    inicio:
+      type: timestamp
+      notnull: true
+    fin:
+      type: timestamp
+      notnull: true
+    costo_clase:
+      type: integer(4)
+      notnull: true
+      default: 0
+    costo_total:
+      type: integer(4)
+      notnull: true
+      default: 0
+    hora_inicio:
+      type: string(64)
+      notnull: true
+    hora_fin:
+      type: timestamp
+      notnull: string(64)
+  relations:
+    materia: 
+      onDelete: CASCADE 
+      local: materia_id
+      foreign: id
+    mdUser:
+      onDelete: CASCADE 
+      local: md_user_id
+      foreign: id
+    evaluacion: 
+      onDelete: CASCADE 
+      local: evaluacion_id
+      foreign: id
+    periodo:
+      onDelete: CASCADE
+      local: periodo_id
+      foreign: id
+      
+alumnoPreparacion:
+  actAs: 
+    Timestampable: ~ 
+  columns:
+    alumno_id:
+      type: integer(4)
+      notnull: true
+      primary: true
+    preparacion_id:
+      type: integer(4)
+      notnull: true
+      primary: true
+    forma_contacto_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    alumno: 
+      onDelete: CASCADE 
+      local: alumno_id
+      foreign: id
+    preparacion: 
+      onDelete: CASCADE 
+      local: preparacion_id
+      foreign: id
+    formaContacto: 
+      onDelete: CASCADE 
+      local: forma_contacto_id
+      foreign: id
+
+calendarioMaterias:
+  actAs: 
+    Timestampable: ~ 
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    day:
+      type: enum
+      values: ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo']
+    hour:
+      type: integer(4)
+      notnull: true
+    minutes:
+      type: integer(4)
+      notnull: true
+    preparacion_id:
+      type: integer(4)
+      notnull: true
+    duration:
+      type: integer(4)
+      notnull: true
+  relations:
+    preparacion: 
+      onDelete: CASCADE 
+      local: preparacion_id
+      foreign: id
+
+horarioEstudiante:
+  columns:
+    alumno_id:
+      type: integer(4)
+      notnull: true
+    horario_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    alumno: 
+      onDelete: CASCADE 
+      local: alumno_id
+      foreign: id
+    calendarioMaterias:
+      onDelete: CASCADE 
+      local: horario_id
+      foreign: id

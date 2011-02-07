@@ -25,7 +25,7 @@ test:
 all:
   .settings:
     # Form security secret (CSRF protection)
-    csrf_secret:            5c58dca77e0fc738e6dd8b35774d390b765e74bf
+    csrf_secret:            9bb8e507bd2a97bc683b9b761d70f4aa6e7f3b79
 
     # Output escaping settings
     escaping_strategy:      true
@@ -33,3 +33,5 @@ all:
 
     # Enable the database manager
     use_database:           true
+
+    default_culture:        es
