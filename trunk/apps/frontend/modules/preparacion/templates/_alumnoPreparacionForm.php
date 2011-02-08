@@ -8,9 +8,16 @@
 <br />
 <label>Que se contacto por: </label>
 <br/>
-  <select id="forma_contacto" name="forma_contacto">
+  <select id="forma_contacto" name="forma_contacto" onchange="showContactNote()"> 
     <?php foreach($formaContacto as $contacto):?>
-      <option value="<?php echo $contacto->getId() ?>"> <?php echo $contacto->getNombre() ?> </option>
+      <option value="<?php echo $contacto->getId() ?>" hasnote="<?php echo $contacto->getTieneNota() ?>" > <?php echo $contacto->getNombre() ?> </option>
     <?php endforeach;?>
   </select>
+  <div id="forma_contacto_note_div" style="display: none">
+    <input type="hidden" value="0" id="forma_contacto_has_note" name="forma_contacto_has_note"/>
+    
+    <label for="forma_contacto_note">Nota:</label>
+    <div class="clear"></div>
+    <textarea id="forma_contacto_note" name="forma_contacto_note"></textarea>
+  </div>
 </form>

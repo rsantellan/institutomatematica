@@ -8,6 +8,11 @@
  * @property integer $alumno_id
  * @property integer $preparacion_id
  * @property integer $forma_contacto_id
+ * @property string $nota_contacto
+ * @property boolean $pago
+ * @property boolean $pago_completo
+ * @property integer $monto_pago
+ * @property enum $resultado
  * @property alumno $alumno
  * @property preparacion $preparacion
  * @property formaContacto $formaContacto
@@ -15,12 +20,22 @@
  * @method integer           getAlumnoId()          Returns the current record's "alumno_id" value
  * @method integer           getPreparacionId()     Returns the current record's "preparacion_id" value
  * @method integer           getFormaContactoId()   Returns the current record's "forma_contacto_id" value
+ * @method string            getNotaContacto()      Returns the current record's "nota_contacto" value
+ * @method boolean           getPago()              Returns the current record's "pago" value
+ * @method boolean           getPagoCompleto()      Returns the current record's "pago_completo" value
+ * @method integer           getMontoPago()         Returns the current record's "monto_pago" value
+ * @method enum              getResultado()         Returns the current record's "resultado" value
  * @method alumno            getAlumno()            Returns the current record's "alumno" value
  * @method preparacion       getPreparacion()       Returns the current record's "preparacion" value
  * @method formaContacto     getFormaContacto()     Returns the current record's "formaContacto" value
  * @method alumnoPreparacion setAlumnoId()          Sets the current record's "alumno_id" value
  * @method alumnoPreparacion setPreparacionId()     Sets the current record's "preparacion_id" value
  * @method alumnoPreparacion setFormaContactoId()   Sets the current record's "forma_contacto_id" value
+ * @method alumnoPreparacion setNotaContacto()      Sets the current record's "nota_contacto" value
+ * @method alumnoPreparacion setPago()              Sets the current record's "pago" value
+ * @method alumnoPreparacion setPagoCompleto()      Sets the current record's "pago_completo" value
+ * @method alumnoPreparacion setMontoPago()         Sets the current record's "monto_pago" value
+ * @method alumnoPreparacion setResultado()         Sets the current record's "resultado" value
  * @method alumnoPreparacion setAlumno()            Sets the current record's "alumno" value
  * @method alumnoPreparacion setPreparacion()       Sets the current record's "preparacion" value
  * @method alumnoPreparacion setFormaContacto()     Sets the current record's "formaContacto" value
@@ -49,6 +64,39 @@ abstract class BasealumnoPreparacion extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              'length' => '4',
+             ));
+        $this->hasColumn('nota_contacto', 'string', 64, array(
+             'type' => 'string',
+             'length' => '64',
+             ));
+        $this->hasColumn('pago', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
+             'notnull' => true,
+             ));
+        $this->hasColumn('pago_completo', 'boolean', null, array(
+             'type' => 'boolean',
+             'default' => false,
+             'notnull' => true,
+             ));
+        $this->hasColumn('monto_pago', 'integer', 4, array(
+             'type' => 'integer',
+             'notnull' => true,
+             'default' => 0,
+             'length' => '4',
+             ));
+        $this->hasColumn('resultado', 'enum', 12, array(
+             'type' => 'enum',
+             'length' => 12,
+             'values' => 
+             array(
+              0 => 'desconocido',
+              1 => 'abandono',
+              2 => 'perdio',
+              3 => 'salvo',
+             ),
+             'notnull' => true,
+             'default' => 'desconocido',
              ));
     }
 

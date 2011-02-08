@@ -25,7 +25,7 @@ abstract class BasepreparacionForm extends BaseFormDoctrine
       'costo_clase'   => new sfWidgetFormInputText(),
       'costo_total'   => new sfWidgetFormInputText(),
       'hora_inicio'   => new sfWidgetFormInputText(),
-      'hora_fin'      => new sfWidgetFormDateTime(),
+      'hora_fin'      => new sfWidgetFormInputText(),
       'created_at'    => new sfWidgetFormDateTime(),
       'updated_at'    => new sfWidgetFormDateTime(),
     ));
@@ -41,7 +41,7 @@ abstract class BasepreparacionForm extends BaseFormDoctrine
       'costo_clase'   => new sfValidatorInteger(array('required' => false)),
       'costo_total'   => new sfValidatorInteger(array('required' => false)),
       'hora_inicio'   => new sfValidatorString(array('max_length' => 64)),
-      'hora_fin'      => new sfValidatorDateTime(),
+      'hora_fin'      => new sfValidatorString(array('max_length' => 64)),
       'created_at'    => new sfValidatorDateTime(),
       'updated_at'    => new sfValidatorDateTime(),
     ));

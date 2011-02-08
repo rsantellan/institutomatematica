@@ -18,6 +18,11 @@ abstract class BasealumnoPreparacionForm extends BaseFormDoctrine
       'alumno_id'         => new sfWidgetFormInputHidden(),
       'preparacion_id'    => new sfWidgetFormInputHidden(),
       'forma_contacto_id' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('formaContacto'), 'add_empty' => false)),
+      'nota_contacto'     => new sfWidgetFormInputText(),
+      'pago'              => new sfWidgetFormInputCheckbox(),
+      'pago_completo'     => new sfWidgetFormInputCheckbox(),
+      'monto_pago'        => new sfWidgetFormInputText(),
+      'resultado'         => new sfWidgetFormChoice(array('choices' => array('desconocido' => 'desconocido', 'abandono' => 'abandono', 'perdio' => 'perdio', 'salvo' => 'salvo'))),
       'created_at'        => new sfWidgetFormDateTime(),
       'updated_at'        => new sfWidgetFormDateTime(),
     ));
@@ -26,6 +31,11 @@ abstract class BasealumnoPreparacionForm extends BaseFormDoctrine
       'alumno_id'         => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'alumno_id', 'required' => false)),
       'preparacion_id'    => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'preparacion_id', 'required' => false)),
       'forma_contacto_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('formaContacto'))),
+      'nota_contacto'     => new sfValidatorString(array('max_length' => 64, 'required' => false)),
+      'pago'              => new sfValidatorBoolean(array('required' => false)),
+      'pago_completo'     => new sfValidatorBoolean(array('required' => false)),
+      'monto_pago'        => new sfValidatorInteger(array('required' => false)),
+      'resultado'         => new sfValidatorChoice(array('choices' => array('desconocido' => 'desconocido', 'abandono' => 'abandono', 'perdio' => 'perdio', 'salvo' => 'salvo'), 'required' => false)),
       'created_at'        => new sfValidatorDateTime(),
       'updated_at'        => new sfValidatorDateTime(),
     ));

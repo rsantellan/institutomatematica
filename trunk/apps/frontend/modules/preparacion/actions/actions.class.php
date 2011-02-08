@@ -140,6 +140,9 @@ class preparacionActions extends sfActions
 	
 	public function executeSaveAlumnoEnPreparacion(sfWebRequest $request)
 	{
+
+    $forma_contacto_has_note = $request->getParameter('forma_contacto_has_note');
+    $forma_contacto_note = $request->getParameter('forma_contacto_note');
 		$preparacion = Doctrine::getTable('preparacion')->find($request->getParameter('preparacion_id'));
 		$alumno = Doctrine::getTable('alumno')->find($request->getParameter('alumno_id'));
 		$formasContacto = Doctrine::getTable('formaContacto')->find($request->getParameter('forma_contacto'));
@@ -147,21 +150,30 @@ class preparacionActions extends sfActions
 		$alumnoPreparacion->setAlumno($alumno);
 		$alumnoPreparacion->setPreparacion($preparacion);
 		$alumnoPreparacion->setFormaContacto($formasContacto);
+    if($forma_contacto_has_note === "1")
+    {
+      $alumnoPreparacion->setNotaContacto($forma_contacto_note);
+    }    
 		$resultado = 0;
 		$alumnoId = $request->getParameter('alumno_id');
+    $salida = array();
 		try
 		{
 			$resultado = 1;
 			$alumnoPreparacion->save();
-			$body = $this->getPartial('preparacion/tableRowAlumnoPreparacion', array('alumnoPreparacion'=>$alumnoPreparacion));
-		}
+			$body = $this->getPartial('preparacion/tableRowAlumnoPreparacion', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
+      $bodyTelefono = $this->getPartial('preparacion/tableRowAlumnoPreparacionTelefono', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
+      $bodyEmail = $this->getPartial('preparacion/tableRowAlumnoPreparacionEmail', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
+      $salida ['bodyTelefono'] = $bodyTelefono;
+      $salida ['bodyEmail'] = $bodyEmail;
+    }
 		catch(Exception $e)
 		{
 			$resultado = 0;
 			$body = "Ups... Hubo un error...<br/><br/> <strong>Posiblemente el alumno ya existe en la preparacion!!</strong>";
 		}
 
-		$salida = array();
+		
 		$salida ['result'] = $resultado;
 		$salida ['body'] = $body;
 		$salida ['alumnoId'] = $alumnoId;

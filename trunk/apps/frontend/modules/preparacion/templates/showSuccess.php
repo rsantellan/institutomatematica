@@ -38,7 +38,7 @@
     </tr>
     <tr>
       <th>Docente:</th>
-      <td><?php echo $preparacion->getDocente()->getNombre() ?></td>
+      <td><?php echo $preparacion->getMdUser()->getEmail() ?></td>
     </tr>
     <tr>
       <th>Evaluacion:</th>
@@ -52,14 +52,44 @@
 </table>
 
 <hr />
-<h4>Alumnos que asisten a la preparacion </h4>
-<table id="tabla_main_alumno_preparacion" <?php if(count($preparacion->getAlumnoPreparacion()) == 0) echo "style:none";?>>
+
+<table id="tabla_main_alumno_preparacion_telefonos" style="display: none">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody id="tabla_alumno_preparacion_telefono">
+  <?php foreach($preparacion->getAlumnoPreparacion() as $alumnoPreparacion): ?>
+    <?php include_partial('preparacion/tableRowAlumnoPreparacionTelefono', array('alumnoPreparacion'=>$alumnoPreparacion)); ?>
+  <?php endforeach; ?>
+  </tbody>
+</table>
+
+<table id="tabla_main_alumno_preparacion_emails" style="display: none; text-align:center;">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Telefono</th>
+    </tr>
+  </thead>
+  <tbody id="tabla_alumno_preparacion_email">
+  <?php foreach($preparacion->getAlumnoPreparacion() as $alumnoPreparacion): ?>
+    <?php include_partial('preparacion/tableRowAlumnoPreparacionEmail', array('alumnoPreparacion'=>$alumnoPreparacion)); ?>
+  <?php endforeach; ?>
+  </tbody>
+</table>
+
+<h4>Alumnos que asisten a la preparacion (<a href="javascript:void(0)" onclick='showTelefonos()'>Telefonos del grupo</a>,<a href="javascript:void(0)" onclick='showEmails()'>Emails del grupo</a>)</h4>
+<table id="tabla_main_alumno_preparacion"  style="width: 100%;">
   <thead>
     <tr>
       <th>Nombre</th>
       <th>Celular</th>
-      <th>Telefono</th>
       <th>Forma de contacto</th>
+      <th>Quitar</th>
+      <th>Pagos</th>
     </tr>
   </thead>
   <tbody id="tabla_alumno_preparacion">

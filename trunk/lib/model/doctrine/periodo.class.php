@@ -12,4 +12,8 @@
  */
 class periodo extends Baseperiodo
 {
+  function __toString()
+  {
+    return $this->getNombre();
+  }
 }
