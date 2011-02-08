@@ -16,6 +16,32 @@ function showDialog(){
 
 }
 
+function showTelefonos()
+{
+  $("#tabla_main_alumno_preparacion_telefonos").dialog({
+			  modal: true,
+        width: 300,
+			  buttons: {
+				  Ok: function(){
+            $(this).dialog('close');
+					}
+			  }
+		  });  
+}
+
+function showEmails()
+{
+  $("#tabla_main_alumno_preparacion_emails").dialog({
+			  modal: true,
+        width: 500,
+			  buttons: {
+				  Ok: function(){
+            $(this).dialog('close');
+					}
+			  }
+		  });  
+}
+
 function showNewAlumnoDialog(){
   $("#new_alumno_form").dialog({
 			  modal: true,
@@ -24,6 +50,7 @@ function showNewAlumnoDialog(){
 						checkAlumno();
 				  },
 				  Cancelar: function(){
+            resetAlumnoForm();
 						$(this).dialog('close');
 					}
 			  }
@@ -39,6 +66,7 @@ function checkAlumno(){
     success: function(data){
         if(data.result == 1){
             saveAlumno();
+            resetAlumnoForm()
         }else{
 						$("#new_alumno_form").dialog( "close" );
             $("#alumnos_parecidos").html(data.body);
@@ -159,7 +187,6 @@ function agregarAlumnoAPreparacion(alumnoId){
 						$("#alumno_preparacion_form").dialog({
 							modal: true,
 							width: 340,
-							height: 270,
 							buttons: {
 								Salvar: function() {
 									saveAlumnoPreparacion();
@@ -176,6 +203,19 @@ function agregarAlumnoAPreparacion(alumnoId){
     return false;	
 }
 
+function showContactNote()
+{
+  if($("#forma_contacto option:selected").attr("hasnote")  == "1")
+  {
+    $("#forma_contacto_note_div").show();
+    $("#forma_contacto_has_note").val(1);
+  }
+  else
+  {
+    $("#forma_contacto_note_div").hide();
+    $("#forma_contacto_has_note").val(0);
+  }
+}
 
 function saveAlumnoPreparacion(){
 	$.ajax({
@@ -186,6 +226,11 @@ function saveAlumnoPreparacion(){
     success: function(data){
         if(data.result == 1){
 						$('#tabla_alumno_preparacion').append(data.body);
+            $('#tabla_alumno_preparacion tr').fadeIn("slow");
+            $('#tabla_alumno_preparacion_email').append(data.bodyEmail);
+            $('#tabla_alumno_preparacion_email tr').fadeIn("slow");
+            $('#tabla_alumno_preparacion_telefono').append(data.bodyTelefono);
+            $('#tabla_alumno_preparacion_telefono tr').fadeIn("slow");
 						var place = "#alumno_li_"+data.alumnoId;
 						$(place).remove();
 						$("#alumno_preparacion_form").dialog( "close" );
@@ -210,6 +255,7 @@ function saveAlumnoPreparacion(){
 function removeAlumnoFromPreparacion(element, alumnoId, preparacionId){
 	$("#confirmar_sacar_alumno").dialog({
 							modal: true,
+							width: 340,              
 							buttons: {
 								Eliminar: function() {
 									actualRemove($(element).attr('href'), alumnoId, preparacionId);
@@ -235,7 +281,11 @@ $.ajax({
     success: function(data){
         if(data.result == 1){
 						var place = "#tr_alumno_" + alumnoId;
-						$(place).remove();
+						$(place).fadeOut("slow", function() { $(this).remove(); });
+            var place = "#tr_alumno_telefono_" + alumnoId;
+						$(place).fadeOut("slow", function() { $(this).remove(); });
+            var place = "#tr_alumno_email_" + alumnoId;
+						$(place).fadeOut("slow", function() { $(this).remove(); });
         }
     }
 

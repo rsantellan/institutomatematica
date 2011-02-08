@@ -158,8 +158,8 @@ preparacion:
       type: string(64)
       notnull: true
     hora_fin:
-      type: timestamp
-      notnull: string(64)
+      type: string(64)
+      notnull: true
   relations:
     materia: 
       onDelete: CASCADE 
@@ -193,6 +193,26 @@ alumnoPreparacion:
     forma_contacto_id:
       type: integer(4)
       notnull: true
+    nota_contacto:
+      type: string(64)
+    pago:
+      type: boolean
+      default: false
+      notnull: true
+    pago_completo:
+      type: boolean
+      default: false
+      notnull: true
+    monto_pago:
+      type: integer(4)
+      notnull: true
+      default: 0
+    resultado:
+      type: enum
+      length: 12
+      values: ['desconocido','abandono','perdio', 'salvo']
+      notnull: true
+      default: 'desconocido'
   relations:
     alumno: 
       onDelete: CASCADE 

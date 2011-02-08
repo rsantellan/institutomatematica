@@ -1,5 +1,5 @@
 <?php include_partial("global/miniNav");?>
-<?php use_helper("Date");?>
+<?php //use_helper("Date");?>
 <h1>Periodos List</h1>
 
 <table>

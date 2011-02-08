@@ -12,12 +12,26 @@
  */
 class preparacion extends Basepreparacion
 {
-	public function __toString(){
+	public function __toString()
+  {
 		$period = $this->calculatePeriodo();
 		return $period.' - '.$this->getDocente()->getNombre().' - '.$this->getMateria()->getNombre();
 	}
 	
-	public function calculatePeriodo(){
+	public function calculatePeriodo()
+  {
 		return date('m / Y',mdBasicFunction::convert_datetime($this->getPeriodo()));
 	}
+  
+  public function retrieveStartHourTime()
+  {
+    $hours = explode(":", $this->getHoraInicio());
+    return $hours[0] . ":".$hours[1];
+  }
+  
+  public function retrieveFinishHourTime()
+  {
+    $hours = explode(":", $this->getHoraFin());
+    return $hours[0] . ":".$hours[1];
+  }  
 }

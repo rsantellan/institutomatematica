@@ -15,7 +15,7 @@
  * @property integer $costo_clase
  * @property integer $costo_total
  * @property string $hora_inicio
- * @property timestamp $hora_fin
+ * @property string $hora_fin
  * @property materia $materia
  * @property mdUser $mdUser
  * @property evaluacion $evaluacion
@@ -33,7 +33,7 @@
  * @method integer             getCostoClase()         Returns the current record's "costo_clase" value
  * @method integer             getCostoTotal()         Returns the current record's "costo_total" value
  * @method string              getHoraInicio()         Returns the current record's "hora_inicio" value
- * @method timestamp           getHoraFin()            Returns the current record's "hora_fin" value
+ * @method string              getHoraFin()            Returns the current record's "hora_fin" value
  * @method materia             getMateria()            Returns the current record's "materia" value
  * @method mdUser              getMdUser()             Returns the current record's "mdUser" value
  * @method evaluacion          getEvaluacion()         Returns the current record's "evaluacion" value
@@ -119,9 +119,10 @@ abstract class Basepreparacion extends sfDoctrineRecord
              'notnull' => true,
              'length' => '64',
              ));
-        $this->hasColumn('hora_fin', 'timestamp', null, array(
-             'type' => 'timestamp',
-             'notnull' => 'string(64)',
+        $this->hasColumn('hora_fin', 'string', 64, array(
+             'type' => 'string',
+             'notnull' => true,
+             'length' => '64',
              ));
     }
 

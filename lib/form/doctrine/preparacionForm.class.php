@@ -20,16 +20,24 @@ class preparacionForm extends BasepreparacionForm
         $this->widgetSchema['fin'] = new sfWidgetFormJQueryDate(array('culture' => 'es', 'date_widget' => new sfWidgetFormDate(array('format' => '%day% %month%
 %year%'))));
 
+        $minutes = array(0, 15, 30, 45);
+
         $this->widgetSchema['hora_inicio'] =  new sfWidgetFormTime(array(
+                                                          'minutes' => array_combine($minutes, $minutes),
                                                           'can_be_empty' => false,
                                                           'format'       => '%minute% : %hour%',
                                                           'label' => 'Hora de inicio (min / mes)'
                                                         ));
         
         $this->widgetSchema['hora_fin'] =  new sfWidgetFormTime(array(
+                                                          'minutes' => array_combine($minutes, $minutes),
                                                           'can_be_empty' => false,
                                                           'format'       => '%minute% : %hour%',
                                                           'label' => 'Hora de fin (min / mes)'
                                                         ));
+                                                        
+        $this->validatorSchema['hora_inicio'] = new sfValidatorTime();
+        
+        $this->validatorSchema['hora_fin'] = new sfValidatorTime();
   }
 }
