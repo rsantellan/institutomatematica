@@ -1,4 +1,9 @@
 <?php use_javascript('manageShowPreparacion.js') ?>
+<?php    
+  use_helper('mdAsset');
+  use_plugin_stylesheet('mastodontePlugin', '../js/fancybox/jquery.fancybox-1.3.1.css');
+  use_plugin_javascript('mastodontePlugin','fancybox/jquery.fancybox-1.3.1.pack.js','last');
+?>
 
 <div id="dialog-message" title="Información del alumno" style="display: none;">
 	<p>
@@ -57,7 +62,7 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Email</th>
+      <th>Telefono</th>
     </tr>
   </thead>
   <tbody id="tabla_alumno_preparacion_telefono">
@@ -71,7 +76,7 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Telefono</th>
+      <th>Email</th>
     </tr>
   </thead>
   <tbody id="tabla_alumno_preparacion_email">
@@ -81,7 +86,7 @@
   </tbody>
 </table>
 
-<h4>Alumnos que asisten a la preparacion (<a href="javascript:void(0)" onclick='showTelefonos()'>Telefonos del grupo</a>,<a href="javascript:void(0)" onclick='showEmails()'>Emails del grupo</a>)</h4>
+<h4>Alumnos que asisten a la preparacion (<a id="link_mostrar_tabla_telefonos" title="Telefono del grupo" href="#tabla_main_alumno_preparacion_telefonos">Telefonos del grupo</a>,<a id="link_mostrar_tabla_email" title="Emails del grupo" href="#tabla_main_alumno_preparacion_emails">Emails del grupo</a>)</h4>
 <table id="tabla_main_alumno_preparacion"  style="width: 100%;">
   <thead>
     <tr>
@@ -116,7 +121,9 @@
 
 <input type="hidden" id="alumno_preparacion_form_url" value="<?php echo url_for('preparacion/getAlumnoPreparacionForm')?>"/>
 
+<div id="pagos_form_container" title="Pagos del alumno" style="display:none">
 
+</div>
 
 
 

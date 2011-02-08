@@ -189,5 +189,39 @@ class preparacionActions extends sfActions
 		$salida ['result'] = 1;
 		$salida ['body'] = "ok";
 		return $this->renderText(json_encode($salida));
-	}	
+	}
+  
+  public function executeBringPagosForm(sfWebRequest $request)
+	{
+    $alumnoId =	$request->getParameter('alumnoId');
+		$preparacionId = $request->getParameter('preparacionId');
+		$alumnoPreparacion = Doctrine::getTable('alumnoPreparacion')->retrieveByAlumnoIdAndPreparacionId($alumnoId, $preparacionId);    
+    $form = new alumnoPreparacionPagosForm($alumnoPreparacion);
+    $body = $this->getPartial('preparacion/pagosForm', array('form'=>$form));
+    
+    return $this->renderText(mdBasicFunction::basic_json_response(true, array('body'=>$body)));
+  }
+  
+  public function executeProccessPagosForm(sfWebRequest $request)
+	{
+    $form = new alumnoPreparacionPagosForm();
+    $parameters = $request->getParameter($form->getName());
+    
+    $alumnoId =	$parameters['alumno_id'];
+		$preparacionId = $parameters['preparacion_id'];
+		$alumnoPreparacion = Doctrine::getTable('alumnoPreparacion')->retrieveByAlumnoIdAndPreparacionId($alumnoId, $preparacionId);        
+    $form = new alumnoPreparacionPagosForm($alumnoPreparacion);
+    $form->bind($parameters);
+    if($form->isValid())
+    {
+        $object = $form->save();
+        $image = "/images/".$object->retrievePaymentStatusInColor()."_flag.png";
+        return $this->renderText(mdBasicFunction::basic_json_response(true, array('alumnoId'=>$alumnoId, 'image'=>$image )));
+    }
+    else
+    {
+      
+    }
+    return $this->renderText(mdBasicFunction::basic_json_response(false, array()));
+  }
 }

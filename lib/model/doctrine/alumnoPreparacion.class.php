@@ -12,4 +12,11 @@
  */
 class alumnoPreparacion extends BasealumnoPreparacion
 {
+  
+  public function retrievePaymentStatusInColor()
+  {
+    if($this->getPagoCompleto()) return 'green';
+    if($this->getPago()) return 'yellow';
+    return 'red';
+  }
 }
