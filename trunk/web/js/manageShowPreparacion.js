@@ -1,5 +1,34 @@
 $(document).ready(function(){
   $('#button_buscar_apellido').click(buscarPorApellido);
+  $("a#link_mostrar_tabla_telefonos").fancybox({
+      autoDimensions: 'true',
+      centerOnScroll: 'true',
+      'onClosed'		: function() {
+            $("#tabla_main_alumno_preparacion_telefonos").hide();
+        },
+      'onStart'		: function() {
+            $("#tabla_main_alumno_preparacion_telefonos").show();
+        },
+       'scrolling'  : 'true',
+       'titlePosition'  : 'inside',
+       'transitionIn' : 'elastic',
+       'transitionOut' : 'elastic',
+    });
+    
+  $("a#link_mostrar_tabla_email").fancybox({
+      autoDimensions: 'true',
+      centerOnScroll: 'true',
+      'onClosed'		: function() {
+            $("#tabla_main_alumno_preparacion_emails").hide();
+        },
+      'onStart'		: function() {
+            $("#tabla_main_alumno_preparacion_emails").show();
+        },
+      'scrolling'  : 'true',
+      'titlePosition'  : 'inside',
+      'transitionIn' : 'elastic',
+      'transitionOut' : 'elastic',      
+    });    
 });
 
 function showDialog(){
@@ -14,19 +43,6 @@ function showDialog(){
 		  });
 
 
-}
-
-function showTelefonos()
-{
-  $("#tabla_main_alumno_preparacion_telefonos").dialog({
-			  modal: true,
-        width: 300,
-			  buttons: {
-				  Ok: function(){
-            $(this).dialog('close');
-					}
-			  }
-		  });  
 }
 
 function showEmails()
@@ -272,8 +288,8 @@ function removeAlumnoFromPreparacion(element, alumnoId, preparacionId){
 }
 
 function actualRemove(url, alumnoId, preparacionId){
-var dataString = 'alumnoId='+alumnoId+ '&preparacionId='+$('#preparacion_id').val();
-$.ajax({
+  var dataString = 'alumnoId='+alumnoId+ '&preparacionId='+$('#preparacion_id').val();
+  $.ajax({
     type: "POST",
     url: url,
     dataType: "json",
@@ -290,4 +306,60 @@ $.ajax({
     }
 
   });	
+}
+
+function changePaymentStatus(url, alumnoId)
+{
+  var dataString = 'alumnoId='+alumnoId+ '&preparacionId='+$('#preparacion_id').val();
+  $.ajax({
+    type: "POST",
+    url: url,
+    dataType: "json",
+    data: dataString,
+    success: function(data){
+        if(data.response == "OK"){
+          $("#pagos_form_container").html(data.options.body);
+          $("#pagos_form_container").dialog({
+							modal: true,
+							width: 400,              
+							buttons: {
+								Cancelar: function(){
+									$(this).dialog('close');
+								},
+                Guardar: function() {
+                  savePaymentForm();
+									//actualRemove($(element).attr('href'), alumnoId, preparacionId);
+									$(this).dialog('close');
+								}
+							}
+						});          
+        }
+    }
+
+  });  
+}
+
+function savePaymentForm()
+{
+
+	$.ajax({
+    type: "POST",
+    url: $('#pagos_complete_form').attr('action'),
+    dataType: "json",
+    data: $('#pagos_complete_form').serialize(),
+    success: function(data){
+        if(data.response == "OK"){
+            var image = "#payment_image_" + data.options.alumnoId;
+            $(image).attr("src", data.options.image);
+
+            //$("#new_alumno_form").dialog( "close" );
+            //agregarAlumnoAPreparacion(data.id);
+        }else{
+            
+        }
+        //$('#new_alumno_form').html(data.body);
+    }
+
+  });  
+ 
 }
