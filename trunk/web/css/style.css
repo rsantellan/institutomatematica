@@ -205,3 +205,35 @@ background:#fff
 {
 background:#FFFFE6
 }
+
+
+/* Estilos para aplicarles a todas las tablas*/
+
+.simple_table td
+{
+    text-align: center;
+}
+
+.simple_table_with_borders td
+{
+    border-right-style: dotted;
+    border-right-width: 0.4px;
+    border-right-color: #6666FF;
+    border-bottom-style: dotted;
+    border-bottom-width: 0.4px;
+    border-bottom-color: #6666FF;
+}
+
+.preparacion_container{
+    border: 1px solid green ;
+    width: 270px;
+    float:left;
+    margin-left: 10px;
+    height: 160px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.clear{
+	clear:both;
+}

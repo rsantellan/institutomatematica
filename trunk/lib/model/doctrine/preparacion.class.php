@@ -10,28 +10,52 @@
  * @author     Your name here
  * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
  */
-class preparacion extends Basepreparacion
-{
-	public function __toString()
-  {
-		$period = $this->calculatePeriodo();
-		return $period.' - '.$this->getDocente()->getNombre().' - '.$this->getMateria()->getNombre();
-	}
-	
-	public function calculatePeriodo()
-  {
-		return date('m / Y',mdBasicFunction::convert_datetime($this->getPeriodo()));
-	}
-  
-  public function retrieveStartHourTime()
-  {
-    $hours = explode(":", $this->getHoraInicio());
-    return $hours[0] . ":".$hours[1];
-  }
-  
-  public function retrieveFinishHourTime()
-  {
-    $hours = explode(":", $this->getHoraFin());
-    return $hours[0] . ":".$hours[1];
-  }  
+class preparacion extends Basepreparacion {
+
+    public function __toString() {
+        $period = $this->calculatePeriodo();
+        return $period . ' - ' . $this->getDocente()->getNombre() . ' - ' . $this->getMateria()->getNombre();
+    }
+
+    public function calculatePeriodo() {
+        return date('m / Y', mdBasicFunction::convert_datetime($this->getPeriodo()));
+    }
+
+    public function retrieveStartHourTime() {
+        $hours = explode(":", $this->getHoraInicio());
+        return $hours[0] . ":" . $hours[1];
+    }
+
+    public function retrieveFinishHourTime() {
+        $hours = explode(":", $this->getHoraFin());
+        return $hours[0] . ":" . $hours[1];
+    }
+
+    public function retrieveGlobalPaymentStatus() {
+        $lista = $this->getAlumnoPreparacion();
+        $salida = true;
+        $finish = true;
+        while (!$finish) {
+            $element = array_shift($lista);
+            if (!is_null($element)) {
+                $pay = $element->hasPay();
+                switch ($pay) {
+                    case alumnoPreparacion::MEDIOPAGO:
+                        $finish = true;
+                        $salida = false;
+                        break;
+                    case alumnoPreparacion::SINPAGO:
+                        $finish = true;
+                        $salida = false;
+                        break;
+                    default:
+                        break;
+                }
+            } else {
+                $finish = true;
+            }
+        }
+        return $salida;
+    }
+
 }
