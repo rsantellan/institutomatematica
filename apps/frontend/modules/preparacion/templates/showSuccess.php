@@ -1,10 +1,11 @@
 <?php use_javascript('manageShowPreparacion.js') ?>
 <?php    
   use_helper('mdAsset');
+  
   use_plugin_stylesheet('mastodontePlugin', '../js/fancybox/jquery.fancybox-1.3.1.css');
   use_plugin_javascript('mastodontePlugin','fancybox/jquery.fancybox-1.3.1.pack.js','last');
 ?>
-
+<?php use_plugin_javascript('mastodontePlugin','AjaxLoader.js','last'); ?>
 <div id="dialog-message" title="Información del alumno" style="display: none;">
 	<p>
 		Info
@@ -58,7 +59,7 @@
 
 <hr />
 
-<table id="tabla_main_alumno_preparacion_telefonos" style="display: none">
+<table id="tabla_main_alumno_preparacion_telefonos" class="simple_table simple_table_with_borders" style="display: none">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -72,7 +73,7 @@
   </tbody>
 </table>
 
-<table id="tabla_main_alumno_preparacion_emails" style="display: none; text-align:center;">
+<table id="tabla_main_alumno_preparacion_emails" class="simple_table simple_table_with_borders" style="display: none;">
   <thead>
     <tr>
       <th>Nombre</th>
@@ -86,13 +87,35 @@
   </tbody>
 </table>
 
-<h4>Alumnos que asisten a la preparacion (<a id="link_mostrar_tabla_telefonos" title="Telefono del grupo" href="#tabla_main_alumno_preparacion_telefonos">Telefonos del grupo</a>,<a id="link_mostrar_tabla_email" title="Emails del grupo" href="#tabla_main_alumno_preparacion_emails">Emails del grupo</a>)</h4>
-<table id="tabla_main_alumno_preparacion"  style="width: 100%;">
+<table id="tabla_main_alumno_preparacion_contacto" class="simple_table simple_table_with_borders" style="display: none;">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Forma de contacto</th>
+    </tr>
+  </thead>
+  <tbody id="tabla_alumno_preparacion_contacto">
+  <?php foreach($preparacion->getAlumnoPreparacion() as $alumnoPreparacion): ?>
+    <?php include_partial('preparacion/tableRowAlumnoPreparacionContacto', array('alumnoPreparacion'=>$alumnoPreparacion)); ?>
+  <?php endforeach; ?>
+  </tbody>
+</table>
+
+<h4>Alumnos que asisten a la preparacion</h4>
+<p>
+    <label style="font-size:40px;"> Mostrar:</label>
+    (
+    <a id="link_mostrar_tabla_telefonos" title="Telefono del grupo" href="#tabla_main_alumno_preparacion_telefonos">Telefonos del grupo</a>,
+    <a id="link_mostrar_tabla_email" title="Emails del grupo" href="#tabla_main_alumno_preparacion_emails">Emails del grupo</a>
+    <a id="link_mostrar_tabla_contactos" title="Emails del grupo" href="#tabla_main_alumno_preparacion_contacto">Forma de contacto del grupo</a>
+    )
+</p>
+
+<table id="tabla_main_alumno_preparacion" class="simple_table" style="width: 100%;">
   <thead>
     <tr>
       <th>Nombre</th>
       <th>Celular</th>
-      <th>Forma de contacto</th>
       <th>Quitar</th>
       <th>Pagos</th>
     </tr>
@@ -113,7 +136,7 @@
 <input type='text' id='text_buscar_apellido' /> 
 <input type="button" id='button_buscar_apellido' value='Buscar' urlToGo="<?php echo url_for('alumno/traerAlumnos')?>" /> 
 <br/>
-<input type="button" value="Insertar alumno" onclick="showNewAlumnoDialog()"/>
+<input type="button" value="Insertar alumno" onclick="showNewAlumnoDialog('<?php echo url_for("alumno/checkAlumno");?>')"/>
   </p>
 <ul id="alumnos_search_list">
 </ul>  

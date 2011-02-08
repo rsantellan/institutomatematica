@@ -12,9 +12,14 @@ class preparacionActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->preparacions = Doctrine::getTable('preparacion')
-      ->createQuery('a')
-      ->execute();
+    $query = Doctrine::getTable('preparacion')
+      ->retrieveAllPreparacionesByDate(true);
+    $this->pager = new sfDoctrinePager ( 'preparacion', 6 );
+
+    $this->pager->setQuery ( $query );
+    //$this->pager->setResultArray($list);
+    $this->pager->setPage($this->getRequestParameter('page',1));
+    $this->pager->init();
 
   }
 
@@ -141,8 +146,8 @@ class preparacionActions extends sfActions
 	public function executeSaveAlumnoEnPreparacion(sfWebRequest $request)
 	{
 
-    $forma_contacto_has_note = $request->getParameter('forma_contacto_has_note');
-    $forma_contacto_note = $request->getParameter('forma_contacto_note');
+                $forma_contacto_has_note = $request->getParameter('forma_contacto_has_note');
+                $forma_contacto_note = $request->getParameter('forma_contacto_note');
 		$preparacion = Doctrine::getTable('preparacion')->find($request->getParameter('preparacion_id'));
 		$alumno = Doctrine::getTable('alumno')->find($request->getParameter('alumno_id'));
 		$formasContacto = Doctrine::getTable('formaContacto')->find($request->getParameter('forma_contacto'));
@@ -150,34 +155,37 @@ class preparacionActions extends sfActions
 		$alumnoPreparacion->setAlumno($alumno);
 		$alumnoPreparacion->setPreparacion($preparacion);
 		$alumnoPreparacion->setFormaContacto($formasContacto);
-    if($forma_contacto_has_note === "1")
-    {
-      $alumnoPreparacion->setNotaContacto($forma_contacto_note);
-    }    
+                if($forma_contacto_has_note === "1")
+                {
+                  $alumnoPreparacion->setNotaContacto($forma_contacto_note);
+                }
 		$resultado = 0;
 		$alumnoId = $request->getParameter('alumno_id');
-    $salida = array();
+                $salida = array();
 		try
 		{
-			$resultado = 1;
-			$alumnoPreparacion->save();
-			$body = $this->getPartial('preparacion/tableRowAlumnoPreparacion', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
-      $bodyTelefono = $this->getPartial('preparacion/tableRowAlumnoPreparacionTelefono', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
-      $bodyEmail = $this->getPartial('preparacion/tableRowAlumnoPreparacionEmail', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
-      $salida ['bodyTelefono'] = $bodyTelefono;
-      $salida ['bodyEmail'] = $bodyEmail;
-    }
+                    $resultado = 1;
+                    $alumnoPreparacion->save();
+                    $body = $this->getPartial('preparacion/tableRowAlumnoPreparacion', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
+                    $bodyTelefono = $this->getPartial('preparacion/tableRowAlumnoPreparacionTelefono', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
+                    $bodyEmail = $this->getPartial('preparacion/tableRowAlumnoPreparacionEmail', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
+                    $bodyContacto = $this->getPartial('preparacion/tableRowAlumnoPreparacionContacto', array('alumnoPreparacion'=>$alumnoPreparacion, 'hidden' => true));
+                    $salida ['bodyTelefono'] = $bodyTelefono;
+                    $salida ['bodyEmail'] = $bodyEmail;
+                    $salida ['bodyContacto'] = $bodyContacto;
+                }
 		catch(Exception $e)
 		{
-			$resultado = 0;
-			$body = "Ups... Hubo un error...<br/><br/> <strong>Posiblemente el alumno ya existe en la preparacion!!</strong>";
+                    $resultado = 0;
+                    $body = "Ups... Hubo un error...<br/><br/> <strong>Posiblemente el alumno ya existe en la preparacion!!</strong>";
+                    return $this->renderText(mdBasicFunction::basic_json_response(false, array('body'=>$body)));
 		}
 
 		
 		$salida ['result'] = $resultado;
 		$salida ['body'] = $body;
 		$salida ['alumnoId'] = $alumnoId;
-		return $this->renderText(json_encode($salida));
+		return $this->renderText(mdBasicFunction::basic_json_response(true, $salida));
 	}
 	
 	public function executeQuitarAlumno(sfWebRequest $request)
@@ -186,9 +194,7 @@ class preparacionActions extends sfActions
 		$preparacionId = $request->getParameter('preparacionId');
 		$alumnoPreparacion = Doctrine::getTable('alumnoPreparacion')->retrieveByAlumnoIdAndPreparacionId($alumnoId, $preparacionId);
 		$alumnoPreparacion->delete();
-		$salida ['result'] = 1;
-		$salida ['body'] = "ok";
-		return $this->renderText(json_encode($salida));
+		return $this->renderText(mdBasicFunction::basic_json_response(true, array()));
 	}
   
   public function executeBringPagosForm(sfWebRequest $request)
