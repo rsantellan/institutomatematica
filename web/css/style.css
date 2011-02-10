@@ -213,7 +213,10 @@ background:#FFFFE6
 {
     text-align: center;
 }
-
+.simple_table img
+{
+  border: 0px !important;
+}
 .simple_table_with_borders td
 {
     border-right-style: dotted;
@@ -236,4 +239,24 @@ background:#FFFFE6
 
 .clear{
 	clear:both;
+}
+
+.simple_rounded
+{
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #FFEEDD;
+  border: 1px solid #FF8855;  
+  width: 270px;
+  float:left;
+  margin-left: 10px;
+  height: 160px;
+  margin-bottom: 10px;
+  text-align: center;  
+}
+
+.simple_rounded img
+{
+  border: 0px !important;
 }

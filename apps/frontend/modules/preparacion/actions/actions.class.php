@@ -35,7 +35,7 @@ class preparacionActions extends sfActions
     $this->form = new preparacionForm();
 
     $this->facultades = Doctrine::getTable('facultad')->findAll();
-
+    //$this->setLayout(ProjectConfiguration::getActive()->getTemplateDir('mdImageFileGallery', 'clean.php').'/clean');
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -106,9 +106,6 @@ class preparacionActions extends sfActions
 			$salida ['result'] = 0;
 			$salida ['body'] = $form->getFormattedErrors();
 		}
-		
-	  
-		
 		return $this->renderText(json_encode($salida));
   }
   

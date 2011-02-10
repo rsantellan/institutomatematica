@@ -5,6 +5,6 @@
       <td>
         <?php $id = $alumnoPreparacion->getAlumnoId()?>
         <?php $url = url_for('preparacion/bringPagosForm');?>
-        <?php echo image_tag($alumnoPreparacion->retrievePaymentStatusInColor().'_flag.png', array('id'=>'payment_image_'.$id,'onclick' => 'changePaymentStatus("'.$url.'",'.$id.')'));?>
+        <?php echo image_tag($alumnoPreparacion->retrievePaymentStatusInColor().'_ball.png', array('id'=>'payment_image_'.$id,'onclick' => 'changePaymentStatus("'.$url.'",'.$id.')'));?>
       </td>
 </tr>
