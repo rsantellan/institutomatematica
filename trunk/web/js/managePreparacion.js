@@ -1,5 +1,16 @@
 $(document).ready(function(){
   $('#materias').find('option').remove().end();
+  if($("#link_agregar_preparacion").length > 0)
+  {
+    $("#link_agregar_preparacion").fancybox({
+      'transitionIn'	:	'elastic',
+      'transitionOut'	:	'elastic',
+      'speedIn'		:	600, 
+      'speedOut'		:	200, 
+      'overlayShow'	:	false
+      });
+
+  }
 });
 
 function sendFormData(){

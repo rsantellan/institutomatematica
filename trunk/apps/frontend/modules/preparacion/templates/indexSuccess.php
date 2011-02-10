@@ -1,40 +1,16 @@
+<?php    
+  use_helper('mdAsset');
+  
+  use_plugin_stylesheet('mastodontePlugin', '../js/fancybox/jquery.fancybox-1.3.1.css');
+  use_plugin_javascript('mastodontePlugin','fancybox/jquery.fancybox-1.3.1.pack.js','last');
+?>
+<?php use_javascript('managePreparacion.js', 'last') ?>
 <h1>Preparacions List</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Materia</th>
-      <th>Docente</th>
-      <th>Evaluacion</th>
-      <th>Periodo</th>
-      <th>Costo por clase</th>
-      <th>Costo completo</th>
-      <th>Hora de inicio</th>
-      <th>Hora de fin</th>
-    </tr>
-  </thead>
-  <tbody>
-    <?php foreach($pager->getResults() as $preparacion): ?>
-    <tr>
-      <td><a href="<?php echo url_for('preparacion/show?id='.$preparacion->getId()) ?>"><?php echo $preparacion->getId() ?></a></td>
-      <td><?php echo $preparacion->getMateria()->getNombre() ?></td>
-      <td><?php echo $preparacion->getMdUser()->getEmail()?></td>
-      <td><?php echo $preparacion->getEvaluacion()->getNombre() ?></td>
-      <td><?php echo $preparacion->getPeriodo() ?></td>
-      <td><?php echo $preparacion->getCostoClase() ?></td>
-      <td><?php echo $preparacion->getCostoTotal() ?></td>
-      <td><?php echo $preparacion->retrieveStartHourTime() ?></td>
-      <td><?php echo $preparacion->retrieveFinishHourTime() ?></td>
-    </tr>
-    <?php endforeach; ?>
-  </tbody>
-</table>
 <div class="clear"></div>
-  <a href="<?php echo url_for('preparacion/new') ?>">New</a>
+  
 <div class="clear"></div>
   <?php foreach($pager->getResults() as $preparacion): ?>
-  <div class="preparacion_container">
+  <div class="simple_rounded">
       <a href="<?php echo url_for('preparacion/show?id='.$preparacion->getId()) ?>"><?php echo $preparacion->getMateria()->getNombre() ?></a>
       <div class="clear"></div>
       <strong><?php echo __('preparacion_profesor');?></strong><br/><?php echo $preparacion->getMdUser()->getEmail()?>
@@ -45,7 +21,8 @@
       <div class="clear"></div>
       <strong><?php echo __('preparacion_horario');?></strong><?php echo $preparacion->retrieveStartHourTime() ?> - <?php echo $preparacion->retrieveFinishHourTime() ?>
       <div class="clear"></div>
-      <strong><?php echo __('preparacion_estado pagos');?></strong><?php echo $preparacion->retrieveGlobalPaymentStatus();?>
+      <strong><?php echo __('preparacion_estado pagos');?></strong>
+        <?php echo image_tag($preparacion->retrieveGlobalPaymentStatus().'_ball.png');?>
   </div>
   <?php endforeach; ?>
 <div class="clear"></div>
@@ -70,3 +47,5 @@
         <?php echo link_to('>', 'preparacion/index?page=' . $pager->getNextPage()) ?>
     </div>
 <?php endif; ?>
+
+<a id="link_agregar_preparacion" class="" href="<?php echo url_for('preparacion/new') ?>">Agregar preparacion</a>

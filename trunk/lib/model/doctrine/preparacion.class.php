@@ -31,31 +31,37 @@ class preparacion extends Basepreparacion {
         return $hours[0] . ":" . $hours[1];
     }
 
+    private $globalPaymentStatus = NULL;
+    
+    private function retrieveLocalGlobalPaymentStatus()
+    {
+      if(is_null($this->globalPaymentStatus))
+      {
+        $this->globalPaymentStatus = alumnoPreparacionTable::retrieveAllPaymentsOfPreparation($this->getId());
+      }
+      return $this->globalPaymentStatus;
+    }
+    
     public function retrieveGlobalPaymentStatus() {
-        $lista = $this->getAlumnoPreparacion();
-        $salida = true;
-        $finish = true;
-        while (!$finish) {
-            $element = array_shift($lista);
-            if (!is_null($element)) {
-                $pay = $element->hasPay();
-                switch ($pay) {
-                    case alumnoPreparacion::MEDIOPAGO:
-                        $finish = true;
-                        $salida = false;
-                        break;
-                    case alumnoPreparacion::SINPAGO:
-                        $finish = true;
-                        $salida = false;
-                        break;
-                    default:
-                        break;
-                }
-            } else {
-                $finish = true;
-            }
+        $results = $this->retrieveLocalGlobalPaymentStatus();
+        $salida = array();
+        $hasRows = false;
+        $pago = 0;
+        $pagoCompleto = 0;
+        $total = 0;
+        foreach($results as $row)
+        {
+            $pago += (integer) $row['pago'];
+            $pagoCompleto += (integer) $row['pago_completo'];
+            $total++; 
+            $hasRows = true;
         }
-        return $salida;
+        if(!$hasRows || $pagoCompleto == $total) return "green";
+        if($pagoCompleto == 0 && $pago == 0)
+        {
+          return "red";
+        }
+        return "yellow";
     }
 
 }
