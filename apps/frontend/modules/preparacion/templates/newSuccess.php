@@ -1,5 +1,5 @@
-<?php use_javascript('managePreparacion.js') ?>
-<h1>New Preparacion</h1>
+<div class='new_preparacion_container'>
+<h1>Nueva Preparacion</h1>
 
   <label>Seleccione una facultad: </label>
   <select id="facultades" onchange="bringSubjects();" urlToGo="<?php echo url_for('preparacion/traerMaterias')?>">
@@ -11,7 +11,7 @@
 
 <?php //include_partial('form', array('form' => $form)) ?>
 <form action="<?php echo url_for('preparacion/saveAjax')?>" onsubmit="return false;" id="new_preparacion" method="POST">
-<ul>
+<ul class="no_bullets">
   <li>
         <?php echo $form['materia_id']->renderLabel();?>
         <?php echo $form['materia_id']->render(array('id'=>'materias'));?>
@@ -72,8 +72,9 @@
   </li>
 </ul>
 </form>
-<a href="<?php echo url_for('preparacion/index') ?>">Back to list</a>
+<a href="javascript:void(0)" onclick="$.fancybox.close();"><?php echo image_tag('../mastodontePlugin/images/iconos/delete.png', array('alt'=>'Cerrar'));?></a>
 <?php if (!$form->getObject()->isNew()): ?>
   &nbsp;
   <?php echo link_to('Delete', 'preparacion/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
 <?php endif; ?>
+</div>

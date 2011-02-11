@@ -9,43 +9,28 @@
 <div class="clear"></div>
   
 <div class="clear"></div>
+  <div id="preparaciones_big_container">
   <?php foreach($pager->getResults() as $preparacion): ?>
-  <div class="simple_rounded">
-      <a href="<?php echo url_for('preparacion/show?id='.$preparacion->getId()) ?>"><?php echo $preparacion->getMateria()->getNombre() ?></a>
-      <div class="clear"></div>
-      <strong><?php echo __('preparacion_profesor');?></strong><br/><?php echo $preparacion->getMdUser()->getEmail()?>
-      <div class="clear"></div>
-      <strong><?php echo __('preparacion_evaluacion');?></strong><?php echo $preparacion->getEvaluacion()->getNombre() ?>
-      <div class="clear"></div>
-      <strong><?php echo __('preparacion_periodo');?></strong><?php echo $preparacion->getPeriodo() ?>
-      <div class="clear"></div>
-      <strong><?php echo __('preparacion_horario');?></strong><?php echo $preparacion->retrieveStartHourTime() ?> - <?php echo $preparacion->retrieveFinishHourTime() ?>
-      <div class="clear"></div>
-      <strong><?php echo __('preparacion_estado pagos');?></strong>
-        <?php echo image_tag($preparacion->retrieveGlobalPaymentStatus().'_ball.png');?>
-  </div>
+      <?php include_partial("preparacion/preparacionBox", array("preparacion" => $preparacion));?>
   <?php endforeach; ?>
+  </div>
 <div class="clear"></div>
-<?php if ($pager->haveToPaginate()): ?>
-   <div id="md_pager">
-        <?php echo link_to('<', 'preparacion/index?page=' . $pager->getPreviousPage()) ?>
-        <?php $objectsCount = count($pager->getLinks()) ?>
-        <?php $objectsIndex = 0 ?>
-        <?php foreach ($pager->getLinks() as $page): ?>
-        <?php if ($page == $pager->getPage()): ?>
-                    <a class="current"><?php echo $page ?></a>
-        <?php else: ?>
-                        <a href="<?php echo url_for('preparacion/index?page=' . $page) ?>"><?php echo $page ?></a>
-        <?php endif; ?>
-        <?php
-            if ($objectsIndex < $objectsCount - 1) {
-                echo " | ";
-                $objectsIndex++;
-            }
-        ?>
-        <?php endforeach; ?>
-        <?php echo link_to('>', 'preparacion/index?page=' . $pager->getNextPage()) ?>
-    </div>
-<?php endif; ?>
-
-<a id="link_agregar_preparacion" class="" href="<?php echo url_for('preparacion/new') ?>">Agregar preparacion</a>
+<div class="controls">
+  <?php if ($pager->haveToPaginate()): ?>
+     <div id="md_pager">
+          <a href="<?php echo url_for('@preparacion?page=' . $pager->getPreviousPage());?>"><?php echo plugin_image_tag('mastodontePlugin','iconos/prev.png');?></a>
+          <?php $objectsCount = count($pager->getLinks()) ?>
+          <?php $objectsIndex = 0 ?>
+          <?php foreach ($pager->getLinks() as $page): ?>
+            <?php if ($page == $pager->getPage()): ?>
+                  <a class="current no_image"><?php echo $page ?></a>
+            <?php else: ?>
+                  <a class="no_image" href="<?php echo url_for('@preparacion?page=' . $page) ?>"><?php echo $page ?></a>
+            <?php endif; ?>
+          <?php endforeach; ?>
+          <a href="<?php echo url_for('@preparacion?page=' . $pager->getNextPage());?>"><?php echo plugin_image_tag('mastodontePlugin','iconos/next.png');?></a>
+      </div>
+  <?php endif; ?>
+  <hr/>
+  <a id="link_agregar_preparacion" class="" href="<?php echo url_for('preparacion/new') ?>">Agregar preparacion</a>
+</div>

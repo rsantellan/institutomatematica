@@ -26,10 +26,8 @@
     <?php echo $sf_content ?>
     </div>
     <div id="footer">
-        <p>Copyleft    </p>
-        <p><!--This theme is free for distriubtion,  so long as  link to openwebdesing.org and dubaiapartments.biz  stay on the theme--> Courtesy <a href="http://www.openwebdesign.org" target="_blank">Open
-Web Design</a><a href="http://www.dubaiapartments.biz" target="_blank"><img src="/images/spacer.gif" width="5" height="5" border="0"/></a>Thanks
-to <a href="http://www.dubaiapartments.biz/" target="_blank">Dubai Hotels</a> </p>
+        <p> </p>
+        <p> </p>
     </div>
 </div>
   </body>

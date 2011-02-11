@@ -251,12 +251,109 @@ background:#FFFFE6
   width: 270px;
   float:left;
   margin-left: 10px;
-  height: 160px;
+  height: 180px;
   margin-bottom: 10px;
   text-align: center;  
+}
+
+.new_simple_rounded
+{
+  background-color: #D6FFC2 !important;
 }
 
 .simple_rounded img
 {
   border: 0px !important;
+}
+
+.div_hidden_payment
+{
+  width: 400px;
+  height: 400px;
+}
+
+.no_bullets
+{
+  list-style-type:none;
+}
+
+.new_preparacion_container
+{
+  background-color : 	#FFFFD6;
+}
+
+.new_preparacion_container img
+{
+  border: 0px !important;
+}
+
+.controls
+{
+  text-align: center;
+}
+
+.controls img
+{
+  border: 0px !important;
+}
+
+#md_pager a
+{
+  padding: 10px;
+}
+
+#md_pager a.no_image
+{
+  vertical-align: top;
+  font-weight: bolder;
+}
+
+#link_agregar_preparacion
+{
+  text-decoration:none;
+  font-weight: bold;
+}
+
+.hidden_payment_fancy
+{
+  background-color : 	#FFFFD6;
+}
+
+.preparacion_basic_info_table_container
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+.preparacion_basic_info_table
+{
+  margin-left: auto;
+  margin-right: auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #FFFFE6;
+}
+
+.preparacion_basic_info_table img
+{
+  border: 0px !important;
+  margin-left: 20px;
+}
+
+.show_preparacion_mostrar_title
+{
+  text-align: center;
+}
+
+.alumno_search_box
+{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#tabla_alumno_preparacion a
+{
+  text-decoration:none;
 }

@@ -97,16 +97,14 @@ class preparacionActions extends sfActions
     $salida = array();
     if ($form->isValid())
     {
-			$salida ['result'] = 1;
       $preparacion = $form->save();
-      $salida ['body'] = "OK";
+      $body = $this->getPartial("preparacion/preparacionBox", array("preparacion" => $preparacion));
+      return $this->renderText(mdBasicFunction::basic_json_response(true, array('body' => $body)));
 		}
 		else
 		{
-			$salida ['result'] = 0;
-			$salida ['body'] = $form->getFormattedErrors();
+			return $this->renderText(mdBasicFunction::basic_json_response(false, array('errors'=>$form->getFormattedErrors())));
 		}
-		return $this->renderText(json_encode($salida));
   }
   
   public function executeTraerMaterias(sfWebRequest $request)
