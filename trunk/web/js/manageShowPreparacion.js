@@ -1,5 +1,15 @@
 $(document).ready(function(){
     $('#button_buscar_apellido').click(buscarPorApellido);
+    $("input:button").button();
+    $(".show_preparacion_mostrar_title a").button();
+    $(".remove_link").button({
+            icons: {
+                primary: "ui-icon-trash"
+            },
+            text: false
+        })
+    
+    
     $("a#link_mostrar_tabla_telefonos").fancybox({
         autoDimensions: 'true',
         centerOnScroll: 'true',
@@ -372,6 +382,9 @@ function changePaymentStatus(url, alumnoId)
                     }
                 });
             }
+        },
+        complete: function(data){
+          
         }
 
     });

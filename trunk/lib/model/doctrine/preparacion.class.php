@@ -42,6 +42,25 @@ class preparacion extends Basepreparacion {
       return $this->globalPaymentStatus;
     }
     
+    public function retrivePaymentsNumbers()
+    {
+      $results = $this->retrieveLocalGlobalPaymentStatus();
+      $salida = array();
+      $pago = 0;
+      $pagoCompleto = 0;
+      $total = 0;      
+      foreach($results as $row)
+      {
+          $pago += (integer) $row['pago'];
+          $pagoCompleto += (integer) $row['pago_completo'];
+          $total++; 
+      }
+      $salida['pago'] = $pago;
+      $salida['pagoCompleto'] = $pagoCompleto;
+      $salida['noPagos'] =  $total - $pagoCompleto - $pago;
+      return $salida;
+    }
+    
     public function retrieveGlobalPaymentStatus() {
         $results = $this->retrieveLocalGlobalPaymentStatus();
         $salida = array();

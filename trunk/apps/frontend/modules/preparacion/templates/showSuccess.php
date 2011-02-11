@@ -30,34 +30,30 @@
 <div id="alumnos_parecidos" title="No sera alguno de estos?" style="display: none">
 
 </div>
-<a href="<?php echo url_for('preparacion/edit?id='.$preparacion->getId()) ?>">Edit</a>
-&nbsp;
-<a href="<?php echo url_for('preparacion/index') ?>">List</a>
+<a href="<?php echo url_for('preparacion/index') ?>"><?php echo plugin_image_tag('mastodontePlugin','iconos/left.png', array('alt'=>'Lista', 'style'=> "border: 0px !important;"));?></a>
 
-<hr/>
 <input type="hidden" id="preparacion_id" value="<?php echo $preparacion->getId()?>"/>
-<table>
-  <tbody>
-    <tr>
-      <th>Materia:</th>
-      <td><?php echo $preparacion->getMateria()->getNombre() ?></td>
-    </tr>
-    <tr>
-      <th>Docente:</th>
-      <td><?php echo $preparacion->getMdUser()->getEmail() ?></td>
-    </tr>
-    <tr>
-      <th>Evaluacion:</th>
-      <td><?php echo $preparacion->getEvaluacion()->getNombre() ?></td>
-    </tr>
-    <tr>
-      <th>Periodo:</th>
-      <td><?php echo $preparacion->getPeriodo() ?></td>
-    </tr>
-  </tbody>
-</table>
 
-<hr />
+  <table class="preparacion_basic_info_table">
+    <tbody>
+      <tr>
+        <th>Materia:</th>
+        <td><?php echo $preparacion->getMateria()->getNombre() ?><a href="<?php echo url_for('preparacion/edit?id='.$preparacion->getId()) ?>"><?php echo plugin_image_tag('mastodontePlugin','iconos/edit.png', array('alt'=>'Editar'));?></a></td>
+      </tr>
+      <tr>
+        <th>Docente:</th>
+        <td><?php echo $preparacion->getMdUser()->getEmail() ?></td>
+      </tr>
+      <tr>
+        <th>Evaluacion:</th>
+        <td><?php echo $preparacion->getEvaluacion()->getNombre() ?></td>
+      </tr>
+      <tr>
+        <th>Periodo:</th>
+        <td><?php echo $preparacion->getPeriodo() ?></td>
+      </tr>
+    </tbody>
+  </table>
 
 <table id="tabla_main_alumno_preparacion_telefonos" class="simple_table simple_table_with_borders" style="display: none">
   <thead>
@@ -101,14 +97,12 @@
   </tbody>
 </table>
 
-<h4>Alumnos que asisten a la preparacion</h4>
-<p>
-    <label style="font-size:40px;"> Mostrar:</label>
-    (
+<p class="show_preparacion_mostrar_title">
+
     <a id="link_mostrar_tabla_telefonos" title="Telefono del grupo" href="#tabla_main_alumno_preparacion_telefonos">Telefonos del grupo</a>,
     <a id="link_mostrar_tabla_email" title="Emails del grupo" href="#tabla_main_alumno_preparacion_emails">Emails del grupo</a>
     <a id="link_mostrar_tabla_contactos" title="Emails del grupo" href="#tabla_main_alumno_preparacion_contacto">Forma de contacto del grupo</a>
-    )
+    
 </p>
 
 <table id="tabla_main_alumno_preparacion" class="simple_table" style="width: 100%;">
@@ -126,28 +120,23 @@
   <?php endforeach; ?>
   </tbody>
 </table>
-<hr />
+<span class="alumno_search_box">
   <h4>Busque un alumno por nombre, apellido o ingrese uno nuevo</h4>
   <p>
-  
-  Nombre:
-<input type='text' id='text_buscar_nombre' />   
-  Apellido: 
-<input type='text' id='text_buscar_apellido' /> 
-<input type="button" id='button_buscar_apellido' value='Buscar' urlToGo="<?php echo url_for('alumno/traerAlumnos')?>" /> 
-<br/>
-<input type="button" value="Insertar alumno" onclick="showNewAlumnoDialog('<?php echo url_for("alumno/checkAlumno");?>')"/>
+    Nombre:
+    <input type='text' id='text_buscar_nombre' />   
+    Apellido: 
+    <input type='text' id='text_buscar_apellido' /> 
+    <input type="button" id='button_buscar_apellido' value='Buscar' urlToGo="<?php echo url_for('alumno/traerAlumnos')?>" /> 
+    <br/>
+    <input type="button" value="Insertar alumno" onclick="showNewAlumnoDialog('<?php echo url_for("alumno/checkAlumno");?>')"/>
   </p>
-<ul id="alumnos_search_list">
-</ul>  
-<hr/>
-
-<input type="hidden" id="alumno_preparacion_form_url" value="<?php echo url_for('preparacion/getAlumnoPreparacionForm')?>"/>
-
-<div id="pagos_form_container" title="Pagos del alumno" style="display:none">
-
-</div>
-
+  <ul id="alumnos_search_list">
+  </ul>  
+  <input type="hidden" id="alumno_preparacion_form_url" value="<?php echo url_for('preparacion/getAlumnoPreparacionForm')?>"/>
+  <div id="pagos_form_container" title="Pagos del alumno" style="display:none">
+  </div>
+</span>
 
 
 

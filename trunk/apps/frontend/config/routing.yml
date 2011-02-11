@@ -1,5 +1,12 @@
 # You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
+preparacion:
+  url:   /preparacion.html
+  param: { module: preparacion, action: index }
+
+#preparacion_page:
+#  url:   /preparacion/:page
+#  param: { module: preparacion, action: index }
 
 # default rules
 homepage:

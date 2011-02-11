@@ -6,12 +6,31 @@ $(document).ready(function(){
       'transitionIn'	:	'elastic',
       'transitionOut'	:	'elastic',
       'speedIn'		:	600, 
-      'speedOut'		:	200, 
-      'overlayShow'	:	false
+      'speedOut'		:	200,
+      'hideOnContentClick' : false,
+      'overlayOpacity' : 0.6,
+      'onComplete' : function(){
+                        $('#materias').find('option').remove().end();
+                      }
       });
 
   }
+
+  activatePaymentsFancyboxs();
+  
 });
+
+function activatePaymentsFancyboxs()
+{
+  $("a.link_hidden_payment").fancybox({
+      'centerOnScroll' : true,
+      'transitionIn'	:	'elastic',
+      'transitionOut'	:	'elastic',
+      'speedIn'		:	600, 
+      'speedOut'		:	200,
+      'overlayOpacity' : 0.6
+    });  
+}
 
 function sendFormData(){
  $.ajax({
@@ -20,13 +39,20 @@ function sendFormData(){
     dataType: "json",
     data: $('#new_preparacion').serialize(),
     success: function(data){
-        if(data.result == 1){
-            $("#form_errors").html(data.body);
-        }else{
-            var x =0;
-            for(x=0;x<data.body.length;x++){
-              $("#form_errors").append(data.body[x]);
-            }
+        if(data.response == "OK")
+        {
+          $.fancybox.close();
+          var place = "#preparaciones_big_container .preparaciones_small_container:last";
+          $("#preparaciones_big_container").prepend(data.options.body);
+          $(place).fadeOut("slow", function() {
+                    $(this).remove();
+                });
+          $("#preparaciones_big_container .preparaciones_small_container:first .simple_rounded").addClass('new_simple_rounded');
+          activatePaymentsFancyboxs();
+        }
+        else
+        {
+          
         }
     }
 
