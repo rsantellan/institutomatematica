@@ -261,6 +261,19 @@ background:#FFFFE6
   background-color: #D6FFC2 !important;
 }
 
+.preparaciones_small_container .terminado
+{
+  background-color: #000052 !important;
+  color: white !important;
+  
+}
+
+.preparaciones_small_container .terminado a
+{
+  color: #4DDB4D !important;
+  
+}
+
 .simple_rounded img
 {
   border: 0px !important;
@@ -356,4 +369,35 @@ background:#FFFFE6
 #tabla_alumno_preparacion a
 {
   text-decoration:none;
+}
+
+ul#alumnos_search_list li
+{
+  margin-bottom: 3px;
+}
+
+ul.preparacion_form_ul
+{
+  list-style-type: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  background-color: #FFFFE6;
+}
+
+ul.preparacion_form_ul li
+{
+  background-color: #FFFFE6;
+}
+
+#form_alumno ul
+{
+  list-style-type: none;
+}
+
+#form_alumno ul li label
+{
+  font-size: 22px;
+  font-weight: bold;
 }

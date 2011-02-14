@@ -1,5 +1,10 @@
+<?php
+  $class = "simple_rounded";
+  if($preparacion->hasFinish())
+    $class .= " terminado";
+?>
 <div class="preparaciones_small_container" <?php if(isset($hidden)) echo 'style="display:none"';?> >
-    <div class="simple_rounded">
+    <div class="<?php echo $class; ?>">
         <a href="<?php echo url_for('preparacion/show?id='.$preparacion->getId()) ?>"><?php echo $preparacion->getMateria()->getNombre() ?></a>
         <div class="clear"></div>
         <strong><?php echo __('preparacion_profesor');?></strong><br/><?php echo $preparacion->getMdUser()->getEmail()?>
