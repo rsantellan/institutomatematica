@@ -83,4 +83,17 @@ class preparacion extends Basepreparacion {
         return "yellow";
     }
 
+    public function hasFinish()
+    {
+        $time = time();
+        $fin = mdBasicFunction::convert_datetime($this->getFin());
+        //print_r($time);
+        //print_r("<br/>");
+        //print_r($fin);
+        if($time >= $fin)
+        {
+          return true;
+        }
+        return false;
+    }
 }

@@ -2,12 +2,7 @@ $(document).ready(function(){
     $('#button_buscar_apellido').click(buscarPorApellido);
     $("input:button").button();
     $(".show_preparacion_mostrar_title a").button();
-    $(".remove_link").button({
-            icons: {
-                primary: "ui-icon-trash"
-            },
-            text: false
-        })
+    changeRemoveToIcon();
     
     
     $("a#link_mostrar_tabla_telefonos").fancybox({
@@ -56,6 +51,15 @@ $(document).ready(function(){
     }); 
 });
 
+function changeRemoveToIcon()
+{
+     $(".remove_link").button({
+            icons: {
+                primary: "ui-icon-trash"
+            },
+            text: false
+        }); 
+}
 function showDialog(){
   
     $("#dialog-message").dialog({
@@ -172,6 +176,7 @@ function saveAlumno(){
 }
 
 function showAlumno(element, id){
+    AjaxLoader.getInstance().show();
     $.ajax({
         type: "GET",
         url: $(element).attr('href'),
@@ -184,6 +189,9 @@ function showAlumno(element, id){
         success: function(data){
             $("#dialog-message").html(data.body);
             showDialog();
+        },
+        complete: function(data){
+          AjaxLoader.getInstance().hide();
         }
 
     });
@@ -206,6 +214,7 @@ function buscarPorApellido(){
                     var aux = data.list[x];
                     $("#alumnos_search_list").append(aux.body);
                 }
+                $("#alumnos_search_list li input:button").button();
             }else{
 							
             }
@@ -222,6 +231,7 @@ function buscarPorApellido(){
 
 function agregarAlumnoAPreparacion(alumnoId){
     
+    AjaxLoader.getInstance().show();
     var url = $("#alumno_preparacion_form_url").val();
     var dataString = 'alumnoId='+alumnoId+ '&preparacionId='+$('#preparacion_id').val();
     $.ajax({
@@ -245,6 +255,9 @@ function agregarAlumnoAPreparacion(alumnoId){
                     }
                 });
             }
+        },
+        complete: function(data){
+          AjaxLoader.getInstance().hide();
         }
 
     });
@@ -284,6 +297,7 @@ function saveAlumnoPreparacion(){
                 $('#tabla_alumno_preparacion_contacto tr').fadeIn("slow");
                 var place = "#alumno_li_"+data.options.alumnoId;
                 $(place).remove();
+                changeRemoveToIcon();
                 $("#alumno_preparacion_form").dialog( "close" );
             }else{
                 $("#alumno_preparacion_form").dialog( "close" );
@@ -358,6 +372,7 @@ function actualRemove(url, alumnoId, preparacionId){
 
 function changePaymentStatus(url, alumnoId)
 {
+    AjaxLoader.getInstance().show();
     var dataString = 'alumnoId='+alumnoId+ '&preparacionId='+$('#preparacion_id').val();
     $.ajax({
         type: "POST",
@@ -384,7 +399,7 @@ function changePaymentStatus(url, alumnoId)
             }
         },
         complete: function(data){
-          
+          AjaxLoader.getInstance().hide();
         }
 
     });
@@ -414,3 +429,12 @@ function savePaymentForm()
     });
  
 }
+
+function pausecomp(millis)
+{
+  var date = new Date();
+  var curDate = null;
+
+  do { curDate = new Date(); }
+  while(curDate-date < millis);
+} 

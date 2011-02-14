@@ -5,7 +5,11 @@
   use_plugin_javascript('mastodontePlugin','fancybox/jquery.fancybox-1.3.1.pack.js','last');
 ?>
 <?php use_javascript('managePreparacion.js', 'last') ?>
-<h1>Preparacions List</h1>
+
+<?php foreach($listaPeriodos as $periodo): ?>
+  <?php echo $periodo->getNombre();?>
+<?php endforeach;?>
+
 <div class="clear"></div>
   
 <div class="clear"></div>

@@ -14,6 +14,9 @@ class preparacionActions extends sfActions
   {
     $query = Doctrine::getTable('preparacion')
       ->retrieveAllPreparacionesByDate(true);
+    $this->listaPeriodos = Doctrine::getTable('periodo')
+                              ->createQuery('a')
+                              ->execute();
     $this->pager = new sfDoctrinePager ( 'preparacion', 6 );
 
     $this->pager->setQuery ( $query );
@@ -216,7 +219,7 @@ class preparacionActions extends sfActions
     if($form->isValid())
     {
         $object = $form->save();
-        $image = "/images/".$object->retrievePaymentStatusInColor()."_flag.png";
+        $image = "/images/".$object->retrievePaymentStatusInColor()."_ball.png";
         return $this->renderText(mdBasicFunction::basic_json_response(true, array('alumnoId'=>$alumnoId, 'image'=>$image )));
     }
     else
