@@ -72,6 +72,8 @@ abstract class BasemdMediaContent extends sfDoctrineRecord
              'foreign' => 'md_media_content_id'));
 
         $mdcontentbehavior0 = new mdContentBehavior();
+        $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($mdcontentbehavior0);
+        $this->actAs($timestampable0);
     }
 }
