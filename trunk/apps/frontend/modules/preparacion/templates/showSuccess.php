@@ -42,7 +42,7 @@
       </tr>
       <tr>
         <th>Docente:</th>
-        <td><?php echo $preparacion->getMdUser()->getEmail() ?></td>
+        <td><?php echo $preparacion->getMdUser()->__toString() ?></td>
       </tr>
       <tr>
         <th>Evaluacion:</th>

@@ -401,3 +401,7 @@ ul.preparacion_form_ul li
   font-size: 22px;
   font-weight: bold;
 }
+.periodos_container{
+    padding-bottom: 12px;
+    text-align: center;
+}
