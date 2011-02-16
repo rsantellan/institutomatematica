@@ -17,8 +17,13 @@ $(document).ready(function(){
   }
 
   activatePaymentsFancyboxs();
-  
+  createButtonsOfPeriodos();
 });
+
+function createButtonsOfPeriodos()
+{
+  $('.periodo_link').button();
+}
 
 function activatePaymentsFancyboxs()
 {
@@ -44,9 +49,10 @@ function sendFormData(){
           $.fancybox.close();
           var place = "#preparaciones_big_container .preparaciones_small_container:last";
           $("#preparaciones_big_container").prepend(data.options.body);
-          $(place).fadeOut("slow", function() {
-                    $(this).remove();
-                });
+          if($("#preparaciones_big_container .preparaciones_small_container").length > 5)
+            $(place).fadeOut("slow", function() {
+                      $(this).remove();
+                  });
           $("#preparaciones_big_container .preparaciones_small_container:first .simple_rounded").addClass('new_simple_rounded');
           activatePaymentsFancyboxs();
         }

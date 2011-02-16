@@ -9,4 +9,18 @@ class preparacionTable extends Doctrine_Table
         if($isQuery) return $query;
         return $query->execute();
     }
+    
+    public function addFilterByPeriodo($query, $periodoId)
+    {
+      if(is_null($query))
+      {
+        throw new Exception("Query must not be null", 159);
+      }
+      if ($query->getType() == Doctrine_Query_Abstract::SELECT)
+        $query->select($query->getRootAlias() . '.*');
+        
+      $query->addWhere($query->getRootAlias() .".periodo_id = ?", $periodoId);
+      
+      return $query;  
+    }
 }

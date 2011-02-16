@@ -5,11 +5,13 @@
   use_plugin_javascript('mastodontePlugin','fancybox/jquery.fancybox-1.3.1.pack.js','last');
 ?>
 <?php use_javascript('managePreparacion.js', 'last') ?>
-
-<?php foreach($listaPeriodos as $periodo): ?>
-  <?php echo $periodo->getNombre();?>
-<?php endforeach;?>
-
+<div class="periodos_container">
+  <?php foreach($listaPeriodos as $periodo): ?>
+    <a class="periodo_link" href="<?php echo url_for('@preparacion?periodoId='.$periodo->getId());?>" >
+      <?php echo $periodo->getNombre();?>
+    </a>
+  <?php endforeach;?>
+</div>
 <div class="clear"></div>
   
 <div class="clear"></div>
@@ -22,17 +24,17 @@
 <div class="controls">
   <?php if ($pager->haveToPaginate()): ?>
      <div id="md_pager">
-          <a href="<?php echo url_for('@preparacion?page=' . $pager->getPreviousPage());?>"><?php echo plugin_image_tag('mastodontePlugin','iconos/prev.png');?></a>
+          <a href="<?php echo url_for('@preparacion?page=' . $pager->getPreviousPage().'&periodoId='.$periodoId);?>"><?php echo plugin_image_tag('mastodontePlugin','iconos/prev.png');?></a>
           <?php $objectsCount = count($pager->getLinks()) ?>
           <?php $objectsIndex = 0 ?>
           <?php foreach ($pager->getLinks() as $page): ?>
             <?php if ($page == $pager->getPage()): ?>
                   <a class="current no_image"><?php echo $page ?></a>
             <?php else: ?>
-                  <a class="no_image" href="<?php echo url_for('@preparacion?page=' . $page) ?>"><?php echo $page ?></a>
+                  <a class="no_image" href="<?php echo url_for('@preparacion?page=' . $page .'&periodoId='.$periodoId) ?>"><?php echo $page ?></a>
             <?php endif; ?>
           <?php endforeach; ?>
-          <a href="<?php echo url_for('@preparacion?page=' . $pager->getNextPage());?>"><?php echo plugin_image_tag('mastodontePlugin','iconos/next.png');?></a>
+          <a href="<?php echo url_for('@preparacion?page=' . $pager->getNextPage().'&periodoId='.$periodoId);?>"><?php echo plugin_image_tag('mastodontePlugin','iconos/next.png');?></a>
       </div>
   <?php endif; ?>
   <hr/>

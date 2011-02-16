@@ -13,11 +13,24 @@ class preparacionActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $query = Doctrine::getTable('preparacion')
-      ->retrieveAllPreparacionesByDate(true);
+              ->retrieveAllPreparacionesByDate(true);
+    
     $this->listaPeriodos = Doctrine::getTable('periodo')
-                              ->createQuery('a')
-                              ->execute();
-    $this->pager = new sfDoctrinePager ( 'preparacion', 6 );
+                              ->retrieveAllPeriodosByDate();
+    $this->periodoId = $this->getRequestParameter('periodoId',0);
+    if($this->periodoId != 0)
+    {
+      $query = Doctrine::getTable('preparacion')
+              ->addFilterByPeriodo($query, $this->periodoId);
+    }
+    else
+    {
+      if(count($this->listaPeriodos) > 0)
+      {
+        $this->periodoId = $this->listaPeriodos->getFirst()->getId();
+      }
+    }
+    $this->pager = new sfDoctrinePager ( 'preparacion', 1 );
 
     $this->pager->setQuery ( $query );
     //$this->pager->setResultArray($list);

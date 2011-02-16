@@ -12,4 +12,8 @@
  */
 class mdUser extends PluginmdUser
 {
+  public function __toString()
+  {
+    return $this->getMdUserProfile()->getFullName();
+  }
 }
