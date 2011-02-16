@@ -18,12 +18,16 @@ abstract class BasemdMediaContentForm extends BaseFormDoctrine
       'id'                => new sfWidgetFormInputHidden(),
       'object_class_name' => new sfWidgetFormInputText(),
       'object_id'         => new sfWidgetFormInputText(),
+      'created_at'        => new sfWidgetFormDateTime(),
+      'updated_at'        => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
       'id'                => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
       'object_class_name' => new sfValidatorString(array('max_length' => 128)),
       'object_id'         => new sfValidatorInteger(),
+      'created_at'        => new sfValidatorDateTime(),
+      'updated_at'        => new sfValidatorDateTime(),
     ));
 
     $this->validatorSchema->setPostValidator(
