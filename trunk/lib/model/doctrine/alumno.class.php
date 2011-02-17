@@ -15,4 +15,15 @@ class alumno extends Basealumno
   public function __toString(){
     return $this->getNombre();
   }
+
+
+  public static function retrieveAllAlumnosQueEstuvieronEnElperiodo($periodoId)
+  {
+      return Doctrine::getTable("alumno")->retrieveInPreparation($periodoId);
+  }
+
+  public static function retrieveAllAlumnosQueNoTienenPeriodo()
+  {
+      return Doctrine::getTable("alumno")->retrieveNotInPreparation();
+  }
 }

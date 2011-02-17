@@ -11,6 +11,7 @@ $(document).ready(function(){
       'overlayOpacity' : 0.6,
       'onComplete' : function(){
                         $('#materias').find('option').remove().end();
+                        changeMdUserId();
                       }
       });
 
@@ -19,6 +20,11 @@ $(document).ready(function(){
   activatePaymentsFancyboxs();
   createButtonsOfPeriodos();
 });
+
+function changeMdUserId()
+{
+    $("#preparacion_md_user_id").val($("#md_user_fake_id").val());
+}
 
 function createButtonsOfPeriodos()
 {

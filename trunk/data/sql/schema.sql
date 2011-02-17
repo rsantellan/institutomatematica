@@ -2,6 +2,7 @@ CREATE TABLE alumno (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, apelli
 CREATE TABLE alumno_preparacion (alumno_id INT, preparacion_id INT, forma_contacto_id INT NOT NULL, nota_contacto VARCHAR(64), pago TINYINT(1) DEFAULT '0' NOT NULL, pago_completo TINYINT(1) DEFAULT '0' NOT NULL, monto_pago INT DEFAULT 0 NOT NULL, resultado VARCHAR(12) DEFAULT 'desconocido' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX forma_contacto_id_idx (forma_contacto_id), PRIMARY KEY(alumno_id, preparacion_id)) ENGINE = INNODB;
 CREATE TABLE calendario_materias (id INT AUTO_INCREMENT, day VARCHAR(255), hour INT NOT NULL, minutes INT NOT NULL, preparacion_id INT NOT NULL, duration INT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX preparacion_id_idx (preparacion_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE docente (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE encargados (id BIGINT AUTO_INCREMENT, md_user_responsable_id INT NOT NULL, md_user_enresponsabilidad_id INT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX md_user_responsable_id_idx (md_user_responsable_id), INDEX md_user_enresponsabilidad_id_idx (md_user_enresponsabilidad_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE evaluacion (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE facultad (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE forma_contacto (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, nota VARCHAR(128), tiene_nota TINYINT DEFAULT '0' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
@@ -42,6 +43,8 @@ ALTER TABLE alumno_preparacion ADD CONSTRAINT alumno_preparacion_preparacion_id_
 ALTER TABLE alumno_preparacion ADD CONSTRAINT alumno_preparacion_forma_contacto_id_forma_contacto_id FOREIGN KEY (forma_contacto_id) REFERENCES forma_contacto(id) ON DELETE CASCADE;
 ALTER TABLE alumno_preparacion ADD CONSTRAINT alumno_preparacion_alumno_id_alumno_id FOREIGN KEY (alumno_id) REFERENCES alumno(id) ON DELETE CASCADE;
 ALTER TABLE calendario_materias ADD CONSTRAINT calendario_materias_preparacion_id_preparacion_id FOREIGN KEY (preparacion_id) REFERENCES preparacion(id) ON DELETE CASCADE;
+ALTER TABLE encargados ADD CONSTRAINT encargados_md_user_responsable_id_md_user_id FOREIGN KEY (md_user_responsable_id) REFERENCES md_user(id);
+ALTER TABLE encargados ADD CONSTRAINT encargados_md_user_enresponsabilidad_id_md_user_id FOREIGN KEY (md_user_enresponsabilidad_id) REFERENCES md_user(id);
 ALTER TABLE horario_estudiante ADD CONSTRAINT horario_estudiante_horario_id_calendario_materias_id FOREIGN KEY (horario_id) REFERENCES calendario_materias(id) ON DELETE CASCADE;
 ALTER TABLE horario_estudiante ADD CONSTRAINT horario_estudiante_alumno_id_alumno_id FOREIGN KEY (alumno_id) REFERENCES alumno(id) ON DELETE CASCADE;
 ALTER TABLE materia ADD CONSTRAINT materia_facultad_id_facultad_id FOREIGN KEY (facultad_id) REFERENCES facultad(id) ON DELETE CASCADE;
