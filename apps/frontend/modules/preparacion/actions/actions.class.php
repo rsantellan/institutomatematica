@@ -48,6 +48,9 @@ class preparacionActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
+    
+    $this->userOptions = Doctrine::getTable("encargados")->retrieveAllMyEncargados($this->getUser()->getMdUserId());
+    
     $this->form = new preparacionForm();
 
     $this->facultades = Doctrine::getTable('facultad')->findAll();

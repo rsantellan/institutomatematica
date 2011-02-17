@@ -22,8 +22,10 @@ class preparacionForm extends BasepreparacionForm {
 
         $minutes = array(0, 15, 30, 45);
 
-        //$this->widgetSchema['md_user_id'] =new sfWidgetFormInputHidden();
-        
+        $this->widgetSchema['md_user_id'] =new sfWidgetFormInputHidden();
+
+        $this->validatorSchema['md_user_id'] =new sfValidatorString();
+
         $this->widgetSchema['hora_inicio'] = new sfWidgetFormTime(array(
                     'minutes' => array_combine($minutes, $minutes),
                     'can_be_empty' => false,

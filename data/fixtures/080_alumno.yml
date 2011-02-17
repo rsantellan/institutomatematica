@@ -1,0 +1,11 @@
+alumno:
+<?php for ($i = 1; $i <= 20; $i++): ?>
+  alumno_<?php echo $i ?>:
+    nombre: 'Juan <?php echo $i ?>'
+    apellido: 'Perez <?php echo $i ?>'
+    telefono: '255005235'
+    celular: '099 65423135'
+    direccion: algo
+    email: juan<?php echo $i ?>@perez.com
+    sexo: M
+<?php endfor; ?>

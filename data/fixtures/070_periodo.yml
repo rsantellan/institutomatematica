@@ -1,0 +1,6 @@
+periodo:
+  periodo_1:
+    inicio: '2011-02-01 00:00:00'
+    fin: '2011-02-28 00:00:00'
+    nombre: 'Febrero 2011'
+    activo: true

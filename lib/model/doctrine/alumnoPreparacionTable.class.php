@@ -12,19 +12,6 @@ class alumnoPreparacionTable extends Doctrine_Table {
     }
 
 
-    public function retrieveMyRecivedMessagesIds($mdUserId, $limit)
-    {
-        /*$query = $this->createQuery("mdW");
-        $query->select("mdW.id")
-            ->where('mdW.md_user_to_id = ?', $mdUserId)
-            ->addWhere('mdW.md_user_from_id = ?', $mdUserId)
-            ->addOrderBy('mdW.created_at DESC')
-            ->limit($limit);
-        $query->setHydrationMode(Doctrine_Core::HYDRATE_NONE);
-        return $query->execute();
-*/
-    }
-  
   public static function retrieveAllPaymentsOfPreparation($preparacionId)
   {
         try

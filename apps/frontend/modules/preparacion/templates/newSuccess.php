@@ -19,8 +19,15 @@
   </li>
   <li>
         <?php echo $form['md_user_id']->renderLabel();?>
-        <?php echo $form['md_user_id']->render();?>
+        <?php //echo $form['md_user_id']->render();?>
         <?php echo $form['md_user_id']->renderError();?>
+      <select id="md_user_fake_id" onchange="changeMdUserId()" name="preparacion[md_user_id]">
+          <option value="<?php echo $sf_user->getMdUserId();?>" ><?php echo $sf_user->getMdPassport()->getMdUser()->__toString();?></option>
+          <?php foreach($userOptions as $user): ?>
+            <option value="<?php echo $user->getMdUserEnresponsabilidadId();?>"><?php echo $user->getMdUserEnresponsabilidad()->__toString();?></option>
+          <?php endforeach;?>
+      </select>
+
   </li>
   <li>
         <?php echo $form['evaluacion_id']->renderLabel();?>
