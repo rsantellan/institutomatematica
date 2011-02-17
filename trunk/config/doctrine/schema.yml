@@ -273,3 +273,29 @@ horarioEstudiante:
       onDelete: CASCADE 
       local: horario_id
       foreign: id
+
+encargados:
+  options:
+    symfony:
+      form:   false
+      filter: false
+  actAs: [Timestampable]
+  columns:
+    md_user_responsable_id:
+      type: integer(4)
+      notnull: true
+    md_user_enresponsabilidad_id:
+      type: integer(4)
+      notnull: true
+  relations:
+    mdUserResponsable:
+      class: mdUser
+      local: md_user_responsable_id
+      foreign: id
+      type: one
+    mdUserEnresponsabilidad:
+      class: mdUser
+      local: md_user_enresponsabilidad_id
+      foreign: id
+      type: one
+      

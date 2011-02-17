@@ -39,3 +39,12 @@ all:
     default_culture:        es
 
     standard_helpers: [Partial, Cache, I18N, Date]
+
+    # Enable de login by Mastodonte Auth
+    login_module:           mdAuth
+    login_action:           signin
+    secure_module:          mdAuth
+    secure_action:          secure
+
+    #Modules enabled
+    enabled_modules:        [ mdAuth ]
