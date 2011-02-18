@@ -1,0 +1,446 @@
+/* CSS assembled by Marko Mihelcic at mcville and James Koster from sixshootermedia*/
+
+body {
+	margin:0;
+	font-family:"Trebuchet MS", Arial, Verdana;
+	font-size:0.74em;
+	color:#555555;
+	background-color:#FFFFFF;
+	text-align:left;
+}
+
+
+
+a {
+	color:#4D87CE;
+	font-weight:bold;
+	text-decoration:none;
+}
+a:hover {
+	color:#2a65ad;
+}
+
+ol,ul {
+
+}
+
+li {
+	list-style-image:url(/images/backgrounds/li.gif);
+	line-height:20px;
+	text-align:left;
+}
+
+#menu {
+	width:100%;
+	padding-top:20px;
+	padding-bottom:20px;
+	background-color:#FFFFFF;
+	margin-bottom:50px;
+	color:#FFFFFF;
+	text-align:center;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	font-variant:small-caps;
+	background-image:url(/images/backgrounds/back.png);
+}
+#menu a {
+	color:#FFFFFF;
+	text-decoration:none;
+	padding:10px;
+	padding-top:20px;
+	padding-bottom:20px;
+	
+}
+#menu a:hover {
+	border-bottom:1px solid #ffffff;
+	border-left:1px solid #243482;
+	border-right:1px solid #243482;
+	padding-left:9px;
+	padding-right:9px;
+	color:#000000;
+	background-color:#FFFFFF;
+	background-image:url(/images/backgrounds/hover.jpg);
+}
+
+#header {
+	width:750px;
+	margin:0 auto 0 auto;
+	margin-bottom:40px;
+}
+#header h1 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:30px;
+	text-transform:uppercase;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	padding-top:5px;
+	color:#253183;
+	margin-bottom:10px;
+	text-align:left;
+}
+#header h2 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:15px;
+	text-transform:uppercase;
+	text-align:right;
+	font-weight:normal;
+	margin:0;
+	padding:0;
+	color:#000000;
+	border-bottom:1px solid #eeeeee;
+}
+
+#content {
+	width:720px;
+	margin:0 auto 0 auto;
+	text-align:left;
+}
+
+.introduction {
+	font-family:Helvetica, Arial, sans-serif;
+	line-height:20px;
+	font-size:12px;
+	color:#99B198;
+	text-indent:25px;
+	background-image:url(/images/backgrounds/desc.jpg);
+	background-position:bottom left;
+	padding-left:0;
+	padding-right:200px;
+	padding-bottom:35px;
+	padding-top:0;
+	background-repeat:no-repeat;
+	
+}
+.logo {
+	float:left;
+	margin-right:30px;
+}
+.clearer {
+	clear:both;
+}
+
+#sidebar {
+
+	width:160px;
+	float:right;
+	font-size:95%;
+	color:#253183;
+	text-align:left;
+}
+#sidebar h1 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:20px;
+	text-transform:uppercase;
+	font-weight:normal;
+	border-bottom:1px solid #eeeeee;
+	color:#253183;
+	text-align:right;
+}
+.submenu {
+}
+.submenu a {
+	display:block;
+	width:100%;
+	background-image:url(/images/backgrounds/submenua.png);
+	background-position:right;
+	background-repeat:no-repeat;
+	padding:5px;
+	padding-right:0;
+}
+.submenu a:hover {
+	background-color:#eeeeee;
+	background-image:url(/images/backgrounds/submenua_hover.jpg);
+	background-repeat:repeat-y;
+}
+#mainbar {
+	margin-right:185px;
+	padding-right:35px;
+	background-image:url(/images/backgrounds/mainbar.jpg);
+	background-position:top right;
+	background-repeat:no-repeat;
+}
+
+#mainbar h1 {
+	font-family:"Century Gothic", "Trebuchet MS", "Arial Narrow", Arial, sans-serif;
+	font-size:25px;
+	text-transform:uppercase;
+	font-weight:normal;
+	border-bottom:1px solid #eeeeee;
+	color:#253183;
+}
+
+#mainbar p {
+	padding:15px;
+	line-height:20px;
+}
+
+#mainbar .articleimg {
+	float:right;
+	padding:5px;
+	border:1px solid #eeeeee;
+	margin-left:20px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+#mainbar .articleimg2 {
+
+	padding:5px;
+	border:1px solid #eeeeee;
+	margin-left:20px;
+	margin-top:20px;
+	margin-bottom:25px;
+}
+
+
+
+#footer {
+	width:80%;
+	background-color:#253183;
+	border-top:1px solid #81C0FF;
+	border-bottom:5px solid #253169;
+	padding-top:5px;
+	padding-bottom:5px;
+	color:#FFFFFF;
+}
+#footer a {
+	color:#81C0FF;
+}
+#footer a:hover {
+	color:#AFD7FF;
+}
+
+
+.table
+{
+background:#333;
+width:950px !important;
+margin-left:-50px !important;
+}
+.table ul
+{
+float:left;
+margin:0;
+padding:0;
+border:1px solid #C9C9C9;
+}
+.table ul li
+{
+list-style:none;
+padding:0px 10px;
+}
+.table ul li.title
+{
+font-weight:bold;
+background:#333;
+color:#fff;
+}
+.table ul li.even
+{
+background:#fff
+}
+.table ul li.odd
+{
+background:#FFFFE6
+}
+
+
+/* Estilos para aplicarles a todas las tablas*/
+
+.simple_table td
+{
+    text-align: center;
+}
+.simple_table img
+{
+  border: 0px !important;
+}
+.simple_table_with_borders td
+{
+    border-right-style: dotted;
+    border-right-width: 0.4px;
+    border-right-color: #6666FF;
+    border-bottom-style: dotted;
+    border-bottom-width: 0.4px;
+    border-bottom-color: #6666FF;
+}
+
+.preparacion_container{
+    border: 1px solid green ;
+    width: 270px;
+    float:left;
+    margin-left: 10px;
+    height: 160px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.clear{
+	clear:both;
+}
+
+.simple_rounded
+{
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #FFEEDD;
+  border: 1px solid #FF8855;  
+  width: 230px;
+  float:left;
+  margin-left: 10px;
+  height: 180px;
+  margin-bottom: 10px;
+  text-align: center;  
+}
+
+.new_simple_rounded
+{
+  background-color: #D6FFC2 !important;
+}
+
+.preparaciones_small_container .terminado
+{
+  background-color: #000052 !important;
+  color: white !important;
+  
+}
+
+.preparaciones_small_container .terminado a
+{
+  color: #4DDB4D !important;
+  
+}
+
+.simple_rounded img
+{
+  border: 0px !important;
+}
+
+.div_hidden_payment
+{
+  width: 400px;
+  height: 400px;
+}
+
+.no_bullets
+{
+  list-style-type:none;
+}
+
+.new_preparacion_container
+{
+  background-color : 	#FFFFD6;
+}
+
+.new_preparacion_container img
+{
+  border: 0px !important;
+}
+
+.controls
+{
+  text-align: center;
+}
+
+.controls img
+{
+  border: 0px !important;
+}
+
+#md_pager a
+{
+  padding: 10px;
+}
+
+#md_pager a.no_image
+{
+  vertical-align: top;
+  font-weight: bolder;
+}
+
+#link_agregar_preparacion
+{
+  text-decoration:none;
+  font-weight: bold;
+}
+
+.hidden_payment_fancy
+{
+  background-color : 	#FFFFD6;
+}
+
+.preparacion_basic_info_table_container
+{
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px;
+}
+.preparacion_basic_info_table
+{
+  margin-left: auto;
+  margin-right: auto;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #FFFFE6;
+}
+
+.preparacion_basic_info_table img
+{
+  border: 0px !important;
+  margin-left: 20px;
+}
+
+.show_preparacion_mostrar_title
+{
+  text-align: center;
+}
+
+.alumno_search_box
+{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#tabla_alumno_preparacion a
+{
+  text-decoration:none;
+}
+
+ul#alumnos_search_list li
+{
+  margin-bottom: 3px;
+}
+
+ul.preparacion_form_ul
+{
+  list-style-type: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+  background-color: #FFFFE6;
+}
+
+ul.preparacion_form_ul li
+{
+  background-color: #FFFFE6;
+}
+
+#form_alumno ul
+{
+  list-style-type: none;
+}
+
+#form_alumno ul li label
+{
+  font-size: 22px;
+  font-weight: bold;
+}
+.periodos_container{
+    padding-bottom: 12px;
+    text-align: center;
+}
+
