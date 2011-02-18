@@ -23,4 +23,18 @@ class preparacionTable extends Doctrine_Table
       
       return $query;  
     }
+    
+    public function addFilterByMdUsers($query, $mdUserIdList)
+    {
+      if(is_null($query))
+      {
+        throw new Exception("Query must not be null", 159);
+      }
+      if ($query->getType() == Doctrine_Query_Abstract::SELECT)
+        $query->select($query->getRootAlias() . '.*');
+      $query->whereIn($query->getRootAlias() .".md_user_id", $mdUserIdList);  
+      //$query->addWhere($query->getRootAlias() .".periodo_id = ?", $periodoId);
+      
+      return $query;        
+    }
 }

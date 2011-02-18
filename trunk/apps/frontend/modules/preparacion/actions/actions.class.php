@@ -18,19 +18,27 @@ class preparacionActions extends sfActions
     $this->listaPeriodos = Doctrine::getTable('periodo')
                               ->retrieveAllPeriodosByDate();
     $this->periodoId = $this->getRequestParameter('periodoId',0);
-    if($this->periodoId != 0)
+    $list = Doctrine::getTable("encargados")->retrieveAllMyEncargadosIds($this->getUser()->getMdUserId());
+    $idList = array();
+    array_push($idList, $this->getUser()->getMdUserId());
+    foreach($list as $id)
     {
-      $query = Doctrine::getTable('preparacion')
-              ->addFilterByPeriodo($query, $this->periodoId);
+      array_push($idList, $id['md_user_enresponsabilidad_id']);
     }
-    else
+    
+    if($this->periodoId == 0)
     {
       if(count($this->listaPeriodos) > 0)
       {
         $this->periodoId = $this->listaPeriodos->getFirst()->getId();
       }
     }
-    $this->pager = new sfDoctrinePager ( 'preparacion', 1 );
+    $query = Doctrine::getTable('preparacion')
+            ->addFilterByPeriodo($query, $this->periodoId); 
+               
+    $query = Doctrine::getTable('preparacion')
+              ->addFilterByMdUsers($query, $idList);
+    $this->pager = new sfDoctrinePager ( 'preparacion', 10 );
 
     $this->pager->setQuery ( $query );
     //$this->pager->setResultArray($list);

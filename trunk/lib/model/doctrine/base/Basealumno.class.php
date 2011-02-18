@@ -15,6 +15,7 @@
  * @property enum $sexo
  * @property Doctrine_Collection $alumnoPreparacion
  * @property Doctrine_Collection $horarioEstudiante
+ * @property Doctrine_Collection $mailing_alumnos
  * 
  * @method integer             getId()                Returns the current record's "id" value
  * @method string              getNombre()            Returns the current record's "nombre" value
@@ -26,6 +27,7 @@
  * @method enum                getSexo()              Returns the current record's "sexo" value
  * @method Doctrine_Collection getAlumnoPreparacion() Returns the current record's "alumnoPreparacion" collection
  * @method Doctrine_Collection getHorarioEstudiante() Returns the current record's "horarioEstudiante" collection
+ * @method Doctrine_Collection getMailingAlumnos()    Returns the current record's "mailing_alumnos" collection
  * @method alumno              setId()                Sets the current record's "id" value
  * @method alumno              setNombre()            Sets the current record's "nombre" value
  * @method alumno              setApellido()          Sets the current record's "apellido" value
@@ -36,6 +38,7 @@
  * @method alumno              setSexo()              Sets the current record's "sexo" value
  * @method alumno              setAlumnoPreparacion() Sets the current record's "alumnoPreparacion" collection
  * @method alumno              setHorarioEstudiante() Sets the current record's "horarioEstudiante" collection
+ * @method alumno              setMailingAlumnos()    Sets the current record's "mailing_alumnos" collection
  * 
  * @package    instituto
  * @subpackage model
@@ -99,6 +102,10 @@ abstract class Basealumno extends sfDoctrineRecord
              'foreign' => 'alumno_id'));
 
         $this->hasMany('horarioEstudiante', array(
+             'local' => 'id',
+             'foreign' => 'alumno_id'));
+
+        $this->hasMany('mailing_alumnos', array(
              'local' => 'id',
              'foreign' => 'alumno_id'));
 

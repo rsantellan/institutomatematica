@@ -1,3 +1,4 @@
+CREATE TABLE mail_message (id BIGINT AUTO_INCREMENT, message LONGTEXT NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE alumno (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, apellido VARCHAR(255) NOT NULL, telefono VARCHAR(255), celular VARCHAR(255), direccion VARCHAR(255), email VARCHAR(255), sexo VARCHAR(2) NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE alumno_preparacion (alumno_id INT, preparacion_id INT, forma_contacto_id INT NOT NULL, nota_contacto VARCHAR(64), pago TINYINT(1) DEFAULT '0' NOT NULL, pago_completo TINYINT(1) DEFAULT '0' NOT NULL, monto_pago INT DEFAULT 0 NOT NULL, resultado VARCHAR(12) DEFAULT 'desconocido' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX forma_contacto_id_idx (forma_contacto_id), PRIMARY KEY(alumno_id, preparacion_id)) ENGINE = INNODB;
 CREATE TABLE calendario_materias (id INT AUTO_INCREMENT, day VARCHAR(255), hour INT NOT NULL, minutes INT NOT NULL, preparacion_id INT NOT NULL, duration INT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX preparacion_id_idx (preparacion_id), PRIMARY KEY(id)) ENGINE = INNODB;
@@ -7,6 +8,8 @@ CREATE TABLE evaluacion (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, cr
 CREATE TABLE facultad (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE forma_contacto (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, nota VARCHAR(128), tiene_nota TINYINT DEFAULT '0' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE horario_estudiante (id BIGINT AUTO_INCREMENT, alumno_id INT NOT NULL, horario_id INT NOT NULL, INDEX alumno_id_idx (alumno_id), INDEX horario_id_idx (horario_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE mailing (id INT AUTO_INCREMENT, texto TEXT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE mailing_alumnos (id BIGINT AUTO_INCREMENT, alumno_id INT NOT NULL, mailing_id INT NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX alumno_id_idx (alumno_id), INDEX mailing_id_idx (mailing_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE materia (id INT AUTO_INCREMENT, nombre VARCHAR(128) NOT NULL, facultad_id INT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX facultad_id_idx (facultad_id), PRIMARY KEY(id)) ENGINE = INNODB;
 CREATE TABLE md_attribute_translation (id INT, label VARCHAR(100) NOT NULL, lang CHAR(2), PRIMARY KEY(id, lang)) ENGINE = INNODB;
 CREATE TABLE md_attribute (id INT AUTO_INCREMENT, name VARCHAR(100) NOT NULL, type_class VARCHAR(100) NOT NULL, requiered TINYINT DEFAULT 0 NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
@@ -47,6 +50,8 @@ ALTER TABLE encargados ADD CONSTRAINT encargados_md_user_responsable_id_md_user_
 ALTER TABLE encargados ADD CONSTRAINT encargados_md_user_enresponsabilidad_id_md_user_id FOREIGN KEY (md_user_enresponsabilidad_id) REFERENCES md_user(id);
 ALTER TABLE horario_estudiante ADD CONSTRAINT horario_estudiante_horario_id_calendario_materias_id FOREIGN KEY (horario_id) REFERENCES calendario_materias(id) ON DELETE CASCADE;
 ALTER TABLE horario_estudiante ADD CONSTRAINT horario_estudiante_alumno_id_alumno_id FOREIGN KEY (alumno_id) REFERENCES alumno(id) ON DELETE CASCADE;
+ALTER TABLE mailing_alumnos ADD CONSTRAINT mailing_alumnos_mailing_id_mailing_id FOREIGN KEY (mailing_id) REFERENCES mailing(id) ON DELETE CASCADE;
+ALTER TABLE mailing_alumnos ADD CONSTRAINT mailing_alumnos_alumno_id_alumno_id FOREIGN KEY (alumno_id) REFERENCES alumno(id) ON DELETE CASCADE;
 ALTER TABLE materia ADD CONSTRAINT materia_facultad_id_facultad_id FOREIGN KEY (facultad_id) REFERENCES facultad(id) ON DELETE CASCADE;
 ALTER TABLE md_attribute_translation ADD CONSTRAINT md_attribute_translation_id_md_attribute_id FOREIGN KEY (id) REFERENCES md_attribute(id) ON UPDATE CASCADE ON DELETE CASCADE;
 ALTER TABLE md_attribute_object_translation ADD CONSTRAINT md_attribute_object_translation_id_md_attribute_object_id FOREIGN KEY (id) REFERENCES md_attribute_object(id) ON UPDATE CASCADE ON DELETE CASCADE;

@@ -299,3 +299,44 @@ encargados:
       foreign: id
       type: one
       
+mailing:
+  actAs: [Timestampable]
+  columns:
+    id:
+      type: integer(4)
+      primary: true
+      autoincrement: true
+    texto:
+      type: string(10000)
+      notnull: true
+
+mailing_alumnos:
+  options:
+    symfony:
+      form:   false
+      filter: false
+  actAs: [Timestampable]    
+  columns:
+    alumno_id:
+      type: integer(4)
+      notnull: true
+    mailing_id:
+      type: integer(4)
+      notnull: true      
+  relations:
+    alumno: 
+      onDelete: CASCADE 
+      local: alumno_id
+      foreign: id
+    mailing:
+      onDelete: CASCADE 
+      local: mailing_id
+      foreign: id
+
+MailMessage:
+  actAs: Timestampable: ~
+  columns:
+    message: 
+      type: clob 
+      notnull: true
+

@@ -25,8 +25,12 @@ test:
 
 dev:
   mailer:
+    class: sfMailer
     param:
-      delivery_strategy: none
+      delivery_strategy: spool
+      spool_class:  Swift_DoctrineSpool
+      spool_arguments: [ MailMessage, message]
+
 
 all:
   routing:
@@ -45,3 +49,18 @@ all:
     param:
       session_name: instituto
       timeout: 86400
+      
+  mailer:
+    class: sfMailer
+    param:
+      logging:           %SF_LOGGING_ENABLED%
+      charset:           %SF_CHARSET%
+      delivery_strategy: realtime
+      transport:
+        class: Swift_SmtpTransport
+        param:
+          host:       smtp.gmail.com
+          port:       465
+          encryption: ssl
+          username:   rsantellan@gmail.com
+          password:   ro4321
