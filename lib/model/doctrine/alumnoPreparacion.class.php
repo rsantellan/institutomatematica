@@ -29,4 +29,9 @@ class alumnoPreparacion extends BasealumnoPreparacion
     return self::SINPAGO;
 
   }
+
+  public static function retrieveAllAlumnosByMateriaAndPeriodo($materiaId, $periodoId)
+  {
+      return Doctrine::getTable("alumnoPreparacion")->retrieveAllAlumnosByMateriaAndPeriodo($materiaId, $periodoId);
+  }
 }
