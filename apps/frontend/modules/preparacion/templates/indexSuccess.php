@@ -6,16 +6,33 @@
 ?>
 <?php use_javascript('managePreparacion.js', 'last') ?>
 <div class="periodos_container">
+  <?php $index = 0; ?>
+  <?php $openDic = false; ?>
   <?php foreach($listaPeriodos as $periodo): ?>
     <a class="periodo_link" href="<?php echo url_for('@preparacion?periodoId='.$periodo->getId());?>" >
       <?php echo $periodo->getNombre();?>
     </a>
+      <?php 
+        $index++;
+       if($index == 3):
+          $openDic = true;
+      ?>
+        <br/>
+        <a href="javascript:void(0)" onclick="$('#hidden_links_containers').slideToggle('slow');">Mostrar todos los periodos</a>
+        <div id="hidden_links_containers">
+      <?php endif;?>    
   <?php endforeach;?>
+  <?php 
+       if($openDic):
+      ?>
+        </div>
+      <?php endif;?>      
 </div>
 <div class="clear"></div>
   
 <div class="clear"></div>
   <div id="preparaciones_big_container">
+
   <?php foreach($pager->getResults() as $preparacion): ?>
       <?php include_partial("preparacion/preparacionBox", array("preparacion" => $preparacion));?>
   <?php endforeach; ?>

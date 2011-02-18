@@ -87,6 +87,13 @@ class alumnoActions extends sfActions {
         return $this->renderText(json_encode($salida));
     }
 
+    public function executeBringAlumnosList(sfWebRequest $request) {
+        $this->listaPeriodos = Doctrine::getTable('periodo')
+                          ->retrieveAllPeriodosByDate();
+        $body = $this->getPartial("alumno/listadoPartial", array('listaPeriodos'=>$this->listaPeriodos));
+        return $this->renderText(mdBasicFunction::basic_json_response(true, array("body"=>$body)));
+    }
+
     public function executeListado(sfWebRequest $request) {
         $this->listaPeriodos = Doctrine::getTable('periodo')
                           ->retrieveAllPeriodosByDate();
