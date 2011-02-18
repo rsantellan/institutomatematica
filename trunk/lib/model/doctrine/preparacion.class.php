@@ -96,4 +96,9 @@ class preparacion extends Basepreparacion {
         }
         return false;
     }
+
+    public static function retrieveAllMateriasOfPeriodo($periodoId)
+    {
+        return Doctrine::getTable("preparacion")->retrieveAllMateriasFromPeriodo($periodoId);
+    }
 }

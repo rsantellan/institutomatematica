@@ -37,4 +37,24 @@ class preparacionTable extends Doctrine_Table
       
       return $query;        
     }
+
+  public function retrieveAllMateriasFromPeriodo($periodoId)
+  {
+        try
+        {
+            $sql = "select distinct(materia_id) as id
+                    FROM preparacion WHERE periodo_id = :periodoId";
+
+            $db = Doctrine_Manager::getInstance()->getConnection('doctrine')->getDbh();
+            $st = $db->prepare($sql);
+            $st->setFetchMode(Doctrine_Core::FETCH_ASSOC);
+            $st->execute(array(":periodoId" => $periodoId));
+            $result = $st->fetchAll();
+            return $result;
+        }
+        catch(Exception $e)
+        {
+            throw new Exception("mdContentRelationTable::retrieveIfObjectsHasRelations - " . $e->getMessage(), $e->getCode());
+        }
+  }
 }

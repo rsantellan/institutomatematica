@@ -15,4 +15,9 @@ class materia extends Basemateria
   public function __toString(){
     return $this->getNombre();
   }
+
+  public static function retrieveMateria($id)
+  {
+      return Doctrine::getTable("materia")->find($id);
+  }
 }

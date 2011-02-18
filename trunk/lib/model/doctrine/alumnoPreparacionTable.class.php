@@ -32,4 +32,12 @@ class alumnoPreparacionTable extends Doctrine_Table {
             throw new Exception("mdContentRelationTable::retrieveIfObjectsHasRelations - " . $e->getMessage(), $e->getCode());
         }    
   }
+
+
+ public function retrieveAllAlumnosByMateriaAndPeriodo($materiaId, $periodoId)
+ {
+     $query = $this->createQuery("ap")
+                ->where("ap.preparacion_id IN (select id from preparacion where materia_id = ? and periodo_id = ?)", array($materiaId, $periodoId));
+     return $query->execute();
+ }
 }

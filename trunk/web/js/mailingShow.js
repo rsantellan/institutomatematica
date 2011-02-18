@@ -30,11 +30,11 @@ function bringAlumnosList(url)
 
 function checkAll(element)
 {
-  var checked_status = element.checked;
-  $(element).next('.checkbox_container').children("input:checkbox").each(function()
-				{
-					this.checked = checked_status;
-				});
+    var checked_status = element.checked;
+    $(element).next().next('.checkbox_container').children("input:checkbox").each(function()
+    {
+        this.checked = checked_status;
+    });
   
 }
 
@@ -42,14 +42,16 @@ function startProccessOfSendingMail(url, mailId)
 {
   AjaxLoader.getInstance().show();
   var ids = new Array();
+  var sendIds = ids.join('|');
   $('input:checkbox:checked').each(function(index, item){
     var value = $(item).val();
-    if(value != "0")
+    if(value != "0" && value !== undefined && value !== "")
     {
-      ids[index] = value;
+      ids.push(value);
+      sendIds = ids.join('|');
     }
   });
-  var sendIds = ids.join('|');
+  
   $.ajax({
     url: url,
     dataType: 'json',
