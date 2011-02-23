@@ -406,3 +406,54 @@ ul.preparacion_form_ul li
     text-align: center;
 }
 
+.mailing_full_text{
+    background-color: #FFFFE6;
+    border-style: solid;
+    border-color: blue;
+}
+
+.mailing_ul
+{
+    list-style-type: none;
+}
+
+.mailing_index_div{
+    background-color: #FFFFE3;
+    border-style: solid;
+    border-color: #FFFFD6;
+    text-align: center;
+}
+
+#md_login_form
+{
+    width: 400px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#md_login_form form ul
+{
+    list-style-type: none;
+}
+
+.inicio_contenedor{
+    width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home{
+	margin-top:0!important;
+}
+#home, #home li{
+	height:315px;
+	width:535px;
+	overflow:hidden;
+}
+
+#slider{
+    margin-left: auto;
+    margin-right: auto;
+}

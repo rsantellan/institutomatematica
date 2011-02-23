@@ -13,7 +13,7 @@ class mailingActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $this->mailings = Doctrine::getTable('mailing')
-      ->createQuery('a')
+      ->createQuery('a')->orderBy("created_at DESC")
       ->execute();
   }
 

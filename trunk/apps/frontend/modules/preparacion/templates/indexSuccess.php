@@ -19,7 +19,7 @@
       ?>
         <br/>
         <a href="javascript:void(0)" onclick="$('#hidden_links_containers').slideToggle('slow');">Mostrar todos los periodos</a>
-        <div id="hidden_links_containers">
+        <div id="hidden_links_containers" style="display:none">
       <?php endif;?>    
   <?php endforeach;?>
   <?php 
