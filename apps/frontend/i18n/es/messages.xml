@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
 <xliff version="1.0">
-  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2011-02-08T19:57:38Z" product-name="messages">
+  <file source-language="EN" target-language="es" datatype="plaintext" original="messages" date="2011-02-22T21:35:52Z" product-name="messages">
     <header/>
     <body>
       <trans-unit id="1">
@@ -27,6 +27,16 @@
       <trans-unit id="5">
         <source>preparacion_estado pagos</source>
         <target>Estado pagos:</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="6">
+        <source>inicio_titulo</source>
+        <target>Bienvenidos al instituto</target>
+        <note>es</note>
+      </trans-unit>
+      <trans-unit id="7">
+        <source>inicio_texto</source>
+        <target>Este es el mensaje de bienvenida.</target>
         <note>es</note>
       </trans-unit>
     </body>

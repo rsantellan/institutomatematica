@@ -17,6 +17,7 @@ class defaultActions extends sfActions
   */
   public function executeIndex(sfWebRequest $request)
   {
+      $this->images = mdImageFileGallery::getImagesByDate(array('path'=>"inicio", 'order'=>'desc', 'absolute'=>false));
   }
 
 }

@@ -16,10 +16,19 @@
         <div id="menu">
           <ul>
               <li><a href="<?php echo url_for('default/index')?>" class="active">Inicio</a></li>
-              <li><a href="<?php echo url_for('alumno/index')?>">Alumnos</a></li>
-              <li><a href="<?php echo url_for('preparacion/index')?>">Preparacion</a></li>
-              <li><a href="<?php echo url_for('facultad/index')?>" >Manejar Instituto</a></li>
-              <li><a href="<?php echo url_for('calendarioMaterias/index')?>">Calendario</a></li>
+              <?php if($sf_user->isAuthenticated()):?>
+                  <li><a href="<?php echo url_for('preparacion/index')?>">Preparacion</a></li>
+                  <?php if($sf_user->hasGroup("Manejar el instituto")): ?>
+                    <li><a href="<?php echo url_for('alumno/index')?>">Alumnos</a></li>
+                    <li><a href="<?php echo url_for('facultad/index')?>" >Manejar Instituto</a></li>
+                  <?php endif;?>
+                  <?php if($sf_user->hasGroup("Mailing")): ?>
+                    <li><a href="<?php echo url_for('mailing/index')?>">Mailing</a></li>
+                  <?php endif;?>
+                  <li><a href="<?php echo url_for('mdAuth/logout')?>">Salir</a></li>
+              <?php else: ?>
+                    <li><a href="<?php echo url_for('mdAuth/signin')?>">Entrar</a></li>
+              <?php endif;?>
           </ul>
         </div>
       <div id="content">

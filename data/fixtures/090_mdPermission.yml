@@ -1,0 +1,20 @@
+mdGroup:
+  manejar_instituto:
+    name: 'Manejar el instituto'
+    description: 'Grupo para manejar el instituto'
+  mailing:
+    name: 'Mailing'
+    description: 'Grupo para usar el mailing'
+
+mdPermission:
+  use:
+    name: 'use'
+    description: 'For use'
+
+mdGroupPermission:
+  manejarUso:
+    mdGroup: manejar_instituto
+    mdPermission: use
+  mailingUso:
+    mdGroup: mailing
+    mdPermission: use

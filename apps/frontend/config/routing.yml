@@ -4,6 +4,277 @@ preparacion:
   url:   /preparacion.html
   param: { module: preparacion, action: index }
 
+mostrar_preparacion:
+  url:   /mostrar-preparacion.html
+  param: { module: preparacion, action: show }
+
+crear_preparacion:
+  url:   /crear-preparacion.html
+  param: { module: preparacion, action: new }
+
+editar_preparacion:
+  url:   /editar-preparacion/:id
+  param: { module: preparacion, action: edit }
+
+actualizar_preparacion:
+  url:   /actualizar-preparacion/:id
+  param: { module: preparacion, action: update }
+
+borrar_preparacion:
+  url:   /borrar-preparacion/:id
+  param: { module: preparacion, action: delete }
+
+
+traer_materias:
+  url:   /materias-preparacion.html
+  param: { module: preparacion, action: traerMaterias }
+
+preparacion_salvar_ajax:
+  url:   /salvar-preparacion.html
+  param: { module: preparacion, action: saveAjax }
+
+alumno:
+  url:   /alumno.html
+  param: { module: alumno, action: index }
+
+agregar_alumno_ajax:
+  url:   /alumno-agregar.html
+  param: { module: alumno, action: addAlumnoAjax }
+
+traer_alumnos:
+  url:   /alumno-traer.html
+  param: { module: alumno, action: traerAlumnos }
+
+check_alumnos:
+  url:   /alumno-chequear.html
+  param: { module: alumno, action: checkAlumno }
+
+alumno_preparacion_form:
+  url:   /formulario-preparacion-alumno.html
+  param: { module: preparacion, action: getAlumnoPreparacionForm }
+
+save_alumno_preparacion_form:
+  url:   /salvar-formulario-preparacion-alumno.html
+  param: { module: preparacion, action: saveAlumnoEnPreparacion }
+
+quitar_alumno_preparacion_form:
+  url:   /preparacion-quitar-alumno.html
+  param: { module: preparacion, action: quitarAlumno }
+
+pagos_preparacion_form:
+  url:   /pagos-preparacion-alumno.html
+  param: { module: preparacion, action: bringPagosForm }
+
+procesar_pagos_preparacion_form:
+  url:   /procesar-pagos-preparacion-alumno.html
+  param: { module: preparacion, action: proccessPagosForm }
+
+
+
+mostrar_lista_alumno:
+  url:   /lista-alumno.html
+  param: { module: alumno, action: bringAlumnosList }
+
+mostrar_fila_alumno:
+  url:   /mostrar-alumno/:id
+  param: { module: alumno, action: showSimpleAlumno }
+
+mostrar_alumno:
+  url:   /alumno-mostrar/:id
+  param: { module: alumno, action: show }
+
+crear_alumno:
+  url:   /alumno-crear.html
+  param: { module: alumno, action: new }
+
+procesar_alumno:
+  url:   /alumno-procesar.html
+  param: { module: alumno, action: create }
+
+editar_alumno:
+  url:   /alumno-editar.html
+  param: { module: alumno, action: edit }
+
+actualizar_alumno:
+  url:   /alumno-actualizar/:id
+  param: { module: alumno, action: update }
+
+eliminar_alumno:
+  url:   /alumno-eliminar/:id
+  param: { module: alumno, action: delete }
+
+facultad:
+  url:   /facultad.html
+  param: { module: facultad, action: index }
+
+mostrar_facultad:
+  url:   /facultad-mostrar/:id
+  param: { module: facultad, action: show }
+
+crear_facultad:
+  url:   /facultad-crear.html
+  param: { module: facultad, action: new }
+
+procesar_facultad:
+  url:   /facultad-procesar.html
+  param: { module: facultad, action: create }
+
+editar_facultad:
+  url:   /facultad-editar.html
+  param: { module: facultad, action: edit }
+
+actualizar_facultad:
+  url:   /facultad-actualizar/:id
+  param: { module: facultad, action: update }
+
+eliminar_facultad:
+  url:   /facultad-eliminar/:id
+  param: { module: facultad, action: delete }
+
+evaluacion:
+  url:   /evaluacion.html
+  param: { module: evaluacion, action: index }
+
+mostrar_evaluacion:
+  url:   /evaluacion-mostrar/:id
+  param: { module: evaluacion, action: show }
+
+crear_evaluacion:
+  url:   /evaluacion-crear.html
+  param: { module: evaluacion, action: new }
+
+procesar_evaluacion:
+  url:   /evaluacion-procesar.html
+  param: { module: evaluacion, action: create }
+
+editar_evaluacion:
+  url:   /evaluacion-editar.html
+  param: { module: evaluacion, action: edit }
+
+actualizar_evaluacion:
+  url:   /evaluacion-actualizar/:id
+  param: { module: evaluacion, action: update }
+
+eliminar_evaluacion:
+  url:   /evaluacion-eliminar/:id
+  param: { module: evaluacion, action: delete }
+
+materia:
+  url:   /materia.html
+  param: { module: materia, action: index }
+
+mostrar_materia:
+  url:   /materia-mostrar/:id
+  param: { module: materia, action: show }
+
+crear_materia:
+  url:   /materia-crear.html
+  param: { module: materia, action: new }
+
+procesar_materia:
+  url:   /materia-procesar.html
+  param: { module: materia, action: create }
+
+editar_materia:
+  url:   /materia-editar.html
+  param: { module: materia, action: edit }
+
+actualizar_materia:
+  url:   /materia-actualizar/:id
+  param: { module: materia, action: update }
+
+eliminar_materia:
+  url:   /materia-eliminar/:id
+  param: { module: materia, action: delete }
+
+formaContacto:
+  url:   /formaContacto.html
+  param: { module: formaContacto, action: index }
+
+mostrar_formaContacto:
+  url:   /formaContacto-mostrar/:id
+  param: { module: formaContacto, action: show }
+
+crear_formaContacto:
+  url:   /formaContacto-crear.html
+  param: { module: formaContacto, action: new }
+
+procesar_formaContacto:
+  url:   /formaContacto-procesar.html
+  param: { module: formaContacto, action: create }
+
+editar_formaContacto:
+  url:   /formaContacto-editar.html
+  param: { module: formaContacto, action: edit }
+
+actualizar_formaContacto:
+  url:   /formaContacto-actualizar/:id
+  param: { module: formaContacto, action: update }
+
+eliminar_formaContacto:
+  url:   /formaContacto-eliminar/:id
+  param: { module: formaContacto, action: delete }
+  
+periodo:
+  url:   /periodo.html
+  param: { module: periodo, action: index }
+
+mostrar_periodo:
+  url:   /periodo-mostrar/:id
+  param: { module: periodo, action: show }
+
+crear_periodo:
+  url:   /periodo-crear.html
+  param: { module: periodo, action: new }
+
+procesar_periodo:
+  url:   /periodo-procesar.html
+  param: { module: periodo, action: create }
+
+editar_periodo:
+  url:   /periodo-editar.html
+  param: { module: periodo, action: edit }
+
+actualizar_periodo:
+  url:   /periodo-actualizar/:id
+  param: { module: periodo, action: update }
+
+eliminar_periodo:
+  url:   /periodo-eliminar/:id
+  param: { module: periodo, action: delete }
+  
+mailing:
+  url:   /mailing.html
+  param: { module: mailing, action: index }
+
+mostrar_mailing:
+  url:   /mailing-mostrar/:id
+  param: { module: mailing, action: show }
+
+crear_mailing:
+  url:   /mailing-crear.html
+  param: { module: mailing, action: new }
+
+procesar_mailing:
+  url:   /mailing-procesar.html
+  param: { module: mailing, action: create }
+
+editar_mailing:
+  url:   /mailing-editar.html
+  param: { module: mailing, action: edit }
+
+actualizar_mailing:
+  url:   /mailing-actualizar/:id
+  param: { module: mailing, action: update }
+
+eliminar_mailing:
+  url:   /mailing-eliminar/:id
+  param: { module: mailing, action: delete }
+
+sendMailing:
+  url:   /enviar-mailing.html
+  param: { module: mailing, action: sendMailing }
+  
 #preparacion_page:
 #  url:   /preparacion/:page
 #  param: { module: preparacion, action: index }
@@ -15,9 +286,9 @@ homepage:
 
 # generic rules
 # please, remove them by adding more specific rules
-default_index:
-  url:   /:module
-  param: { action: index }
-
-default:
-  url:   /:module/:action/*
+#default_index:
+#  url:   /:module
+#  param: { action: index }
+#
+#default:
+#  url:   /:module/:action/*

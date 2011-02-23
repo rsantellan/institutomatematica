@@ -47,4 +47,4 @@ all:
     secure_action:          secure
 
     #Modules enabled
-    enabled_modules:        [ mdAuth ]
+    enabled_modules:        [ mdAuth, mdWebImage]
