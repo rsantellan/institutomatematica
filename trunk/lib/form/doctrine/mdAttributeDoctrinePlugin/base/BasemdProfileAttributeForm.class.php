@@ -8,7 +8,7 @@
  * @package    instituto
  * @subpackage form
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BasemdProfileAttributeForm extends BaseFormDoctrine
 {
@@ -20,8 +20,8 @@ abstract class BasemdProfileAttributeForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'md_attribute_id' => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'md_attribute_id', 'required' => false)),
-      'md_profile_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'md_profile_id', 'required' => false)),
+      'md_attribute_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('md_attribute_id')), 'empty_value' => $this->getObject()->get('md_attribute_id'), 'required' => false)),
+      'md_profile_id'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('md_profile_id')), 'empty_value' => $this->getObject()->get('md_profile_id'), 'required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('md_profile_attribute[%s]');

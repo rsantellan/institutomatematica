@@ -13,7 +13,7 @@ class preparacionActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $query = Doctrine::getTable('preparacion')
-              ->retrieveAllPreparacionesByDate(true);
+              ->retrieveAllPreparacionesOrderByStart(true);
     
     $this->listaPeriodos = Doctrine::getTable('periodo')
                               ->retrieveAllPeriodosByDate();

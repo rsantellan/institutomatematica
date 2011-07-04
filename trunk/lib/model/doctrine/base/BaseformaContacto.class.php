@@ -25,7 +25,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BaseformaContacto extends sfDoctrineRecord
 {
@@ -36,22 +36,22 @@ abstract class BaseformaContacto extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('nombre', 'string', 128, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('nota', 'string', 128, array(
              'type' => 'string',
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('tiene_nota', 'integer', 1, array(
              'type' => 'integer',
              'default' => '0',
              'notnull' => true,
-             'length' => '1',
+             'length' => 1,
              ));
     }
 

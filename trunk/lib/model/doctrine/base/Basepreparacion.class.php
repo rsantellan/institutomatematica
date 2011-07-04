@@ -61,7 +61,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class Basepreparacion extends sfDoctrineRecord
 {
@@ -72,27 +72,27 @@ abstract class Basepreparacion extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('materia_id', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('md_user_id', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('evaluacion_id', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('periodo_id', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('inicio', 'timestamp', null, array(
              'type' => 'timestamp',
@@ -106,23 +106,23 @@ abstract class Basepreparacion extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              'default' => 0,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('costo_total', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
              'default' => 0,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('hora_inicio', 'string', 64, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '64',
+             'length' => 64,
              ));
         $this->hasColumn('hora_fin', 'string', 64, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '64',
+             'length' => 64,
              ));
     }
 

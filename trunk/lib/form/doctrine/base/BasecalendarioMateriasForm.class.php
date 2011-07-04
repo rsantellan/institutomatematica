@@ -8,7 +8,7 @@
  * @package    instituto
  * @subpackage form
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BasecalendarioMateriasForm extends BaseFormDoctrine
 {
@@ -26,8 +26,8 @@ abstract class BasecalendarioMateriasForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'id'             => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'id', 'required' => false)),
-      'day'            => new sfValidatorChoice(array('choices' => array('lunes' => 'lunes', 'martes' => 'martes', 'miercoles' => 'miercoles', 'jueves' => 'jueves', 'viernes' => 'viernes', 'sabado' => 'sabado', 'domingo' => 'domingo'), 'required' => false)),
+      'id'             => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'day'            => new sfValidatorChoice(array('choices' => array(0 => 'lunes', 1 => 'martes', 2 => 'miercoles', 3 => 'jueves', 4 => 'viernes', 5 => 'sabado', 6 => 'domingo'), 'required' => false)),
       'hour'           => new sfValidatorInteger(),
       'minutes'        => new sfValidatorInteger(),
       'preparacion_id' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('preparacion'))),

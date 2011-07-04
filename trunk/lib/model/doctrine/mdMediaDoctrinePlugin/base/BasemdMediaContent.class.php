@@ -25,7 +25,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasemdMediaContent extends sfDoctrineRecord
 {
@@ -36,17 +36,17 @@ abstract class BasemdMediaContent extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('object_class_name', 'string', 128, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('object_id', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
 
 

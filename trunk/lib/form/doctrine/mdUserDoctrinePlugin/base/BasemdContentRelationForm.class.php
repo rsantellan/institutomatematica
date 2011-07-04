@@ -8,7 +8,7 @@
  * @package    instituto
  * @subpackage form
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BasemdContentRelationForm extends BaseFormDoctrine
 {
@@ -22,8 +22,8 @@ abstract class BasemdContentRelationForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'md_content_id_first'  => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'md_content_id_first', 'required' => false)),
-      'md_content_id_second' => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'md_content_id_second', 'required' => false)),
+      'md_content_id_first'  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('md_content_id_first')), 'empty_value' => $this->getObject()->get('md_content_id_first'), 'required' => false)),
+      'md_content_id_second' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('md_content_id_second')), 'empty_value' => $this->getObject()->get('md_content_id_second'), 'required' => false)),
       'object_class_name'    => new sfValidatorString(array('max_length' => 128)),
       'profile_name'         => new sfValidatorString(array('max_length' => 128, 'required' => false)),
     ));

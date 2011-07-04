@@ -2,14 +2,22 @@
 
 class preparacionTable extends Doctrine_Table
 {
-    public function retrieveAllPreparacionesByDate($isQuery = false, $mdUserId = null)
+    public function retrieveAllPreparacionesByDate($isQuery = false)
     {
         $query = $this->createQuery("prep");
         $query->orderBy("prep.created_at DESC");
         if($isQuery) return $query;
         return $query->execute();
     }
-    
+
+    public function retrieveAllPreparacionesOrderByStart($isQuery = false)
+    {
+        $query = $this->createQuery("prep");
+        $query->orderBy("prep.hora_inicio ASC");
+        if($isQuery) return $query;
+        return $query->execute();
+    }	
+	
     public function addFilterByPeriodo($query, $periodoId)
     {
       if(is_null($query))

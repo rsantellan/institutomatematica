@@ -40,7 +40,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasemdAttributeObject extends sfDoctrineRecord
 {
@@ -51,37 +51,37 @@ abstract class BasemdAttributeObject extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('object_id', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('object_class_name', 'string', 128, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('md_attribute_id', 'int', 4, array(
              'type' => 'int',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('md_attribute_value_id', 'int', 4, array(
              'type' => 'int',
              'notnull' => false,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('value', 'string', 1024, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '1024',
+             'length' => 1024,
              ));
         $this->hasColumn('md_profile_id', 'int', 4, array(
              'type' => 'int',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
     }
 

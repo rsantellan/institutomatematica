@@ -40,7 +40,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasemdMediaAlbum extends sfDoctrineRecord
 {
@@ -51,20 +51,20 @@ abstract class BasemdMediaAlbum extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('md_media_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('title', 'string', 64, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '64',
+             'length' => 64,
              ));
         $this->hasColumn('description', 'string', 255, array(
              'type' => 'string',
-             'length' => '255',
+             'length' => 255,
              ));
         $this->hasColumn('type', 'enum', null, array(
              'type' => 'enum',
@@ -83,7 +83,7 @@ abstract class BasemdMediaAlbum extends sfDoctrineRecord
              ));
         $this->hasColumn('md_media_content_id', 'integer', 4, array(
              'type' => 'integer',
-             'length' => '4',
+             'length' => 4,
              ));
 
 

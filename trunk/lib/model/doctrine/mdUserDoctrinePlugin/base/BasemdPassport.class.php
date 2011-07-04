@@ -37,7 +37,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasemdPassport extends sfDoctrineRecord
 {
@@ -48,28 +48,28 @@ abstract class BasemdPassport extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('md_user_id', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('username', 'string', 128, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('password', 'string', 128, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('account_active', 'integer', 1, array(
              'type' => 'integer',
              'default' => '0',
              'notnull' => true,
-             'length' => '1',
+             'length' => 1,
              ));
         $this->hasColumn('last_login', 'timestamp', null, array(
              'type' => 'timestamp',

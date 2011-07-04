@@ -207,6 +207,10 @@ alumnoPreparacion:
       type: integer(4)
       notnull: true
       default: 0
+    monto_pago_2:
+      type: integer(4)
+      notnull: true
+      default: 0
     resultado:
       type: enum
       length: 12
@@ -334,7 +338,8 @@ mailing_alumnos:
       foreign: id
 
 MailMessage:
-  actAs: Timestampable: ~
+  actAs: 
+		Timestampable: ~
   columns:
     message: 
       type: clob 
