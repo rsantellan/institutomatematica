@@ -43,7 +43,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasealumnoPreparacion extends sfDoctrineRecord
 {
@@ -53,21 +53,21 @@ abstract class BasealumnoPreparacion extends sfDoctrineRecord
         $this->hasColumn('alumno_id', 'integer', 4, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('preparacion_id', 'integer', 4, array(
              'type' => 'integer',
              'primary' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('forma_contacto_id', 'integer', 4, array(
              'type' => 'integer',
              'notnull' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('nota_contacto', 'string', 64, array(
              'type' => 'string',
-             'length' => '64',
+             'length' => 64,
              ));
         $this->hasColumn('pago', 'boolean', null, array(
              'type' => 'boolean',
@@ -83,7 +83,7 @@ abstract class BasealumnoPreparacion extends sfDoctrineRecord
              'type' => 'integer',
              'notnull' => true,
              'default' => 0,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('resultado', 'enum', 12, array(
              'type' => 'enum',

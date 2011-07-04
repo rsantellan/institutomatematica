@@ -25,7 +25,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasemdUserProfile extends sfDoctrineRecord
 {
@@ -36,24 +36,24 @@ abstract class BasemdUserProfile extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('name', 'string', 128, array(
              'type' => 'string',
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('last_name', 'string', 128, array(
              'type' => 'string',
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('city', 'string', 128, array(
              'type' => 'string',
-             'length' => '128',
+             'length' => 128,
              ));
         $this->hasColumn('country_code', 'string', 2, array(
              'type' => 'string',
              'default' => 'UY',
-             'length' => '2',
+             'length' => 2,
              ));
     }
 

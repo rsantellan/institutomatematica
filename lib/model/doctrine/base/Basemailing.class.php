@@ -19,7 +19,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class Basemailing extends sfDoctrineRecord
 {
@@ -30,12 +30,12 @@ abstract class Basemailing extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('texto', 'string', 10000, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '10000',
+             'length' => 10000,
              ));
     }
 
@@ -46,7 +46,8 @@ abstract class Basemailing extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'mailing_id'));
 
-        $timestampable0 = new Doctrine_Template_Timestampable();
+        $timestampable0 = new Doctrine_Template_Timestampable(array(
+             ));
         $this->actAs($timestampable0);
     }
 }

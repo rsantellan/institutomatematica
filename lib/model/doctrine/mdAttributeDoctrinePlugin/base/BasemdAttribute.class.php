@@ -34,7 +34,7 @@
  * @package    instituto
  * @subpackage model
  * @author     Your name here
- * @version    SVN: $Id: Builder.php 6820 2009-11-30 17:27:49Z jwage $
+ * @version    SVN: $Id: Builder.php 7490 2010-03-29 19:53:27Z jwage $
  */
 abstract class BasemdAttribute extends sfDoctrineRecord
 {
@@ -45,28 +45,28 @@ abstract class BasemdAttribute extends sfDoctrineRecord
              'type' => 'integer',
              'primary' => true,
              'autoincrement' => true,
-             'length' => '4',
+             'length' => 4,
              ));
         $this->hasColumn('name', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '100',
+             'length' => 100,
              ));
         $this->hasColumn('label', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '100',
+             'length' => 100,
              ));
         $this->hasColumn('type_class', 'string', 100, array(
              'type' => 'string',
              'notnull' => true,
-             'length' => '100',
+             'length' => 100,
              ));
         $this->hasColumn('requiered', 'integer', 1, array(
              'type' => 'integer',
              'default' => 0,
              'notnull' => true,
-             'length' => '1',
+             'length' => 1,
              ));
     }
 

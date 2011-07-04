@@ -52,6 +52,10 @@
         <th>Periodo:</th>
         <td><?php echo $preparacion->getPeriodo() ?></td>
       </tr>
+	  <tr>
+		<th><?php echo __('preparacion_horario');?></th>
+		<td><?php echo $preparacion->retrieveStartHourTime() ?> - <?php echo $preparacion->retrieveFinishHourTime() ?></td>
+	  </tr>
     </tbody>
   </table>
 
@@ -59,7 +63,7 @@
   <thead>
     <tr>
       <th>Nombre</th>
-      <th>Telefono</th>
+      <th>Celular</th>
     </tr>
   </thead>
   <tbody id="tabla_alumno_preparacion_telefono">

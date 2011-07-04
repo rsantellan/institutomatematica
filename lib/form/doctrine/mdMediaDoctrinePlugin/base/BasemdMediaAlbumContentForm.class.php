@@ -8,7 +8,7 @@
  * @package    instituto
  * @subpackage form
  * @author     Your name here
- * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 24171 2009-11-19 16:37:50Z Kris.Wallsmith $
+ * @version    SVN: $Id: sfDoctrineFormGeneratedTemplate.php 29553 2010-05-20 14:33:00Z Kris.Wallsmith $
  */
 abstract class BasemdMediaAlbumContentForm extends BaseFormDoctrine
 {
@@ -22,8 +22,8 @@ abstract class BasemdMediaAlbumContentForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'md_media_album_id'   => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'md_media_album_id', 'required' => false)),
-      'md_media_content_id' => new sfValidatorDoctrineChoice(array('model' => $this->getModelName(), 'column' => 'md_media_content_id', 'required' => false)),
+      'md_media_album_id'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('md_media_album_id')), 'empty_value' => $this->getObject()->get('md_media_album_id'), 'required' => false)),
+      'md_media_content_id' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('md_media_content_id')), 'empty_value' => $this->getObject()->get('md_media_content_id'), 'required' => false)),
       'object_class_name'   => new sfValidatorString(array('max_length' => 128)),
       'priority'            => new sfValidatorInteger(),
     ));

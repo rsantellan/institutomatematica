@@ -139,9 +139,9 @@ class alumnoActions extends sfActions {
         $direccion = $parameters['alumno']['direccion'];
         $email = $parameters['alumno']['email'];
 
-        $telefonoAlumnos = Doctrine::getTable('alumno')->findBy('telefono', $telefono);
+        $telefonoAlumnos = array();//Doctrine::getTable('alumno')->findBy('telefono', $telefono);
         $celularAlumnos = Doctrine::getTable('alumno')->findBy('celular', $celular);
-        $direccionAlumnos = Doctrine::getTable('alumno')->findBy('direccion', $direccion);
+        $direccionAlumnos = array();//Doctrine::getTable('alumno')->findBy('direccion', $direccion);
         $emailAlumnos = Doctrine::getTable('alumno')->findBy('email', $email);
         $nombresAlumnos = Doctrine::getTable('alumno')->retrieveByName($nombre, $apellido);
         $salida = array();
