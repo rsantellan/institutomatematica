@@ -1,0 +1,1 @@
+Este es un proyecto basico de symfony para un instituto de matematica.
